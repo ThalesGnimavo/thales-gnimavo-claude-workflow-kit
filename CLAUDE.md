@@ -134,6 +134,8 @@ are documented in `docs/<lang>/native-commands.md`, verified against the install
   the current session. A go given earlier does not carry over.
 - Never `git push --force`, never `--no-verify`, never commit `.env` or any credential.
 - Never read a `.env` file, with any tool. If a value is needed, ask the user to paste it.
+  One exception: `/notify` runs `.claude/skills/notify/notify.sh`, which reads `.env` and
+  prints no value from it.
 - Never mark an item done without its proof.
 - Never rewrite a user's wording when asked to fix layout, tone or structure; ask first.
 - Never pad: no closing recap, no summary beyond what was asked, no commentary on your own answer.
