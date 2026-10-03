@@ -24,16 +24,20 @@ a project's recorded state matches reality; it runs on your machine and sends no
    - Any system, with Node.js installed: `npm install -g @anthropic-ai/claude-code`
    Then open a new terminal and check with `claude --version`. If you prefer no terminal at
    all, the Claude Desktop app runs Claude Code too: https://claude.com/download.
-4. **Download the kit** from
-   https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/releases/latest, unzip it,
-   and open a terminal inside the unzipped folder (macOS: drag the folder onto the Terminal
-   icon; Windows: Shift + right-click in the folder, "Open PowerShell window here").
-   Keep this folder: it becomes your workspace.
+4. **Get the kit.** In the terminal, paste these two lines, one after the other:
+   `git clone https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit.git`
+   then `cd thales-gnimavo-claude-workflow-kit`. Keep this folder: it becomes your
+   workspace, and `/update` brings it to each new release. If git is out of reach, a zip
+   of the latest release is at
+   https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/releases/latest:
+   unzip it and open a terminal inside the folder (macOS: drag the folder onto the
+   Terminal icon; Windows: Shift + right-click in the folder, "Open PowerShell window
+   here"). A zip cannot be updated in place: `/update` will ask you to download again.
 5. **Type `claude` and press Enter.** Log in when the browser opens. When asked whether you
    trust the files in this folder, answer yes. Then type `hello` (or `bonjour`) and press
    Enter: Claude greets you, reads the folder, and runs `/setup`.
 
-From here, type `/learn` to be taught the method. `/new-project` arrives with v0.1.0.
+From here, type `/learn` to be taught the method, or `/new-project` to start your first project.
 
 ---
 
@@ -63,13 +67,18 @@ d'un projet correspond à la réalité ; il tourne sur votre machine et n'envoie
    Ouvrez ensuite un nouveau terminal et vérifiez avec `claude --version`. Si vous ne voulez
    pas de terminal du tout, l'application Claude Desktop fait aussi tourner Claude Code :
    https://claude.com/download.
-4. **Téléchargez le kit** depuis
-   https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/releases/latest,
-   décompressez-le, puis ouvrez un terminal dans le dossier décompressé (macOS : glissez le
-   dossier sur l'icône Terminal ; Windows : Maj + clic droit dans le dossier, « Ouvrir une
-   fenêtre PowerShell ici »). Gardez ce dossier : il devient votre espace de travail.
+4. **Récupérez le kit.** Dans le terminal, collez ces deux lignes, l'une après l'autre :
+   `git clone https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit.git`
+   puis `cd thales-gnimavo-claude-workflow-kit`. Gardez ce dossier : il devient votre
+   espace de travail, et `/update` l'amène à chaque nouvelle version. Si git est hors de
+   portée, un zip de la dernière version est à
+   https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/releases/latest :
+   décompressez-le, puis ouvrez un terminal dans le dossier (macOS : glissez le dossier
+   sur l'icône Terminal ; Windows : Maj + clic droit dans le dossier, « Ouvrir une fenêtre
+   PowerShell ici »). Un zip ne se met pas à jour sur place : `/update` vous demandera de
+   le télécharger à nouveau.
 5. **Tapez `claude` et validez.** Connectez-vous quand le navigateur s'ouvre. Quand on vous
    demande si vous faites confiance aux fichiers de ce dossier, répondez oui. Tapez ensuite
    `bonjour` et validez : Claude vous accueille, lit le dossier et lance `/setup`.
 
-Ensuite, tapez `/learn` pour apprendre la méthode. `/new-project` arrive avec la v0.1.0.
+Ensuite, tapez `/learn` pour apprendre la méthode, ou `/new-project` pour démarrer votre premier projet.

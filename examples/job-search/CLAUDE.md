@@ -7,7 +7,7 @@ I am looking for a bilingual customer support role in Lyon or remote, after four
 
 This is run as a project, not as a pile of documents: one folder per employer, one
 tracking file, a roadmap that ends at a signed contract. The owner's first goal, in their
-words: "Have a CV and a letter I am not ashamed of, then send the first application within a week.".
+words: "Have a CV and a letter I am not ashamed of, then send the first application within a week."
 
 ## Rule number one: prepare everything, send nothing
 

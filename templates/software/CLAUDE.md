@@ -3,7 +3,7 @@
 {{description}}
 
 Stack: {{stack}}. Deployment: {{deploy}}. Owner: {{owner_name}}. First goal, in the
-owner's words: "{{first_goal}}".
+owner's words: "{{first_goal}}"
 
 ## Rule number one: the gate passes before any push
 
@@ -55,7 +55,7 @@ green with its output in the log, next prompt, `casp check` exit 0.
 |---|---|---|
 | Push to the remote at the end of a session? | Yes, after the gate is green and `casp check` exits 0. | rule number one |
 | Publish a package, a release, a store build? | **Never in an implementation session.** Level 1. | root rules |
-| Push to a branch that deploys automatically? | Level 1 unless `{{deploy}}` names it as the normal path; then yes, with the gate green. | this file |
+| Push to a branch that deploys automatically? | Level 1, unless the deployment line at the top of this file names that branch as the normal path; then yes, with the gate green. | this file |
 | Add a dependency? | Yes if small and justified in the log; major framework or runtime: level 1. | invariants |
 | Call a paid or external service for real (mail, SMS, payment)? | **Never without a go in the current session.** Level 1. | root rules |
 | Naming, file layout, error codes, test names, ordering? | Level 2: decide, record, continue. | root rules |

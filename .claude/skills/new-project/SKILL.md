@@ -56,7 +56,7 @@ rewrite the user's wording.
 ```bash
 mkdir -p my-projects/<name>
 (cd my-projects/<name> && git init -q -b main 2>/dev/null || (git init -q && git symbolic-ref HEAD refs/heads/main))
-(cd my-projects/<name> && git -C . rev-parse --abbrev-ref HEAD)      # must print main
+(cd my-projects/<name> && git symbolic-ref --short HEAD)      # must print main, even before the first commit
 ```
 
 Then, from the kit root:

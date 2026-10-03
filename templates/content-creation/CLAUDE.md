@@ -5,7 +5,7 @@ Content of {{owner_name}}. Channels: {{channels}}. Audience: {{audience}}. Caden
 
 {{description}}
 
-The owner's first goal, in their words: "{{first_goal}}".
+The owner's first goal, in their words: "{{first_goal}}"
 
 ## Rule number one: the assistant drafts, the owner publishes
 

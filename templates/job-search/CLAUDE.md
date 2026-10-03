@@ -7,7 +7,7 @@ Scope: {{search_scope}}.
 
 This is run as a project, not as a pile of documents: one folder per employer, one
 tracking file, a roadmap that ends at a signed contract. The owner's first goal, in their
-words: "{{first_goal}}".
+words: "{{first_goal}}"
 
 ## Rule number one: prepare everything, send nothing
 

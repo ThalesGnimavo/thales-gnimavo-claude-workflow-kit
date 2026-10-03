@@ -5,7 +5,7 @@
 
 {{description}}
 
-The author's first goal, in their words: "{{first_goal}}".
+The author's first goal, in their words: "{{first_goal}}"
 
 ## Rule number one: no claim without a source the author has read
 

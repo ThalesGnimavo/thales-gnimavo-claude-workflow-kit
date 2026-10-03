@@ -5,7 +5,7 @@
 
 {{description}}
 
-The owner's first goal, in their words: "{{first_goal}}".
+The owner's first goal, in their words: "{{first_goal}}"
 
 ## Rule number one: nothing leaves this folder without the owner
 

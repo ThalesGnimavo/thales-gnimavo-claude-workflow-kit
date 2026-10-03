@@ -3,7 +3,7 @@
 A command-line tool that records my small expenses in a plain JSON file and prints monthly totals. I use it alone, from the terminal, and I want it to stay a single folder with no server and no account.
 
 Stack: Node.js 22, plain JavaScript (ES modules), one JSON file as storage, no framework, no dependency. Deployment: not deployed. Owner: Sam Idris. First goal, in the
-owner's words: "Export one month as a CSV file I can open in a spreadsheet.".
+owner's words: "Export one month as a CSV file I can open in a spreadsheet."
 
 ## Rule number one: the gate passes before any push
 

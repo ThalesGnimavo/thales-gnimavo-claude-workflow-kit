@@ -5,7 +5,7 @@ Organiser: {{owner_name}}.
 
 {{description}}
 
-The organiser's first goal, in their words: "{{first_goal}}".
+The organiser's first goal, in their words: "{{first_goal}}"
 
 ## Rule number one: a date, a venue, a vendor and a budget line are the organiser's decisions
 

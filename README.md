@@ -2,7 +2,7 @@
 
 **Run any project, technical or not, with Claude Code as a working partner.**
 
-Download, unzip, type `claude`. Claude reads this folder, checks your machine, teaches you
+Clone it, type `claude`. Claude reads this folder, checks your machine, teaches you
 the method one chapter at a time, and creates your first project with its own cockpit.
 No prior experience with Claude Code is assumed.
 
