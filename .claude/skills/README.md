@@ -43,6 +43,25 @@ profile is `non-developer`. Everything else speaks to someone who may never have
 terminal: show the command and its result in one or two lines, never assume a tool is
 installed, never assume git vocabulary.
 
+### Wording by profile
+
+Read `profile` from `.kit/profile.json` once per command (`Read`; a missing file means
+`non-developer`). A `developer` reads git words. A `non-developer` reads these instead,
+and never a sha, a hash or a branch name:
+
+| git word | say instead |
+|---|---|
+| commit (the thing) | save point |
+| commit (the act) | record a save point |
+| sha, hash, branch | omitted |
+| "N files not committed" | "N files changed since the last save point" |
+| push, pull | send to the online copy, fetch from the online copy |
+| working tree | the project folder |
+
+The commands run are the same for both profiles; only the reply changes. `/casp`, `/next`,
+`/update`, `/day` and `/new-project` apply this table; a new skill that prints git state
+applies it too.
+
 ## Adding a skill
 
 1. Create `.claude/skills/<name>/SKILL.md` with the frontmatter above.

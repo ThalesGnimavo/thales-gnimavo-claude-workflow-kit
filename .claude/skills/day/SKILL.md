@@ -9,7 +9,9 @@ allowed-tools: Bash(ls my-projects:*), Bash(ls -d my-projects/*), Bash(wc:*), Ba
 
 The user has ten minutes. You show the state of every project, name what is blocked and
 how to unblock it, ask one question, and start the session. Nothing else. Speak in the
-user's language, in plain words, no git vocabulary beyond "commit".
+user's language, in plain words, no git vocabulary: a `non-developer` (`Read`
+`.kit/profile.json`) reads "save point" where a `developer` reads "commit", and never a sha
+or a branch (wording table in `.claude/skills/README.md`).
 
 ## 1. The projects
 
@@ -50,13 +52,14 @@ Decide each project's state, first match wins:
 Print one table, one row per project, and nothing above it but the date:
 
 ```
-Project          Phase              Next                         Last commit   State
+Project          Phase              Next                         Last commit   State     (non-developer: Last save point)
 <n>              <shipped>/<total>  <next_phase>                 <date>        ready
 ```
 
 Then, only if some rows are not `ready`, a short list "Blocked" with the action per
 project, one line each, the command in backticks. A dirty working tree is a trailing note
-on the row ("N files not committed"), not a blocker.
+on the row ("N files not committed"; to a `non-developer`, "N files changed since the last
+save point"), not a blocker.
 
 ## 3. `--dry-run`
 

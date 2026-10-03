@@ -30,7 +30,9 @@ git -C my-projects/<project> status --short | head -10
 (cd my-projects/<project> && casp doctor --json 2>/dev/null | jq -r '.checks[] | select(.id=="cockpit.version") | [.severity, .label] | @tsv')
 ```
 
-First line of the reply: `<project> · <sha> on <branch>`. If `jq` is missing, read
+First line of the reply: `<project> · <sha> on <branch>`; for a `non-developer` profile
+(`Read` `.kit/profile.json`), `<project>` alone, and the wording table of
+`.claude/skills/README.md` applies to every later line. If `jq` is missing, read
 `casp/state.json` with `Read` and pick the four fields by eye.
 
 **Cockpit drift.** When the last line says `warn` and the message is that the cockpit is
@@ -136,7 +138,8 @@ what to start. Suggest `/new-project` only if the folder is not a project at all
 
 ## Close, in this order
 
-Work first, state second: two commits, so the state commit can be undone alone.
+Work first, state second: two commits, so the state commit can be undone alone. To a
+`non-developer`, say "two save points: the work, then the cockpit"; never print a sha.
 
 ```bash
 # 0. The work is committed inside the project, tree clean apart from casp/ and logs.
@@ -167,7 +170,8 @@ sections at least: scope shipped, proofs (command and output, dated), decisions 
 without the user, deferred, next.
 
 Then: `casp check` exit 0 before any push; push only if the project's `CLAUDE.md` says
-pushing is pre-approved, otherwise show the command. Propose `/notify` in one line; do not
+pushing is pre-approved, otherwise show the command (to a `non-developer`: "send the save
+points to the online copy", then the command). Propose `/notify` in one line; do not
 run it.
 
 ## Never

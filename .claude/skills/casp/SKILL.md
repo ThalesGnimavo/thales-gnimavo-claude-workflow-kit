@@ -25,6 +25,15 @@ ls my-projects
 
 The kit root itself has a `casp/`: `/casp kit` reads it (the kit is run with its own method).
 
+## Wording by profile
+
+`Read` `.kit/profile.json` once; the table in `.claude/skills/README.md` ("Wording by
+profile") applies. For a `non-developer`: the header line is `<project>` alone (no sha, no
+branch), `LAST 5 COMMITS` becomes `LAST 5 SAVE POINTS` printed with
+`git -C my-projects/<project> log -5 --format='%cs %s'` (date and message, no hash), and
+`WORKING TREE` becomes `SINCE THE LAST SAVE POINT` with `clean | N files changed`. The
+`casp status` board stays verbatim in both cases: it is the tool's output, not yours.
+
 ## `status`
 
 The board the state tool prints. Output **verbatim**, in a fenced block; never redraw it.
@@ -68,7 +77,7 @@ git -C my-projects/<project> status --short | head -10
 Reply, thirty lines at most:
 
 ```
-<project> · <short-sha> on <branch>
+<project> · <short-sha> on <branch>        (non-developer: <project> alone)
 
 FOCUS
 <one sentence from now.md>
@@ -76,10 +85,10 @@ FOCUS
 BOARD
 <casp status, verbatim>
 
-LAST 5 COMMITS
+LAST 5 COMMITS                             (non-developer: LAST 5 SAVE POINTS, date and message)
 <verbatim>
 
-WORKING TREE
+WORKING TREE                               (non-developer: SINCE THE LAST SAVE POINT)
 <clean | N changed files>
 
 ASK ME

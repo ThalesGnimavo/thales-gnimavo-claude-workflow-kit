@@ -20,6 +20,8 @@ git fetch origin --quiet && git log --oneline HEAD..origin/main | head -20
 ```
 
 Report in two lines: current commit, and either "already up to date" or "N commits behind".
+To a `non-developer` (`Read` `.kit/profile.json`; wording table in
+`.claude/skills/README.md`): "the kit is up to date" or "N updates are waiting", no sha.
 With `--check`, stop here.
 
 ## 2. Refuse on a dirty tree
@@ -50,7 +52,8 @@ Never rebase, never merge, never reset from this command.
 
 Then report:
 
-- the commits pulled (verbatim, bounded);
+- the commits pulled (verbatim, bounded; to a `non-developer`, introduce them as "the
+  changes pulled", the lines themselves stay as git prints them);
 - the `CHANGELOG.md` lines added, verbatim;
 - if `.claude/settings.json` or `CLAUDE.md` is among the changed files, one line saying the
   new rules apply from the next `claude` start, not this session.

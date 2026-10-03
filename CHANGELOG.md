@@ -6,6 +6,11 @@ Versions follow [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- `docs/fr/`: the manual in French, same six chapters and file names as `docs/en/`.
+- `docs/<lang>/native-commands.md`: the native Claude Code commands the manual relies on,
+  read from the command table of the installed binary (2.1.288) and tested from `claude -p`.
+- Wording by profile: `/casp`, `/next`, `/update`, `/day`, `/new-project` say "save point"
+  and print no sha or branch to a `non-developer`; the table is in `.claude/skills/README.md`.
 - Root `CLAUDE.md`: roles, session cycle, decision levels, verification, context discipline.
 - `INSTALL.md` (EN + FR): the five human steps before the first `claude`.
 - `/setup`: machine check, `casp` install, profile written to `.kit/profile.json`.

@@ -114,7 +114,8 @@ outputs for the closing message.
 Say, in the user's language:
 
 - the folder, the profile, and that a first save point was recorded (the developer
-  profile also gets the branch and the commit);
+  profile also gets the branch and the commit; a `non-developer` never reads "commit",
+  "branch" or a sha: wording table in `.claude/skills/README.md`);
 - the raw `casp check` line and the `{{` count;
 - that `CLAUDE.md` is the project's constitution and is worth reading once (one minute);
 - the next step: `/next <name> --solo "first slice of a new project"` to start now

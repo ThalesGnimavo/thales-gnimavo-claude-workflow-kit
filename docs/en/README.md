@@ -11,7 +11,7 @@ printed during a real run on 2026-10-03.
 | A session | `a-session.md` | before your first `/next` |
 | A project | `a-project.md` | before your first `/new-project` |
 | The state | `the-state.md` | the first time `casp check` prints a FAIL, or before |
-| Native commands | `native-commands.md` | ships with the next release; the list `/learn` gives covers the first week |
+| Native commands | `native-commands.md` | the first time you wonder what `/compact` or `/rewind` does; checked against an installed Claude Code |
 | Pitfalls | `pitfalls.md` | at the end of the first week, then whenever something felt wrong |
 
 The manual is longer than `/learn` (seven chapters of five to eight minutes, with an
@@ -20,8 +20,9 @@ when you have a question. Two finished projects to compare yours to are in `exam
 `examples/job-search/` (non-technical) and `examples/software/` (technical). Each has a
 `README.md` that says what to look at and in which order.
 
-The French version, `docs/fr/`, ships with the next release. The root `CLAUDE.md` and the
-kit's commands answer in the language you write in, whichever manual you read.
+The French version, `docs/fr/`, has the same six chapters under the same file names. The
+root `CLAUDE.md` and the kit's commands answer in the language you write in, whichever
+manual you read.
 
 ## Three words, before anything
 

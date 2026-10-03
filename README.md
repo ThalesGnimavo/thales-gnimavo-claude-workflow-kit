@@ -7,9 +7,10 @@ the method one chapter at a time, and creates your first project with its own co
 No prior experience with Claude Code is assumed.
 
 **Release status.** This is a pre-release: every command of the table below, the six
-templates, the manual in English (`docs/en/`) and the two examples ship today; the French
-manual and the native-commands sheet arrive with v0.1.0. `CHANGELOG.md` is the authority
-on what exists.
+templates, the manual in English and in French (`docs/en/`, `docs/fr/`, six chapters each,
+native commands checked against Claude Code 2.1.288) and the two examples ship today. What
+remains before v0.1.0 is the blank-machine test and the download page. `CHANGELOG.md` is
+the authority on what exists.
 
 *Version française plus bas.*
 
@@ -58,9 +59,10 @@ vous enseigne la méthode chapitre par chapitre, et crée votre premier projet a
 cockpit. Aucune expérience préalable de Claude Code n'est supposée.
 
 **État de la version.** Pré-version : toutes les commandes du tableau ci-dessous, les six
-gabarits, le manuel en anglais (`docs/en/`) et les deux exemples sont livrés ; le manuel
-en français et la fiche des commandes natives arrivent avec la v0.1.0. `CHANGELOG.md`
-fait foi sur ce qui existe.
+gabarits, le manuel en anglais et en français (`docs/en/`, `docs/fr/`, six chapitres
+chacun, commandes natives vérifiées contre Claude Code 2.1.288) et les deux exemples sont
+livrés. Restent avant la v0.1.0 le test sur machine vierge et la page de téléchargement.
+`CHANGELOG.md` fait foi sur ce qui existe.
 
 ## Ce qu'il contient
 
