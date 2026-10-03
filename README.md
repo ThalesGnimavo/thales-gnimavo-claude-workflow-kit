@@ -6,9 +6,10 @@ Download, unzip, type `claude`. Claude reads this folder, checks your machine, t
 the method one chapter at a time, and creates your first project with its own cockpit.
 No prior experience with Claude Code is assumed.
 
-**Release status.** This is a pre-release: `/setup` and `/learn` ship today; `/new-project`,
-`/day` and the other commands, the manual, the templates and the examples arrive with
-v0.1.0. `CHANGELOG.md` is the authority on what exists.
+**Release status.** This is a pre-release: every command of the table below, the six
+templates, the manual in English (`docs/en/`) and the two examples ship today; the French
+manual and the native-commands sheet arrive with v0.1.0. `CHANGELOG.md` is the authority
+on what exists.
 
 *Version française plus bas.*
 
@@ -56,9 +57,10 @@ Téléchargez, décompressez, tapez `claude`. Claude lit ce dossier, vérifie vo
 vous enseigne la méthode chapitre par chapitre, et crée votre premier projet avec son
 cockpit. Aucune expérience préalable de Claude Code n'est supposée.
 
-**État de la version.** Pré-version : `/setup` et `/learn` sont livrés ; `/new-project`,
-`/day` et les autres commandes, le manuel, les gabarits et les exemples arrivent avec la
-v0.1.0. `CHANGELOG.md` fait foi sur ce qui existe.
+**État de la version.** Pré-version : toutes les commandes du tableau ci-dessous, les six
+gabarits, le manuel en anglais (`docs/en/`) et les deux exemples sont livrés ; le manuel
+en français et la fiche des commandes natives arrivent avec la v0.1.0. `CHANGELOG.md`
+fait foi sur ce qui existe.
 
 ## Ce qu'il contient
 

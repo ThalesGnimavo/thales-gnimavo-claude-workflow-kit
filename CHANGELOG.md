@@ -33,6 +33,14 @@ Versions follow [Semantic Versioning](https://semver.org/).
 - `/chain <project> [N]`, `/fleet <project>`, `/audit-batch <project>`: generalised from the
   author's, each opening with a warning on cost and prerequisites; `/fleet` is macOS with
   iTerm2 only.
+- `docs/en/`: the manual in English, five chapters (a day, a session, a project, the
+  state, pitfalls) plus a table of contents; every chapter ends with "What to type" and
+  "What you should see", taken from real runs on 2026-10-03. `native-commands.md` and
+  `docs/fr/` follow.
+- `examples/job-search/` and `examples/software/`: two projects created with
+  `/new-project` for a fictional owner and played for two sessions each (real session
+  logs, a shipped phase, a queued prompt, `casp check` at exit 0), frozen without their
+  `.git`; each `README.md` says what to look at and in which order.
 
 ### Changed
 - `/setup`: the `casp` install log goes to `.kit/`, not `/tmp`; `.kit/` is ignored as a whole.

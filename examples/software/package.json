@@ -1,0 +1,13 @@
+{
+  "name": "ledger-cli",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Record small expenses in a JSON file and print monthly totals.",
+  "bin": { "ledger": "./src/cli.mjs" },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/ledger.mjs && node --check src/cli.mjs && node --check test/ledger.test.mjs"
+  },
+  "engines": { "node": ">=22" }
+}
