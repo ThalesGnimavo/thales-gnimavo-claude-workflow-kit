@@ -1,6 +1,6 @@
 # What I'm doing NOW
 
-> **Updated** : 2026-10-03 (session 005: phase 2 shipped, phase 3 queued with its prompt).
+> **Updated** : 2026-10-03 (session 006: phase 3 slice A shipped, phase stays queued for slice B).
 >
 > **Read this first.** The single most important file in casp/. "Where am I?" has a one-screen answer here.
 
@@ -8,12 +8,14 @@
 
 ## Current focus (1 sentence)
 
-**Phase 2 shipped: the manual in English and in French (`docs/en/`, `docs/fr/`, six
-chapters each, native commands checked against Claude Code 2.1.288), the two worked
-examples, and the wording by profile in `/casp`, `/next`, `/update`, `/day`,
-`/new-project`.** Phase 3 is queued with its prompt: the three known defects fixed, the
-blank-machine test, the skill-name collision decided, then the website page and the
-`v0.1.0` tag on the user's go. The GitHub repository is **private** until v0.1.0.
+**Phase 3, slice A shipped: the three known defects fixed with proof, `INSTALL.md` step 4
+on `git clone` (a zip cannot be updated by `/update`), the first-run test run in a sandbox
+(`/setup`, two `/new-project`, `/day`: all pass, two wording defects fixed), six Proofs due
+consolidated in `roadmap.md`.** Slice B waits on one level 1 answer: the skill-name
+collision with `~/.claude/skills/` (observed four times, in interactive and `-p` sessions).
+Recommendation on file: document in `README.md` and have `/setup` print the shadowing
+names; do not prefix. Then the website page, `[0.1.0]`, the tag on the user's go, the
+public flip by the user. The repository is **private** until then.
 
 ---
 
@@ -21,28 +23,29 @@ blank-machine test, the skill-name collision decided, then the website page and 
 
 ### 15 minutes
 
-Read `docs/fr/a-day.md` as a first-time French reader would, then `docs/fr/native-commands.md`;
-note every sentence that reads as a translation rather than as French. Compare one table
-with its English row.
+Answer the collision question (session 006 log, "What did NOT ship"), then write the
+`README.md` section under a heading a developer will find ("Already using Claude Code
+with your own skills?").
 
 ### 1 hour
 
-Fix the three defects listed under "Queued — non-critical" in `roadmap.md` (two template
-lines, one skill line), re-run the `/new-project` proofs on a throwaway project: it is
-MUST 1 of phase 3 and needs no decision.
+The `/setup` line that lists the names under `~/.claude/skills/` shadowing a kit skill,
+`CHANGELOG.md` `[Unreleased]` → `[0.1.0] - <date>`, the release notes with the six Proofs
+due still open (`roadmap.md`, "Queued — non-critical").
 
 ### Half a day
 
-`/cto kit` then `/next kit`: phase 3, slice A. The defects first, then the blank-machine
-test on a machine without `~/.claude/` (a fresh user account is enough), every stop of the
-tester written in the log; the skill-name collision put to the user as a level 1 question
-before the website work starts.
+`/next kit`, slice B: the `/kit` page in `ThalesAndHisAiCtoClaude.com` (its own `CLAUDE.md`
+governs it; clone line first, zip second, same order as `INSTALL.md`), the tag `v0.1.0` on
+the user's go, `casp ship phase-3-release --log 26-10-03-006-phase-3-release-a` plus the
+slice B log, a `casp new discussion` as the next prompt. Optional, fifteen minutes on a fresh
+macOS user account: `INSTALL.md` steps 3 to 5 as written, which produces Proof due 6.
 
 ---
 
 ## Don't get distracted by
 
-- **The website page and the homepage download link**, phase 3: nothing to link to before v0.1.0.
+- **The website page before the collision answer and the changelog version**: it links a tag that does not exist yet.
 - **A `fleet.sh` launcher**: the `osascript` line in `/fleet` is the launcher until a real
   iTerm2 run says otherwise.
 - **French templates**: decided in session 004, `docs/en/a-project.md`: templates stay English, the owner asks for a translation in the first session; no `templates/<profile>/fr/`.

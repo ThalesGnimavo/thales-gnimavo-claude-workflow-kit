@@ -51,6 +51,21 @@ If you reach for anything BELOW Next-3, stop and check why.
   `.claude/skills/new-project/SKILL.md:59` — `git -C . rev-parse --abbrev-ref HEAD` prints `HEAD` and a fatal error on an unborn branch; the check that prints `main` is `git symbolic-ref --short HEAD`.
   `templates/*/CLAUDE.md` (six files, the `"{{first_goal}}".` line) — an answer that ends with a period renders as `week.".`; drop the period after the closing quote.
   `templates/software/CLAUDE.md:58` — `{{deploy}}` inside the pre-approved table renders as "unless `not deployed` names it as the normal path"; rephrase the row so that any answer reads.
+- Proofs due still open at v0.1.0 (consolidated by session 006 from logs 002 to 005; the
+  release notes list them as untested until each one has its observation):
+  1. `(cd my-projects/<x> && casp status)` without a permission prompt, from a fresh `claude`
+     at the kit root with a real project under `my-projects/` (the kit-root form was observed
+     twice).
+  2. Desktop notification on Linux (`notify-send`) and Windows (PowerShell balloon): only
+     macOS available.
+  3. Email channel of `/notify` end to end on a real SMTP account: design only.
+  4. `/fleet` opening an iTerm2 tab with the worker loaded: the `osascript` line has never run.
+  5. `/new-project` end to end through the skill text in an interactive session
+     (`AskUserQuestion` menu, one question at a time): every run so far was headless, with
+     the answers given in the message.
+  6. A first-time reader runs a day from `docs/<lang>/` alone, on a machine that never had
+     Claude Code: the blank-machine test, blocked in-session by the interactive `/login`
+     (session 006, "Verify").
 
 ---
 

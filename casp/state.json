@@ -1,8 +1,8 @@
 {
   "casp_version": "0.18.2",
   "updated_at": "2026-10-03",
-  "last_session_id": "26-10-03-005-phase-2-manual-and-examples-b",
-  "last_commit": "2eaa893",
+  "last_session_id": "26-10-03-006-phase-3-release-a",
+  "last_commit": "d6004b0",
   "current_phase": "phase-2-manual-and-examples",
   "next_phase": "phase-3-release",
   "next_prompt": "docs/plan/sessions/PHASE-3-RELEASE.md",
@@ -21,10 +21,10 @@
   ],
   "notes": "Bump every section at session close. Prompts live in docs/plan/sessions, logs in session-logs. Non-code project: no migrations. Run `casp check` before push.",
   "arbitration": {
-    "phase": "phase-2-manual-and-examples",
+    "phase": "phase-3-release",
     "shape": "solo",
     "decided_at": "2026-10-03",
-    "by": "chain-runner",
-    "reason": "headless chain: a fleet needs an explicit CEO go; documentation phase with serial dependencies (manual in one language before its translation, examples before the chapters that cite them); single gate casp check, nothing to isolate"
+    "by": "cto-kit-006",
+    "reason": "serial chain (defects fixed before the blank-machine test, test findings before the tag, tag before the website zip) with two level-1 stops (skill-collision decision, v0.1.0 go); the website page is another repository; single gate casp check, nothing a second writer could contribute without blocking on the same stops"
   }
 }
