@@ -106,3 +106,10 @@ casp:check · 17 PASS · 1 WARN · 0 FAIL
 
 (The single WARN is the state bump itself, committed right after this capture.)
 ```
+
+## Addendum (same day, after close)
+
+`projects/` renamed to `my-projects/` at the author's request: the name tells a first-time
+user that this folder is theirs and the rest is the kit. A bilingual `README.md` inside it
+states the one-place rule; `CLAUDE.md` `<workspace>` now says to propose moving a project
+that lives elsewhere on the machine. Commit after `7066599`.
