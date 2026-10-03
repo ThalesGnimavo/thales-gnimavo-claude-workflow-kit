@@ -1,0 +1,67 @@
+# Roadmap
+
+> **Updated** : 2026-10-03 (phase 0 shipped).
+> **Source of truth** : this file + `docs/plan/sessions/*.md` (status frontmatter) + `session-logs/`.
+> **Maintenance rule** : update at the end of every session that ships something or surfaces a blocker.
+
+---
+
+## Now — Next 3 to ship (in this order)
+
+| # | Item | Prompt | Status |
+|---|------|--------|--------|
+| 1 | Phase 1 — generalised skills (`casp`, `next`, `cto`, `chain`, `fleet`, `notify`, `audit-batch`, `humanizer`, generic `verify`) + `/new-project` with its six profile templates | `docs/plan/sessions/PHASE-1-SKILLS-AND-TEMPLATES.md` | queued |
+| 2 | Phase 2 — the manual (FR + EN), the two worked examples (job search, code project), the native-commands sheet verified against `/help` | (prompt not yet drafted) | not drafted |
+| 3 | Phase 3 — blank-machine test with a first-time user, `/kit` page on thalesandhisaictoclaude.com, homepage download link, release v0.1.0 | (prompt not yet drafted) | not drafted |
+
+If you reach for anything BELOW Next-3, stop and check why.
+
+---
+
+## In-flight (other agents working in parallel)
+
+| Item | Owner | Expected close |
+|------|-------|----------------|
+| _(none)_ | _(none)_ | _(none)_ |
+
+---
+
+## Blocked
+
+| Item | Blocker | Unblock action |
+|------|---------|----------------|
+| Public visibility of the GitHub repository | v0.1.0 not released; half-built kit must not be the first thing a developer sees | flip to public in phase 3 after the blank-machine test |
+
+---
+
+## Queued — launch-critical (do before public launch)
+
+1. Verify every native slash command named in `docs/*/native-commands.md` against the installed Claude Code `/help` output on release day.
+2. Blank-machine test: a user who has never opened Claude Code unzips, runs `claude`, and reaches a first project without reading anything but `INSTALL.md`.
+
+---
+
+## Queued — non-critical (post-launch deferable)
+
+- Spanish docs (the blog already publishes ES; the kit can follow).
+- Windows-native walkthrough for `/setup` with screenshots.
+- `fleet` without iTerm2 (tmux or plain multi-terminal fallback).
+
+---
+
+## Shipped this week
+
+| Date | Commit | Title | Notes |
+|------|--------|-------|-------|
+| 2026-10-03 | _(first commit)_ | Phase 0 — the kit boots | `CLAUDE.md`, `INSTALL.md`, `/setup`, `/learn`, cockpit |
+
+---
+
+## Phase scoreboard
+
+| Phase | Status | Session log | Notes |
+|-------|--------|-------------|-------|
+| Phase 0 — Skeleton, `CLAUDE.md`, `INSTALL.md`, `/setup`, `/learn`, cockpit | shipped | `session-logs/26-10-03-001-phase-0-skeleton.md` | the kit boots a first-time user |
+| Phase 1 — Skills and templates | queued | _(pending)_ | de-coupled from the author's private infrastructure |
+| Phase 2 — Manual and examples | queued | _(pending)_ | FR + EN from day one |
+| Phase 3 — Blank-machine test, website, v0.1.0 | queued | _(pending)_ | repo flips to public here |

@@ -1,0 +1,23 @@
+{
+  "casp_version": "0.18.2",
+  "updated_at": "2026-10-03",
+  "last_session_id": "pending",
+  "last_commit": "pending",
+  "current_phase": "phase-0-skeleton",
+  "next_phase": "phase-1-skills-and-templates",
+  "next_prompt": "docs/plan/sessions/PHASE-1-SKILLS-AND-TEMPLATES.md",
+  "phases_shipped": [
+    "phase-0-skeleton"
+  ],
+  "phases_queued": [
+    "phase-1-skills-and-templates",
+    "phase-2-manual-and-examples",
+    "phase-3-release"
+  ],
+  "phases_backlog": [
+    "spanish-docs",
+    "windows-walkthrough",
+    "fleet-without-iterm2"
+  ],
+  "notes": "Bump every section at session close. Prompts live in docs/plan/sessions, logs in session-logs. Non-code project: no migrations. Run `casp check` before push."
+}

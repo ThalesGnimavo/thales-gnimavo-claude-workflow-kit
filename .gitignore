@@ -1,0 +1,15 @@
+# Personal: who you are and what you have learned
+.kit/profile.json
+
+# Your projects are their own git repositories
+projects/*
+!projects/.gitkeep
+
+# Secrets
+.env
+.env.*
+
+# Tooling
+node_modules/
+.DS_Store
+*.log
