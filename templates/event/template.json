@@ -1,0 +1,18 @@
+{
+  "label": "Event",
+  "summary": "A conference, wedding, launch, workshop or trip with a date, a venue, vendors and a budget. One schedule, one budget, written confirmations for every commitment.",
+  "offer_first_to": ["non-developer"],
+  "first_phase": { "slug": "scope-and-budget", "title": "Scope, date, budget envelope, the list of decisions" },
+  "questions": [
+    { "key": "event_kind", "ask": "What the event is, in one line, and for how many people." },
+    { "key": "event_date", "ask": "The date, or the window if not fixed, and the place or city." },
+    { "key": "budget_envelope", "ask": "The budget envelope, with its currency, or 'not decided'." }
+  ],
+  "phases": [
+    { "id": "phase-1-scope-and-budget", "title": "Scope, date, budget envelope, decisions list" },
+    { "id": "phase-2-venue-and-vendors", "title": "Venue and vendors: shortlist, questions, written confirmations" },
+    { "id": "phase-3-guests-and-communication", "title": "Guest list, invitations prepared, replies tracked" },
+    { "id": "phase-4-run-of-show", "title": "The run-of-show: minute by minute, who does what" },
+    { "id": "phase-5-after", "title": "After: payments closed, thanks prepared, what to keep for next time" }
+  ]
+}

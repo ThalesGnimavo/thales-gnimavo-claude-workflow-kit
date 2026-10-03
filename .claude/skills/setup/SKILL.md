@@ -2,7 +2,7 @@
 name: setup
 description: First-run check of the machine. Verifies Claude Code, git and Node.js, installs the casp state tool, asks who the user is, and writes .kit/profile.json. Run automatically when the profile is missing; re-run any time with /setup.
 argument-hint: "[--check]"
-allowed-tools: Bash(uname:*), Bash(node --version), Bash(npm --version), Bash(git --version), Bash(claude --version), Bash(casp --version), Bash(git config:*), Read, Write, AskUserQuestion
+allowed-tools: Bash(uname:*), Bash(node --version), Bash(npm --version), Bash(git --version), Bash(claude --version), Bash(casp --version), Bash(jq --version), Bash(git config:*), Read, Write, AskUserQuestion
 ---
 
 # /setup — prepare the machine and the profile
@@ -29,12 +29,17 @@ git --version 2>/dev/null || echo "git: missing"
 node --version 2>/dev/null || echo "node: missing"
 npm --version 2>/dev/null || echo "npm: missing"
 casp --version 2>/dev/null || echo "casp: missing"
+jq --version 2>/dev/null || echo "jq: missing"
 ```
 
 Print a four-column table: tool, found version, required, status. Requirements:
-Claude Code any version; git any version; Node.js 22 or newer; casp 0.18 or newer.
+Claude Code any version; git any version; Node.js 22 or newer; casp 0.18 or newer; jq
+any version (the kit's commands read the cockpit with it).
 
 ## 2. Fix what is missing, in this order
+
+- **jq missing.** macOS: `brew install jq` (or https://jqlang.org/download/ without
+  Homebrew). Debian/Ubuntu: `sudo apt install jq`. Windows: `winget install jqlang.jq`.
 
 - **git missing.** macOS: `xcode-select --install` (opens a dialog; tell the user to accept).
   Debian/Ubuntu: `sudo apt install git`. Windows: https://git-scm.com/downloads/win, then
@@ -45,7 +50,7 @@ Claude Code any version; git any version; Node.js 22 or newer; casp 0.18 or newe
   terminal and `claude` must be restarted; say so and stop here.
 - **casp missing.** Say: "casp is the small tool that checks your project's state against
   git; it is open source, MIT, and sends nothing anywhere." Then:
-  `npm install -g @justethales/casp > /tmp/casp-install.log 2>&1; echo "exit=$?"`.
+  `mkdir -p .kit && npm install -g @justethales/casp > .kit/casp-install.log 2>&1; echo "exit=$?"`.
   If the exit code is not 0, print the last ten lines of the log. A line containing
   `EACCES` means the folder npm installs into is not writable by the user: offer
   `npx @justethales/casp` as the fallback (same tool, downloaded on each use) and record
@@ -94,8 +99,7 @@ This file is personal and ignored by git. Say so.
 Print the table from step 1 again with the final statuses, then exactly this choice:
 
 - `/learn` to be taught the method, chapter by chapter, about forty minutes in total.
-- `/new-project` to start a project now and learn by doing (ships with v0.1.0; if the
-  folder `.claude/skills/new-project/` is absent, say so and offer `/learn` only).
+- `/new-project <name>` to start a project now and learn by doing.
 
 Recommend `/learn` to a non-developer and to anyone who has never used Claude Code.
 Recommend `/new-project` to a developer who already uses Claude Code daily.

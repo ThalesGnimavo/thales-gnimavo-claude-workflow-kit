@@ -1,0 +1,17 @@
+{
+  "label": "Software",
+  "summary": "A codebase with a gate (tests, build, lint) that must pass before any push. Phases ship slices; nothing is published, deployed or paid without the owner.",
+  "offer_first_to": ["developer"],
+  "first_phase": { "slug": "walking-skeleton", "title": "Walking skeleton: the gate runs, one end-to-end path works" },
+  "questions": [
+    { "key": "stack", "ask": "The stack in one line: language, framework, database, runtime version." },
+    { "key": "gate_commands", "ask": "The commands that must pass before a push, one per line (for example: npm test, npm run build). Write 'none yet' if the project has none." },
+    { "key": "deploy", "ask": "How it reaches users: 'not deployed', 'manual', or 'automatic on push to <branch>' with the platform." }
+  ],
+  "phases": [
+    { "id": "phase-1-walking-skeleton", "title": "Walking skeleton: the gate runs, one end-to-end path works" },
+    { "id": "phase-2-first-feature", "title": "The first feature the owner named, behind the gate" },
+    { "id": "phase-3-hardening", "title": "Errors, edge cases, what the tests do not cover" },
+    { "id": "phase-4-release", "title": "Versioned release, changelog, the owner publishes" }
+  ]
+}

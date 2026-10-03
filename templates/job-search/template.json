@@ -1,0 +1,18 @@
+{
+  "label": "Job search",
+  "summary": "Applications, letters, follow-ups and interviews, tracked until a contract is signed. The assistant prepares everything and sends nothing.",
+  "offer_first_to": ["non-developer", "developer"],
+  "first_phase": { "slug": "application-kit", "title": "Application kit: masters, tracking file, content rules" },
+  "questions": [
+    { "key": "target_role", "ask": "Which role are you applying for? One line, the title as employers write it." },
+    { "key": "current_situation", "ask": "Your current situation in one line: employed (role, contract type), between jobs, student, other." },
+    { "key": "search_scope", "ask": "Where and how: city or remote, full-time or part-time, the sectors you want, the ones you refuse." }
+  ],
+  "phases": [
+    { "id": "phase-1-application-kit", "title": "Application kit: masters, tracking file, content rules" },
+    { "id": "phase-2-first-wave", "title": "First wave: one employer folder at a time, each sent by you before the next" },
+    { "id": "phase-3-offer-watch", "title": "Offer watch: boards and career pages filtered on the trade, folders prepared up to ready" },
+    { "id": "phase-4-follow-ups-and-interviews", "title": "Follow-ups at ten working days; one interview sheet per employer" },
+    { "id": "phase-5-offer-and-transition", "title": "Offer, negotiation, notice period; the cockpit closes on signature" }
+  ]
+}

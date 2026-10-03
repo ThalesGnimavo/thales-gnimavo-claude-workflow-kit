@@ -1,0 +1,17 @@
+{
+  "label": "Small business",
+  "summary": "Offers, prices, customers, quotes, invoices and recurring tasks of a small business. Nothing reaches a customer, a supplier, a bank or an administration without the owner.",
+  "offer_first_to": ["non-developer"],
+  "first_phase": { "slug": "operating-baseline", "title": "Operating baseline: what is sold, to whom, at what price, with which recurring tasks" },
+  "questions": [
+    { "key": "business_kind", "ask": "What the business sells, in one line, and since when." },
+    { "key": "customers", "ask": "Who buys: the kind of customer, roughly how many, how they pay." },
+    { "key": "existing_tools", "ask": "What you already use for quotes, invoices, accounting and bank, or 'nothing yet'." }
+  ],
+  "phases": [
+    { "id": "phase-1-operating-baseline", "title": "Operating baseline: offers, prices, customers, recurring tasks" },
+    { "id": "phase-2-quotes-and-invoices", "title": "Quote and invoice templates, numbering, the register" },
+    { "id": "phase-3-customer-follow-up", "title": "Customer file, follow-up rhythm, unpaid invoices" },
+    { "id": "phase-4-monthly-close", "title": "The monthly close: figures from the register, one page, every month" }
+  ]
+}

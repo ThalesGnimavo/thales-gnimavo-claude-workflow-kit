@@ -1,0 +1,18 @@
+{
+  "label": "Book or thesis",
+  "summary": "A long text with chapters, sources and a deadline. The assistant structures, questions and edits; the voice and the claims stay the author's.",
+  "offer_first_to": ["non-developer"],
+  "first_phase": { "slug": "outline-and-sources", "title": "Outline, sources on disk, writing rules" },
+  "questions": [
+    { "key": "working_title", "ask": "Working title, in one line." },
+    { "key": "text_kind", "ask": "What kind of text: book, thesis, dissertation, memoir, long report? And for whom, in a few words." },
+    { "key": "deadline", "ask": "The deadline, or 'none'. If there is a jury, a publisher or a supervisor, name the role." },
+    { "key": "target_length", "ask": "Target length, in words or pages, or 'unknown'." }
+  ],
+  "phases": [
+    { "id": "phase-1-outline-and-sources", "title": "Outline, sources on disk, writing rules" },
+    { "id": "phase-2-first-draft", "title": "First draft, one chapter per session, in order" },
+    { "id": "phase-3-revision", "title": "Revision: structure, then argument, then sentences" },
+    { "id": "phase-4-submission", "title": "Format, references, submission package" }
+  ]
+}

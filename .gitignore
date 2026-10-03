@@ -1,5 +1,5 @@
-# Personal: who you are and what you have learned
-.kit/profile.json
+# Personal: who you are, what you have learned, chain and fleet scratch files
+.kit/
 
 # Your projects are their own git repositories
 my-projects/*

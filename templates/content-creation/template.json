@@ -1,0 +1,17 @@
+{
+  "label": "Content creation",
+  "summary": "A newsletter, blog, channel or social presence with a rhythm. Briefs before drafts, sources behind facts, one calendar. The assistant drafts and never publishes.",
+  "offer_first_to": ["non-developer", "developer"],
+  "first_phase": { "slug": "editorial-baseline", "title": "Editorial baseline: audience, voice, pillars, calendar" },
+  "questions": [
+    { "key": "channels", "ask": "Where it is published: newsletter, blog, YouTube, LinkedIn, podcast, other. One line." },
+    { "key": "audience", "ask": "Who it is for, in one line, and what they should get from it." },
+    { "key": "cadence", "ask": "The rhythm you commit to: pieces per week or month, and the day if fixed." }
+  ],
+  "phases": [
+    { "id": "phase-1-editorial-baseline", "title": "Editorial baseline: audience, voice, pillars, calendar" },
+    { "id": "phase-2-first-pieces", "title": "First four pieces: brief, draft, review, ready" },
+    { "id": "phase-3-rhythm", "title": "The rhythm holds: one session per piece, calendar four weeks ahead" },
+    { "id": "phase-4-measure", "title": "What worked: measured per piece, pillars adjusted" }
+  ]
+}
