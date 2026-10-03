@@ -1,6 +1,6 @@
 # What I'm doing NOW
 
-> **Updated** : 2026-10-03 (phase 0 shipped).
+> **Updated** : 2026-10-03 (phase 1, slice A shipped; slice B queued).
 >
 > **Read this first.** The single most important file in casp/. "Where am I?" has a one-screen answer here.
 
@@ -8,10 +8,12 @@
 
 ## Current focus (1 sentence)
 
-**Phase 0 shipped: the kit boots.** Root `CLAUDE.md` (English, XML sections, rules only),
-bilingual `INSTALL.md` and `README.md`, project-level permissions, `/setup` (machine check,
-casp install, profile) and `/learn` (seven chapters with exercises) exist and are committed.
-Nothing creates a project yet: `/new-project`, `/day` and the generalised skills are phase 1.
+**Phase 1, slice A shipped: the generalised commands exist.** `/casp`, `/next`, `/cto`
+take `<project>` and run from the kit root; `/notify` sends on desktop, email or webhook
+through a script that is the only reader of `.env`; `/update` pulls fast-forward only;
+`/humanizer` is copied as is; `.claude/skills/README.md` fixes the frontmatter and path
+conventions. Still missing (slice B, same prompt): `/new-project`, the six templates,
+`/day`, `/verify`, `/chain`, `/fleet`, `/audit-batch`. Nothing creates a project yet.
 The GitHub repository is **private** until v0.1.0.
 
 ---
@@ -20,18 +22,18 @@ The GitHub repository is **private** until v0.1.0.
 
 ### 15 minutes
 
-Run `/setup --check` and `/learn status` from a fresh `claude` in this folder; confirm both
-read `.kit/profile.json` correctly and that `/learn 3` prints this cockpit via `casp status`.
+Run `/casp kit` and `/update --check` from a fresh `claude` in this folder; confirm both
+answer without a permission prompt (if one appears, note the exact command for slice B).
 
 ### 1 hour
 
-Phase 1, item 7 and 9: copy `/humanizer` as is, write `/update`, and set the frontmatter
-convention every other skill will follow.
+Phase 1, item 5: `/verify` (reads `## Gate` in the project's `CLAUDE.md`, background
+sub-agent, report under `session-logs/verification/`, hidden for `non-developer`).
 
 ### Half a day
 
-Phase 1, items 1 to 3: `/new-project` with the six templates and `/day --dry-run`. Prompt:
-`docs/plan/sessions/PHASE-1-SKILLS-AND-TEMPLATES.md`.
+Phase 1, items 1 to 3 (slice B): the six templates, `/new-project`, `/day --dry-run`.
+Prompt: `docs/plan/sessions/PHASE-1-SKILLS-AND-TEMPLATES.md`, arbitration already recorded.
 
 ---
 

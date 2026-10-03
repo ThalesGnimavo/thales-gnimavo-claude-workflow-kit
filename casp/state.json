@@ -1,8 +1,8 @@
 {
   "casp_version": "0.18.2",
   "updated_at": "2026-10-03",
-  "last_session_id": "26-10-03-001-phase-0-skeleton",
-  "last_commit": "1bde56a",
+  "last_session_id": "26-10-03-002-phase-1-skills-and-templates-a",
+  "last_commit": "ec07fcd",
   "current_phase": "phase-0-skeleton",
   "next_phase": "phase-1-skills-and-templates",
   "next_prompt": "docs/plan/sessions/PHASE-1-SKILLS-AND-TEMPLATES.md",
@@ -19,5 +19,12 @@
     "windows-walkthrough",
     "fleet-without-iterm2"
   ],
-  "notes": "Bump every section at session close. Prompts live in docs/plan/sessions, logs in session-logs. Non-code project: no migrations. Run `casp check` before push."
+  "notes": "Bump every section at session close. Prompts live in docs/plan/sessions, logs in session-logs. Non-code project: no migrations. Run `casp check` before push.",
+  "arbitration": {
+    "phase": "phase-1-skills-and-templates",
+    "shape": "solo",
+    "decided_at": "2026-10-03",
+    "by": "cto-26-10-03-002",
+    "reason": "serial dependencies (frontmatter convention before any copy, templates before /new-project, /next before /day) and nothing delivered yet for adversarial readers to contradict; single gate casp check is isolable but irrelevant"
+  }
 }
