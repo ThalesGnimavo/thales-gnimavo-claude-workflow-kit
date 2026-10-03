@@ -15,7 +15,7 @@ next_after: none
 >
 > **Why now.** Nothing else in the kit can be tested until it boots.
 
-**Project root.** `thales-gnimavo-workflow-kit/`
+**Project root.** `thales-gnimavo-claude-workflow-kit/`
 **Branch.** `main`.
 **Session log target.** `session-logs/26-10-03-001-phase-0-skeleton.md`.
 **Expected size.** half-day. No schema change. No migration. No UI mount.

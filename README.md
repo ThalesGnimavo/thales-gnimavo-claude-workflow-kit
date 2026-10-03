@@ -1,4 +1,4 @@
-# Thales Gnimavo Workflow Kit
+# Thales Gnimavo Claude Workflow Kit
 
 **Run any project, technical or not, with Claude Code as a working partner.**
 
@@ -48,7 +48,7 @@ human engineers; the method is documented at
 
 ---
 
-# Kit de workflow de Thales Gnimavo
+# Kit de workflow Claude de Thales Gnimavo
 
 **Pilotez n'importe quel projet, technique ou non, avec Claude Code comme partenaire de travail.**
 

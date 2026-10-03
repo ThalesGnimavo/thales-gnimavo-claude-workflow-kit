@@ -25,7 +25,7 @@ a project's recorded state matches reality; it runs on your machine and sends no
    Then open a new terminal and check with `claude --version`. If you prefer no terminal at
    all, the Claude Desktop app runs Claude Code too: https://claude.com/download.
 4. **Download the kit** from
-   https://github.com/ThalesGnimavo/thales-gnimavo-workflow-kit/releases/latest, unzip it,
+   https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/releases/latest, unzip it,
    and open a terminal inside the unzipped folder (macOS: drag the folder onto the Terminal
    icon; Windows: Shift + right-click in the folder, "Open PowerShell window here").
    Keep this folder: it becomes your workspace.
@@ -64,7 +64,7 @@ d'un projet correspond à la réalité ; il tourne sur votre machine et n'envoie
    pas de terminal du tout, l'application Claude Desktop fait aussi tourner Claude Code :
    https://claude.com/download.
 4. **Téléchargez le kit** depuis
-   https://github.com/ThalesGnimavo/thales-gnimavo-workflow-kit/releases/latest,
+   https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/releases/latest,
    décompressez-le, puis ouvrez un terminal dans le dossier décompressé (macOS : glissez le
    dossier sur l'icône Terminal ; Windows : Maj + clic droit dans le dossier, « Ouvrir une
    fenêtre PowerShell ici »). Gardez ce dossier : il devient votre espace de travail.

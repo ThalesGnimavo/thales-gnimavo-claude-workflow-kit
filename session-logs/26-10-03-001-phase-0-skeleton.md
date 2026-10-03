@@ -10,7 +10,7 @@ phase: phase-0-skeleton
 workflow documents and the private skills, one `claude-code-guide` sub-agent to verify the
 current Claude Code norms, and one read-only audit sub-agent before the commit.
 **State at session start :** empty folder. The plan (four phases, solo) was validated by
-the author with three amendments: slug `thales-gnimavo-workflow-kit`, owner `ThalesGnimavo`,
+the author with three amendments: slug `thales-gnimavo-claude-workflow-kit`, owner `ThalesGnimavo`,
 `CLAUDE.md` in English with XML sections.
 
 ## Scope shipped this session

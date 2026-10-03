@@ -1,4 +1,4 @@
-# Thales Gnimavo Workflow Kit
+# Thales Gnimavo Claude Workflow Kit
 
 A workspace for running any project, technical or not, with Claude Code as a working
 partner. Author: Juste "Thales" Gnimavo. Method proven on seven products shipped from

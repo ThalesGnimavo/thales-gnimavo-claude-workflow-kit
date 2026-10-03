@@ -18,7 +18,7 @@ next_after: phase-0-skeleton
 > **Why now.** Chapter 6 of `/learn` already names `/day --dry-run`; a user who finishes the
 > tour today hits a missing command.
 
-**Project root.** `thales-gnimavo-workflow-kit/`
+**Project root.** `thales-gnimavo-claude-workflow-kit/`
 **Branch.** `main` (single branch, push at end).
 **Session log target.** `session-logs/26-10-XX-NNN-phase-1-skills-and-templates.md`.
 **Expected size.** two sessions. No schema change. No migration. No UI mount.
