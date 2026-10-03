@@ -1,16 +1,16 @@
 {
   "casp_version": "0.18.2",
   "updated_at": "2026-10-03",
-  "last_session_id": "26-10-03-002-phase-1-skills-and-templates-a",
-  "last_commit": "ec07fcd",
-  "current_phase": "phase-0-skeleton",
-  "next_phase": "phase-1-skills-and-templates",
-  "next_prompt": "docs/plan/sessions/PHASE-1-SKILLS-AND-TEMPLATES.md",
+  "last_session_id": "26-10-03-003-phase-1-skills-and-templates-b",
+  "last_commit": "7cda8c9",
+  "current_phase": "phase-1-skills-and-templates",
+  "next_phase": "phase-2-manual-and-examples",
+  "next_prompt": "docs/plan/sessions/PHASE-2-MANUAL-AND-EXAMPLES.md",
   "phases_shipped": [
-    "phase-0-skeleton"
+    "phase-0-skeleton",
+    "phase-1-skills-and-templates"
   ],
   "phases_queued": [
-    "phase-1-skills-and-templates",
     "phase-2-manual-and-examples",
     "phase-3-release"
   ],

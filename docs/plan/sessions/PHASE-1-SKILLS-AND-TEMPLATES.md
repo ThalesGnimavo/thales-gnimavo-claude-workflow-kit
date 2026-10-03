@@ -1,7 +1,7 @@
 ---
-status: queued
+status: shipped
 session_id: pending
-session_log: pending
+session_log: session-logs/26-10-03-003-phase-1-skills-and-templates-b.md
 drafted_at: 2026-10-03
 next_after: phase-0-skeleton
 ---

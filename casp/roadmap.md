@@ -1,6 +1,6 @@
 # Roadmap
 
-> **Updated** : 2026-10-03 (phase 0 shipped).
+> **Updated** : 2026-10-03 (phase 1 shipped; phase 2 queued with its prompt).
 > **Source of truth** : this file + `docs/plan/sessions/*.md` (status frontmatter) + `session-logs/`.
 > **Maintenance rule** : update at the end of every session that ships something or surfaces a blocker.
 
@@ -10,9 +10,9 @@
 
 | # | Item | Prompt | Status |
 |---|------|--------|--------|
-| 1 | Phase 1 — generalised skills (`casp`, `next`, `cto`, `chain`, `fleet`, `notify`, `audit-batch`, `humanizer`, generic `verify`) + `/new-project` with its six profile templates | `docs/plan/sessions/PHASE-1-SKILLS-AND-TEMPLATES.md` | queued |
-| 2 | Phase 2 — the manual (FR + EN), the two worked examples (job search, code project), the native-commands sheet verified against `/help` | (prompt not yet drafted) | not drafted |
-| 3 | Phase 3 — blank-machine test with a first-time user, `/kit` page on thalesandhisaictoclaude.com, homepage download link, release v0.1.0 | (prompt not yet drafted) | not drafted |
+| 1 | Phase 2 — the manual (FR + EN), the two worked examples (job search, code project), the native-commands sheet verified against `/help` | `docs/plan/sessions/PHASE-2-MANUAL-AND-EXAMPLES.md` | queued |
+| 2 | Phase 3 — blank-machine test with a first-time user, `/kit` page on thalesandhisaictoclaude.com, homepage download link, release v0.1.0 | (prompt not yet drafted) | not drafted |
+| 3 | Follow-ups from phase 1: profile-aware wording in `/casp`, `/next`, `/update`, `/day`, `/new-project`; `/fleet` launch proven on iTerm2; permission-prompt Proof due | (inside phase 2 SHOULD) | not drafted |
 
 If you reach for anything BELOW Next-3, stop and check why.
 
@@ -62,6 +62,6 @@ If you reach for anything BELOW Next-3, stop and check why.
 | Phase | Status | Session log | Notes |
 |-------|--------|-------------|-------|
 | Phase 0 — Skeleton, `CLAUDE.md`, `INSTALL.md`, `/setup`, `/learn`, cockpit | shipped | `session-logs/26-10-03-001-phase-0-skeleton.md` | the kit boots a first-time user |
-| Phase 1 — Skills and templates | queued | _(pending)_ | de-coupled from the author's private infrastructure |
+| Phase 1 — Skills and templates | shipped | `session-logs/26-10-03-002-phase-1-skills-and-templates-a.md`, `session-logs/26-10-03-003-phase-1-skills-and-templates-b.md` | fourteen skills, six templates, de-coupled from the author's private infrastructure |
 | Phase 2 — Manual and examples | queued | _(pending)_ | FR + EN from day one |
 | Phase 3 — Blank-machine test, website, v0.1.0 | queued | _(pending)_ | repo flips to public here |
