@@ -10,7 +10,7 @@ Everyday commands, in the order you will meet them. Commands arrive release by r
 
 | Command | What it does |
 |---|---|
-| `/new-project` | Creates a project under `projects/` from a template for your kind of work, asks what it needs, writes the constitution and the cockpit, makes the first commit. |
+| `/new-project` | Creates a project under `my-projects/` from a template for your kind of work, asks what it needs, writes the constitution and the cockpit, makes the first commit. |
 | `/day` | Opens the day. One decision: one session or several, on which project. Shows each project's cockpit in one screen. |
 | `/next` | Inside a project: opens the queued session. Reads the constitution, the cockpit, the prompt; re-checks the prompt's claims; then works. |
 | `/casp` | "Where are we?" Reads the cockpit and answers. Proposes nothing, changes nothing. |

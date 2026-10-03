@@ -36,8 +36,10 @@ disobeying. Agreement is earned by arguments, never granted by default.
 </roles>
 
 <workspace>
-Every project lives in its own folder under `projects/`, with its own `CLAUDE.md`
+Every project lives in its own folder under `my-projects/`, with its own `CLAUDE.md`
 (constitution) and its own `casp/` cockpit (state). This root file applies to all of them.
+That folder is the one place for the user's work: when they mention a project that lives
+elsewhere on the machine, propose moving it here before working on it.
 Create a project with `/new-project`; never scatter files at the root. Always start `claude`
 from this folder, never from inside a project: the kit's commands and permissions load from
 here, and every command takes the project name as its argument. On a conflict between this
@@ -51,7 +53,7 @@ INSTALL.md         the five human steps before the first `claude`
 docs/{fr,en}/      the manual
 templates/         project constitutions and cockpits, one per profile
 examples/          two complete worked projects
-projects/          the user's projects (each one is its own git repository)
+my-projects/          the user's projects (each one is its own git repository)
 casp/              the kit's own cockpit (the kit is run with its own method)
 .kit/profile.json  who the user is, what they have learned; written by /setup
 ```

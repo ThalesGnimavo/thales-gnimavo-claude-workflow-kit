@@ -22,7 +22,7 @@ files, which Claude reads only when needed. Every line in `CLAUDE.md` is paid fo
 every single action, so a long constitution makes every session slower and vaguer.
 
 There are two layers. The file at the root of this kit applies to all your projects: it
-says how Claude behaves, how it decides, how it proves. Each project under `projects/`
+says how Claude behaves, how it decides, how it proves. Each project under `my-projects/`
 gets its own `CLAUDE.md` that says what that project is. The root rules win on conflicts.
 
 You will not write a constitution from a blank page. `/new-project` starts from a

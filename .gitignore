@@ -2,8 +2,8 @@
 .kit/profile.json
 
 # Your projects are their own git repositories
-projects/*
-!projects/.gitkeep
+my-projects/*
+!my-projects/README.md
 
 # Secrets
 .env

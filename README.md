@@ -22,7 +22,7 @@ v0.1.0. `CHANGELOG.md` is the authority on what exists.
 | `docs/en/`, `docs/fr/` | The manual: a day, a session, a project, the state protocol, native commands, pitfalls. |
 | `templates/` | A constitution and a cockpit for each profile: job search, book or thesis, small business, event, content creation, software project. |
 | `examples/` | Two complete projects, one non-technical (a job search), one technical. |
-| `projects/` | Yours. Each project is its own git repository with its own `CLAUDE.md` and `casp/`. |
+| `my-projects/` | Yours. Each project is its own git repository with its own `CLAUDE.md` and `casp/`. |
 
 ## The method in four lines
 
@@ -70,7 +70,7 @@ v0.1.0. `CHANGELOG.md` fait foi sur ce qui existe.
 | `docs/fr/`, `docs/en/` | Le manuel : une journée, une session, un projet, le protocole d'état, les commandes natives, les pièges. |
 | `templates/` | Une constitution et un cockpit par profil : recherche d'emploi, livre ou mémoire, petite entreprise, événement, création de contenu, projet logiciel. |
 | `examples/` | Deux projets complets, un non technique (une recherche d'emploi), un technique. |
-| `projects/` | Les vôtres. Chaque projet est son propre dépôt git avec son `CLAUDE.md` et son `casp/`. |
+| `my-projects/` | Les vôtres. Chaque projet est son propre dépôt git avec son `CLAUDE.md` et son `casp/`. |
 
 ## La méthode en quatre lignes
 

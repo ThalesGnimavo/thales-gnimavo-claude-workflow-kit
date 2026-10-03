@@ -41,7 +41,7 @@ next_after: phase-0-skeleton
 ## MUST
 
 1. `/new-project <name>`: asks for the profile template (job-search, book-or-thesis,
-   small-business, event, content-creation, software), creates `projects/<name>/` as its
+   small-business, event, content-creation, software), creates `my-projects/<name>/` as its
    own git repository, writes `CLAUDE.md` from `templates/<profile>/CLAUDE.md` with the
    user's answers, runs `casp init`, writes the first queued prompt from the user's
    `first_goal`, commits. `casp check` passes in the new project before the skill ends.
@@ -49,12 +49,12 @@ next_after: phase-0-skeleton
    pre-approved decisions, session ritual; adapted from the author's `MODELE-CLAUDE-MD.md`)
    and `first-prompt.md`. The job-search one follows the eight steps of the author's
    article "CASP for a job search".
-3. `/day [--dry-run]`: lists every project under `projects/` with its `casp status` in one
+3. `/day [--dry-run]`: lists every project under `my-projects/` with its `casp status` in one
    screen, shows blocked ones with their unblock action, asks the single decision (which
    project, one session or several), and opens `/next <project>` there. `--dry-run` prints
    and stops. Runs from the kit root; never asks the user to change folder.
 4. `/casp [project]`, `/next <project>`, `/cto <project>`: generalised copies that take the
-   project name and operate on `projects/<name>/` from the kit root (the kit's skills and
+   project name and operate on `my-projects/<name>/` from the kit root (the kit's skills and
    permissions load only when `claude` starts here; `CLAUDE.md` says so). `/next` keeps
    the arbitration gate and the `--solo "<reason>"` escape. `/cto` measures gate isolation only when the project's
    `CLAUDE.md` declares a gate.
@@ -65,7 +65,7 @@ next_after: phase-0-skeleton
    variables), sends the end-of-session summary, prints "not configured" otherwise.
    Desktop uses `osascript` on macOS, `notify-send` on Linux, PowerShell toast on Windows.
 7. `/humanizer`: copied as is (no coupling). `/update`: `git fetch` + `git pull --ff-only`
-   on the kit, refuses if the working tree is dirty, never touches `projects/`.
+   on the kit, refuses if the working tree is dirty, never touches `my-projects/`.
 8. `/chain`, `/fleet`, `/audit-batch`: generalised, each starting with a `<warning>` block
    on cost and prerequisites; `fleet` states macOS + iTerm2 up front.
 9. Every skill: frontmatter `name`, `description`, `argument-hint`, `allowed-tools`; no

@@ -23,7 +23,7 @@
       "Bash(rm -rf ~:*)",
       "Read(./.env)",
       "Read(./.env.*)",
-      "Read(./projects/**/.env)"
+      "Read(./my-projects/**/.env)"
     ]
   }
 }
