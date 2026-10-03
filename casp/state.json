@@ -21,10 +21,10 @@
   ],
   "notes": "Bump every section at session close. Prompts live in docs/plan/sessions, logs in session-logs. Non-code project: no migrations. Run `casp check` before push.",
   "arbitration": {
-    "phase": "phase-1-skills-and-templates",
+    "phase": "phase-2-manual-and-examples",
     "shape": "solo",
     "decided_at": "2026-10-03",
-    "by": "cto-26-10-03-002",
-    "reason": "serial dependencies (frontmatter convention before any copy, templates before /new-project, /next before /day) and nothing delivered yet for adversarial readers to contradict; single gate casp check is isolable but irrelevant"
+    "by": "chain-runner",
+    "reason": "headless chain: a fleet needs an explicit CEO go; documentation phase with serial dependencies (manual in one language before its translation, examples before the chapters that cite them); single gate casp check, nothing to isolate"
   }
 }
