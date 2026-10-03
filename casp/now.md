@@ -1,6 +1,6 @@
 # What I'm doing NOW
 
-> **Updated** : 2026-10-03 (phase 1 shipped; phase 2 queued).
+> **Updated** : 2026-10-03 (session 004: phase 2 slice A shipped, slice B queued).
 >
 > **Read this first.** The single most important file in casp/. "Where am I?" has a one-screen answer here.
 
@@ -8,14 +8,13 @@
 
 ## Current focus (1 sentence)
 
-**Phase 1 shipped: every command of the `<skills>` table exists and `/new-project`
-produces a project whose `casp check` passes on first run.** Fourteen skills under
-`.claude/skills/`, six profile templates under `templates/` driven by a `template.json`
-each, conventions in `.claude/skills/README.md` and `templates/README.md`. The kit can be
-run; it cannot yet be read: `docs/fr/`, `docs/en/` and `examples/` are empty. Phase 2
-(the manual and the two worked examples) is queued with its prompt; it needs its own
-arbitration (`/cto kit`) before `/next kit` starts it. The GitHub repository is
-**private** until v0.1.0.
+**Phase 2, slice A shipped: the English manual (`docs/en/`, five chapters plus a table of
+contents, every chapter ending with real output) and the two worked examples
+(`examples/job-search/`, `examples/software/`, two sessions each, `casp check` 0 inside
+each, frozen without their `.git`).** The phase stays queued for slice B: `docs/fr/`,
+`native-commands.md`, the profile-aware wording in `/casp`, `/next`, `/update`. Three
+template and skill defects met while playing the examples are listed in `roadmap.md`,
+not fixed (out of the prompt's scope). The GitHub repository is **private** until v0.1.0.
 
 ---
 
@@ -23,19 +22,21 @@ arbitration (`/cto kit`) before `/next kit` starts it. The GitHub repository is
 
 ### 15 minutes
 
-From a fresh `claude` in this folder: `/day --dry-run` (one table, no project yet),
-then `/casp kit`. Note any permission prompt with the exact command (Proof due since 002).
+Read `docs/en/a-day.md` as a first-time user would, then `examples/job-search/README.md`
+and follow its order for two files. Note every sentence that needs the author to be
+understood.
 
 ### 1 hour
 
-`/new-project demo-job --profile job-search` interactively, answer the questions, read
-the generated `CLAUDE.md`, then delete `my-projects/demo-job/`. This is the first
-end-to-end run through the skill text rather than the replayed procedure.
+Fix the three defects listed under "Queued — non-critical" in `roadmap.md` (two template
+lines, one skill line), re-run the `/new-project` proofs on a throwaway project.
 
 ### Half a day
 
-`/cto kit`, then `/next kit`: phase 2, slice A (the manual in one language and the two
-examples). Prompt: `docs/plan/sessions/PHASE-2-MANUAL-AND-EXAMPLES.md`.
+`/next kit`: phase 2, slice B. `docs/fr/` as a translation of `docs/en/` with every
+accent, `native-commands.md` verified against the installed `claude` (`claude --version`
+first), the profile-aware wording in `/casp`, `/next`, `/update`; then `casp ship
+phase-2-manual-and-examples` and `PHASE-3-RELEASE.md` drafted.
 
 ---
 
@@ -44,7 +45,7 @@ examples). Prompt: `docs/plan/sessions/PHASE-2-MANUAL-AND-EXAMPLES.md`.
 - **The website page and the homepage download link**, phase 3: nothing to link to before v0.1.0.
 - **A `fleet.sh` launcher**: the `osascript` line in `/fleet` is the launcher until a real
   iTerm2 run says otherwise.
-- **French templates**: decide in phase 2, with the manual, whether twelve more files are worth it.
+- **French templates**: decided in session 004, `docs/en/a-project.md`: templates stay English, the owner asks for a translation in the first session; no `templates/<profile>/fr/`.
 - **Spanish**, backlog: the blog publishes ES, the kit can follow once FR and EN are stable.
 
 ---

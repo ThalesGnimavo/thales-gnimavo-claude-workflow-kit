@@ -1,6 +1,6 @@
 # Roadmap
 
-> **Updated** : 2026-10-03 (phase 1 shipped; phase 2 queued with its prompt).
+> **Updated** : 2026-10-03 (phase 2 slice A shipped: English manual, two examples; slice B queued).
 > **Source of truth** : this file + `docs/plan/sessions/*.md` (status frontmatter) + `session-logs/`.
 > **Maintenance rule** : update at the end of every session that ships something or surfaces a blocker.
 
@@ -10,7 +10,7 @@
 
 | # | Item | Prompt | Status |
 |---|------|--------|--------|
-| 1 | Phase 2 — the manual (FR + EN), the two worked examples (job search, code project), the native-commands sheet verified against `/help` | `docs/plan/sessions/PHASE-2-MANUAL-AND-EXAMPLES.md` | queued |
+| 1 | Phase 2, slice B — the French manual, the native-commands sheet verified against `/help`, the profile-aware wording (slice A shipped on 2026-10-03: `docs/en/`, `examples/`) | `docs/plan/sessions/PHASE-2-MANUAL-AND-EXAMPLES.md` | queued |
 | 2 | Phase 3 — blank-machine test with a first-time user, `/kit` page on thalesandhisaictoclaude.com, homepage download link, release v0.1.0 | (prompt not yet drafted) | not drafted |
 | 3 | Follow-ups from phase 1: profile-aware wording in `/casp`, `/next`, `/update`, `/day`, `/new-project`; `/fleet` launch proven on iTerm2; permission-prompt Proof due | (inside phase 2 SHOULD) | not drafted |
 
@@ -46,6 +46,10 @@ If you reach for anything BELOW Next-3, stop and check why.
 - Spanish docs (the blog already publishes ES; the kit can follow).
 - Windows-native walkthrough for `/setup` with screenshots.
 - `fleet` without iTerm2 (tmux or plain multi-terminal fallback).
+- Defects met while playing the examples (session 004, level 2, one line each):
+  `.claude/skills/new-project/SKILL.md:59` — `git -C . rev-parse --abbrev-ref HEAD` prints `HEAD` and a fatal error on an unborn branch; the check that prints `main` is `git symbolic-ref --short HEAD`.
+  `templates/*/CLAUDE.md` (six files, the `"{{first_goal}}".` line) — an answer that ends with a period renders as `week.".`; drop the period after the closing quote.
+  `templates/software/CLAUDE.md:58` — `{{deploy}}` inside the pre-approved table renders as "unless `not deployed` names it as the normal path"; rephrase the row so that any answer reads.
 
 ---
 

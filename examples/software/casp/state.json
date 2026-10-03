@@ -2,7 +2,7 @@
   "casp_version": "0.18.2",
   "updated_at": "2026-10-03",
   "last_session_id": "26-10-03-002-first-feature",
-  "last_commit": "bd67317",
+  "last_commit": "5e61803",
   "current_phase": "phase-2-first-feature",
   "next_phase": "phase-3-hardening",
   "next_prompt": "docs/plan/sessions/PHASE-3-HARDENING.md",
