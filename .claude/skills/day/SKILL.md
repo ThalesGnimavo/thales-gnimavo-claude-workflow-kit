@@ -52,11 +52,12 @@ Decide each project's state, first match wins:
 Print one table, one row per project, and nothing above it but the date:
 
 ```
-Project          Phase              Next                         Last commit   State     (non-developer: Last save point)
+Project          Phase              Next                         Last commit   State
 <n>              <shipped>/<total>  <next_phase>                 <date>        ready
 ```
 
-Then, only if some rows are not `ready`, a short list "Blocked" with the action per
+For a `non-developer`, the fourth column is titled `Last save point`; the values are the
+same (a date). Then, only if some rows are not `ready`, a short list "Blocked" with the action per
 project, one line each, the command in backticks. A dirty working tree is a trailing note
 on the row ("N files not committed"; to a `non-developer`, "N files changed since the last
 save point"), not a blocker.

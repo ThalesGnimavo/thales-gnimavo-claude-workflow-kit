@@ -67,8 +67,8 @@ anglais avec des phrases en français à l'intérieur. C'est une décision, pas 
 - Claude vous répond dans la langue où vous écrivez, quelle que soit la langue de la
   constitution (`CLAUDE.md` racine, bloc `<language>`). La constitution est lue par Claude
   bien plus souvent que par vous.
-- Douze fichiers de plus à maintenir au niveau des fichiers anglais coûteraient à chaque
-  version plus qu'ils n'apporteraient à un utilisateur débutant.
+- Douze fichiers de plus à tenir à jour en même temps que les fichiers anglais coûteraient
+  à chaque version plus qu'ils n'apporteraient à un utilisateur débutant.
 
 Si vous voulez la constitution de votre projet en français, demandez-le dès la première
 session : « Traduis `CLAUDE.md` en français, en gardant les trois titres

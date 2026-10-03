@@ -31,8 +31,8 @@ listed here that `/help` does not show has been renamed or removed in your build
 |---|---|---|
 | `/compact` | Free up context by summarizing the conversation so far | when Claude says the context is getting long and the slice is not finished; it buys time, it does not replace a close (`pitfalls.md`, pitfall 3) |
 | `/context` | Visualize current context usage as a colored grid | before deciding between "finish the slice" and "close now" |
-| `/rewind` | aliases `/checkpoint`, `/undo`; restores code, conversation, or both, to an earlier user message | after a bad edit, before the next prompt; interactive only (`supportsNonInteractive: false` in the table) |
-| `/model` | Set model for this session (not persisted) | named in the root `CLAUDE.md`; choose once per session, the choice does not survive `/clear` |
+| `/rewind` | aliases `/checkpoint`, `/undo` in the table; no description there. This manual's wording: restores code, conversation, or both, to an earlier user message | after a bad edit, before the next prompt; interactive only (`supportsNonInteractive: false` in the table) |
+| `/model` | Set model for this session (not persisted) | named in the root `CLAUDE.md`; choose once per session, "not persisted" is the program's word |
 | `/schedule` | aliases `/routines`; create and manage scheduled remote Claude Code agents | not used by the kit's commands; `/chain` runs locally and needs no schedule |
 
 ## The ones a first week meets
@@ -49,7 +49,7 @@ listed here that `/help` does not show has been renamed or removed in your build
 | `/config` | Open settings |
 | `/mcp` | Manage MCP servers |
 | `/memory` | Edit CLAUDE.md files and memory settings |
-| `/skills` | List available skills (the kit's commands appear here) |
+| `/skills` | List available skills (the kit's commands should appear here; confirm below) |
 | `/doctor` (alias `/checkup`) | checks the installation; the description is computed at run time |
 | `/init` | writes a first `CLAUDE.md` for a folder; the kit's `/new-project` does this for you, from a template |
 | `/plan` | Enable plan mode or view the current session plan |
@@ -115,6 +115,10 @@ Not observed from this session; run the command and compare with the table.
   or `/context` are missing, note the version and read the release notes.
 - `/rewind`: open it once on a throwaway change to see the three choices (restore code,
   restore conversation, restore both) before you need it in anger.
+- `/skills`: the kit's commands (`/next`, `/casp`, `/day` …) must be in the list; if not,
+  `claude` was started from a folder other than the kit's.
+- `/model`: open it once to see which models your plan offers and what "not persisted"
+  means on your side (a new session starts on the default).
 - `/permissions`: check that the kit's `.claude/settings.json` rules appear under the
   allow list.
 - `/doctor`: run it once after `/setup`; it is the program's own check of the install.

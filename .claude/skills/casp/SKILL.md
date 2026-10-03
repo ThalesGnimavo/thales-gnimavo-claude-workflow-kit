@@ -77,7 +77,7 @@ git -C my-projects/<project> status --short | head -10
 Reply, thirty lines at most:
 
 ```
-<project> · <short-sha> on <branch>        (non-developer: <project> alone)
+<project> · <short-sha> on <branch>
 
 FOCUS
 <one sentence from now.md>
@@ -85,15 +85,19 @@ FOCUS
 BOARD
 <casp status, verbatim>
 
-LAST 5 COMMITS                             (non-developer: LAST 5 SAVE POINTS, date and message)
+LAST 5 COMMITS
 <verbatim>
 
-WORKING TREE                               (non-developer: SINCE THE LAST SAVE POINT)
+WORKING TREE
 <clean | N changed files>
 
 ASK ME
 /casp <project> status | check | where
 ```
+
+For a `non-developer`, the same layout with the header reduced to `<project>`, the block
+`LAST 5 COMMITS` titled `LAST 5 SAVE POINTS` (date and message), and `WORKING TREE` titled
+`SINCE THE LAST SAVE POINT`; the notes in this paragraph are never printed.
 
 If `now.md` was last updated before the last commit, add one line: "`now.md` may be
 stale: updated <date>, last commit <date>".
@@ -104,6 +108,7 @@ stale: updated <date>, last commit <date>".
 - Never paste a whole `now.md` or a whole prompt. The user can open them.
 - Bound every output: `head`, `sed -n`, a grep on the log. Never a whole file by reflex.
 - If the project has no `casp/`: say so once, then answer from `git log -10 --oneline`
+  (non-developer: `git log -10 --format='%cs %s'`, date and message, no hash)
   and the project's `CLAUDE.md` first twenty lines. Mention `/new-project` only if the
   folder is not a project at all.
 - When a value cannot be determined, say "could not determine X". Never fill it in.

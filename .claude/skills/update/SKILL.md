@@ -2,7 +2,7 @@
 name: update
 description: Bring the kit to its latest release with a fast-forward pull. Refuses when the kit's working tree has local changes, never touches my-projects/, and shows what changed in CHANGELOG.md. Also reports whether the casp state tool has a newer version.
 argument-hint: "[--check]"
-allowed-tools: Bash(git fetch:*), Bash(git status:*), Bash(git pull --ff-only:*), Bash(git rev-parse:*), Bash(git diff:*), Bash(git log:*), Bash(casp --version), Bash(npm view @justethales/casp version), AskUserQuestion
+allowed-tools: Read, Bash(git fetch:*), Bash(git status:*), Bash(git pull --ff-only:*), Bash(git rev-parse:*), Bash(git diff:*), Bash(git log:*), Bash(casp --version), Bash(npm view @justethales/casp version), AskUserQuestion
 ---
 
 # /update — bring the kit to its latest release
@@ -52,8 +52,9 @@ Never rebase, never merge, never reset from this command.
 
 Then report:
 
-- the commits pulled (verbatim, bounded; to a `non-developer`, introduce them as "the
-  changes pulled", the lines themselves stay as git prints them);
+- the commits pulled (verbatim, bounded); to a `non-developer`, "the changes pulled",
+  listed with `git log --format='%cs %s' "$OLD"..HEAD | head -20` (date and message, no
+  hash);
 - the `CHANGELOG.md` lines added, verbatim;
 - if `.claude/settings.json` or `CLAUDE.md` is among the changed files, one line saying the
   new rules apply from the next `claude` start, not this session.

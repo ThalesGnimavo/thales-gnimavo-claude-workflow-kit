@@ -123,7 +123,8 @@ a finished roadmap owes decisions (what next), and a decision is a session too.
 
 ### C. No `casp/`
 
-Show `git log --oneline -10` and any queued prompt under `docs/plan/sessions/`, and ask
+Show `git log --oneline -10` (non-developer: `git log -10 --format='%cs %s'`) and any
+queued prompt under `docs/plan/sessions/`, and ask
 what to start. Suggest `/new-project` only if the folder is not a project at all.
 
 ## During execution
