@@ -10,9 +10,9 @@
 
 | # | Item | Prompt | Status |
 |---|------|--------|--------|
-| 1 | Phase 2, slice B — the French manual, the native-commands sheet verified against `/help`, the profile-aware wording (slice A shipped on 2026-10-03: `docs/en/`, `examples/`) | `docs/plan/sessions/PHASE-2-MANUAL-AND-EXAMPLES.md` | queued |
-| 2 | Phase 3 — blank-machine test with a first-time user, `/kit` page on thalesandhisaictoclaude.com, homepage download link, release v0.1.0 | (prompt not yet drafted) | not drafted |
-| 3 | Follow-ups from phase 1: profile-aware wording in `/casp`, `/next`, `/update`, `/day`, `/new-project`; `/fleet` launch proven on iTerm2; permission-prompt Proof due | (inside phase 2 SHOULD) | not drafted |
+| 1 | Phase 3, slice A — the three known template and skill defects fixed with proofs, the blank-machine test on a machine without `~/.claude/`, the skill-name collision decided (level 1) | `docs/plan/sessions/PHASE-3-RELEASE.md` | queued |
+| 2 | Phase 3, slice B — `/kit` page on the author's website, homepage download link, `CHANGELOG.md` cut to `[0.1.0]`, tag `v0.1.0` on the user's go, repository flipped to public by the user | `docs/plan/sessions/PHASE-3-RELEASE.md` | queued |
+| 3 | After v0.1.0 — a `casp new discussion`: Spanish, Windows walkthrough, `/fleet` without iTerm2, the first outside feedback | (drafted at the close of phase 3) | not drafted |
 
 If you reach for anything BELOW Next-3, stop and check why.
 
@@ -31,12 +31,13 @@ If you reach for anything BELOW Next-3, stop and check why.
 | Item | Blocker | Unblock action |
 |------|---------|----------------|
 | Public visibility of the GitHub repository | v0.1.0 not released; half-built kit must not be the first thing a developer sees | flip to public in phase 3 after the blank-machine test |
+| Kit skills shadowed by user-level skills of the same name (`~/.claude/skills/casp` ran instead of `.claude/skills/casp` on `claude -p "/casp kit"`, observed 2026-10-03, session 005) | level 1: rename with a prefix, document in `INSTALL.md`, or accept; binds every later phase | the user decides in phase 3 slice A; the decision goes to `README.md` |
 
 ---
 
 ## Queued — launch-critical (do before public launch)
 
-1. Verify every native slash command named in `docs/*/native-commands.md` against the installed Claude Code `/help` output on release day.
+1. Re-check `docs/*/native-commands.md` against the Claude Code version installed on the test machine (`claude --version`, `/help` compared with the table); the sheet was checked against 2.1.288 from the binary's command table and three `claude -p` runs on 2026-10-03.
 2. Blank-machine test: a user who has never opened Claude Code unzips, runs `claude`, and reaches a first project without reading anything but `INSTALL.md`.
 
 ---
@@ -58,6 +59,8 @@ If you reach for anything BELOW Next-3, stop and check why.
 | Date | Commit | Title | Notes |
 |------|--------|-------|-------|
 | 2026-10-03 | _(first commit)_ | Phase 0 — the kit boots | `CLAUDE.md`, `INSTALL.md`, `/setup`, `/learn`, cockpit |
+| 2026-10-03 | `7cda8c9` | Phase 1 — skills and templates | fourteen skills, six templates |
+| 2026-10-03 | `5e61803`, `db4536f` | Phase 2 — manual and examples | `docs/en/`, `docs/fr/`, `examples/`, native-commands sheet, wording by profile |
 
 ---
 
@@ -67,5 +70,5 @@ If you reach for anything BELOW Next-3, stop and check why.
 |-------|--------|-------------|-------|
 | Phase 0 — Skeleton, `CLAUDE.md`, `INSTALL.md`, `/setup`, `/learn`, cockpit | shipped | `session-logs/26-10-03-001-phase-0-skeleton.md` | the kit boots a first-time user |
 | Phase 1 — Skills and templates | shipped | `session-logs/26-10-03-002-phase-1-skills-and-templates-a.md`, `session-logs/26-10-03-003-phase-1-skills-and-templates-b.md` | fourteen skills, six templates, de-coupled from the author's private infrastructure |
-| Phase 2 — Manual and examples | queued | _(pending)_ | FR + EN from day one |
+| Phase 2 — Manual and examples | shipped | `session-logs/26-10-03-004-phase-2-manual-and-examples-a.md`, `session-logs/26-10-03-005-phase-2-manual-and-examples-b.md` | EN then FR, six chapters each, two examples, native commands checked against 2.1.288 |
 | Phase 3 — Blank-machine test, website, v0.1.0 | queued | _(pending)_ | repo flips to public here |

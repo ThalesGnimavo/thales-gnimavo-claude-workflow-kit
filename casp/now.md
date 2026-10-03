@@ -1,6 +1,6 @@
 # What I'm doing NOW
 
-> **Updated** : 2026-10-03 (session 004: phase 2 slice A shipped, slice B queued).
+> **Updated** : 2026-10-03 (session 005: phase 2 shipped, phase 3 queued with its prompt).
 >
 > **Read this first.** The single most important file in casp/. "Where am I?" has a one-screen answer here.
 
@@ -8,13 +8,12 @@
 
 ## Current focus (1 sentence)
 
-**Phase 2, slice A shipped: the English manual (`docs/en/`, five chapters plus a table of
-contents, every chapter ending with real output) and the two worked examples
-(`examples/job-search/`, `examples/software/`, two sessions each, `casp check` 0 inside
-each, frozen without their `.git`).** The phase stays queued for slice B: `docs/fr/`,
-`native-commands.md`, the profile-aware wording in `/casp`, `/next`, `/update`. Three
-template and skill defects met while playing the examples are listed in `roadmap.md`,
-not fixed (out of the prompt's scope). The GitHub repository is **private** until v0.1.0.
+**Phase 2 shipped: the manual in English and in French (`docs/en/`, `docs/fr/`, six
+chapters each, native commands checked against Claude Code 2.1.288), the two worked
+examples, and the wording by profile in `/casp`, `/next`, `/update`, `/day`,
+`/new-project`.** Phase 3 is queued with its prompt: the three known defects fixed, the
+blank-machine test, the skill-name collision decided, then the website page and the
+`v0.1.0` tag on the user's go. The GitHub repository is **private** until v0.1.0.
 
 ---
 
@@ -22,21 +21,22 @@ not fixed (out of the prompt's scope). The GitHub repository is **private** unti
 
 ### 15 minutes
 
-Read `docs/en/a-day.md` as a first-time user would, then `examples/job-search/README.md`
-and follow its order for two files. Note every sentence that needs the author to be
-understood.
+Read `docs/fr/a-day.md` as a first-time French reader would, then `docs/fr/native-commands.md`;
+note every sentence that reads as a translation rather than as French. Compare one table
+with its English row.
 
 ### 1 hour
 
 Fix the three defects listed under "Queued — non-critical" in `roadmap.md` (two template
-lines, one skill line), re-run the `/new-project` proofs on a throwaway project.
+lines, one skill line), re-run the `/new-project` proofs on a throwaway project: it is
+MUST 1 of phase 3 and needs no decision.
 
 ### Half a day
 
-`/next kit`: phase 2, slice B. `docs/fr/` as a translation of `docs/en/` with every
-accent, `native-commands.md` verified against the installed `claude` (`claude --version`
-first), the profile-aware wording in `/casp`, `/next`, `/update`; then `casp ship
-phase-2-manual-and-examples` and `PHASE-3-RELEASE.md` drafted.
+`/cto kit` then `/next kit`: phase 3, slice A. The defects first, then the blank-machine
+test on a machine without `~/.claude/` (a fresh user account is enough), every stop of the
+tester written in the log; the skill-name collision put to the user as a level 1 question
+before the website work starts.
 
 ---
 
@@ -46,6 +46,7 @@ phase-2-manual-and-examples` and `PHASE-3-RELEASE.md` drafted.
 - **A `fleet.sh` launcher**: the `osascript` line in `/fleet` is the launcher until a real
   iTerm2 run says otherwise.
 - **French templates**: decided in session 004, `docs/en/a-project.md`: templates stay English, the owner asks for a translation in the first session; no `templates/<profile>/fr/`.
+- **Renaming the kit's skills now**: the collision with user-level skills is a level 1 decision for phase 3; nothing moves before the user answers.
 - **Spanish**, backlog: the blog publishes ES, the kit can follow once FR and EN are stable.
 
 ---
