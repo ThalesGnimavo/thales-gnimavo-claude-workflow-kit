@@ -79,5 +79,30 @@ progress in the profile. Chapter 3 reads the kit's own cockpit; chapter 6 dry-ru
 `casp check` at close (pasted verbatim):
 
 ```
-CASP_CHECK_PLACEHOLDER
+
+casp:check · 17 PASS · 1 WARN · 0 FAIL
+──────────────────────────────────────────────────────────────────────
+  PASS  state.json has 'updated_at'
+  PASS  state.json has 'last_session_id'
+  PASS  state.json has 'last_commit'
+  PASS  state.json has 'current_phase'
+  PASS  state.json has 'phases_shipped'
+  PASS  state.json has 'next_phase'
+  PASS  state.json has 'next_prompt'
+  PASS  the cockpit has shipped and still names something to start
+  PASS  next_prompt file exists · docs/plan/sessions/PHASE-1-SKILLS-AND-TEMPLATES.md
+  PASS  next_prompt status is 'queued' · docs/plan/sessions/PHASE-1-SKILLS-AND-TEMPLATES.md
+  PASS  last_session_id has a matching session log · session-logs/26-10-03-001-phase-0-skeleton.md
+  PASS  every shipped phase has a declaring session log · all 1 shipped phase(s)
+  PASS  last_commit matches HEAD · state=4d2a784 HEAD=4d2a784
+  PASS  phases_shipped is unique (1 entries)
+  PASS  all 2 prompt(s) have canonical status
+  PASS  every shipped prompt has a session_log pointer
+  PASS  the queued next_after chain is coherent · 1 chained prompt(s)
+  WARN  CASP-WORKTREE-001 casp / sessions / logs have uncommitted changes · M casp/state.json
+        → commit + push before the session closes
+
+⚠ 1 warning (not blocking).
+
+(The single WARN is the state bump itself, committed right after this capture.)
 ```
