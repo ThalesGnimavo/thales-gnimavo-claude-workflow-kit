@@ -5,6 +5,16 @@ Versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+- `/new-project` step 3: the branch check uses `git symbolic-ref --short HEAD`, which prints
+  `main` on an unborn branch; `rev-parse --abbrev-ref HEAD` printed `HEAD` and a fatal error.
+- Templates (six) and both examples: no period after the quoted first goal, which doubled
+  the user's own period.
+- `templates/software/CLAUDE.md`: the auto-deploy row no longer renders `{{deploy}}` inside
+  a sentence that read badly for `not deployed`.
+- `INSTALL.md` and `README.md`: `/new-project` exists; the sentence that deferred it to
+  v0.1.0 is gone.
+
 ### Added
 - `docs/fr/`: the manual in French, same six chapters and file names as `docs/en/`.
 - `docs/<lang>/native-commands.md`: the native Claude Code commands the manual relies on,
@@ -48,4 +58,7 @@ Versions follow [Semantic Versioning](https://semver.org/).
   `.git`; each `README.md` says what to look at and in which order.
 
 ### Changed
+- `INSTALL.md` step 4: `git clone` is the primary path (git is required by step 2 already);
+  the release zip stays as the fallback and says that `/update` cannot update a zip.
+- `/update`: refuses with a clear message when the kit folder is not a git repository.
 - `/setup`: the `casp` install log goes to `.kit/`, not `/tmp`; `.kit/` is ignored as a whole.

@@ -134,6 +134,12 @@ casp check
 
 ## Ce que vous devez voir
 
+Juste après `/new-project`, avant toute session, le compte est `14 PASS · 2 WARN · 0 FAIL`.
+Les deux WARN disent que `last_session_id` et `last_commit` valent encore `pending` : rien
+n'a encore été travaillé. Ils disparaissent à la clôture de la première session. Observé
+sur deux projets neufs le 2026-10-03 (session 006). Un projet qui a vécu quelques sessions
+montre ceci :
+
 `casp check` sur `examples/job-search/` le 2026-10-03, toutes les lignes :
 
 ```

@@ -126,6 +126,11 @@ casp check
 
 ## What you should see
 
+Right after `/new-project`, before any session, the count is `14 PASS · 2 WARN · 0 FAIL`.
+The two WARNs say that `last_session_id` and `last_commit` are still `pending`: nothing
+has been worked on yet. They go away when the first session closes. Observed on two fresh
+projects on 2026-10-03 (session 006). A project that has lived a few sessions shows this:
+
 `casp check` on `examples/job-search/` on 2026-10-03, every line:
 
 ```

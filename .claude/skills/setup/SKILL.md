@@ -94,6 +94,11 @@ Write `.kit/profile.json` (create `.kit/` if needed):
 
 This file is personal and ignored by git. Say so.
 
+When you read the profile back to the user, repeat their own answer ("you do not write
+software", « vous ne codez pas »), never a noun whose gender you would have to guess from
+the first name: a first name says nothing about the person. Observed in session 006:
+"non-développeuse" written from the name alone.
+
 ## 5. Close
 
 Print the table from step 1 again with the final statuses, then exactly this choice:
