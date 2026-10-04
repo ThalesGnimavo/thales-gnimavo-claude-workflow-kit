@@ -40,7 +40,7 @@ uname -s                                   # Darwin, or stop
 osascript -e 'id of application "iTerm2"'  # com.googlecode.iterm2, or stop
 pwd                                        # the kit root; workers start here too
 (cd my-projects/<project> && git -C . status --short | wc -l && casp check --quiet; echo "check=$?")
-jq -r '[.next_phase, (.arbitration.phase // "none"), (.arbitration.shape // "none"), (.arbitration.reason // "")] | @tsv' my-projects/<project>/thales:casp/state.json
+jq -r '[.next_phase, (.arbitration.phase // "none"), (.arbitration.shape // "none"), (.arbitration.reason // "")] | @tsv' my-projects/<project>/casp/state.json
 ```
 
 `/thales:cto <project>` is the command that decides a fleet: its estimate (number of sessions,

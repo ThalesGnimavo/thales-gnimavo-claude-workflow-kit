@@ -118,7 +118,8 @@ This flow runs in two situations:
   `INSTALL.md` step 3 in a session started outside the kit; Claude cloned the kit and was sent
   here by `INSTALL.md`, section "For Claude". No kit command is loaded yet. Run steps 1 to 6.
 - **First session inside the kit folder.** `.kit/profile.json` does not exist, so `<first_run>`
-  sent you here. Run steps 1, 2, 4, 5 and 7, and skip what already passes.
+  sent you here. Run steps 1, 2, 4, 5 and 7, and skip what already passes. Sections 1 to 5
+  above are the reference for each check; the numbered steps below are the order.
 
 Rules for the whole flow:
 
@@ -154,7 +155,9 @@ Steps, in order. Skip any step whose check already passes.
      terminal, `cd` into the kit, `claude`, then resume here.
 
 5. **casp, the state checker.** Install the command-line tool only:
-   `npm install -g @justethales/casp`, then check `casp --version`. Do not install casp's own
+   `npm install -g @justethales/casp`, then check `casp --version`. If it fails with `EACCES`,
+   use the fallback of section 2 (`npx @justethales/casp`, `"casp": "npx"` in the profile).
+   Do not install casp's own
    Claude Code skills: the kit ships its own versions under `/thales:`. If `~/.claude/skills/`
    contains `casp/`, `next/`, `fleet/` or `audit-batch/` without a `.claude-plugin/` folder,
    they carry the same names as casp's skills: they shadow nothing in the kit (its commands are
@@ -176,7 +179,7 @@ Steps, in order. Skip any step whose check already passes.
    - Check the kit's commands are loaded: `/thales:setup` is running, so they are. If a later
      check shows them missing, the session was not started from the kit root, or the folder
      was not trusted: say so and give the restart steps of step 6.
-   - Write `.kit/profile.json` (section 4 above).
+   - Ask the questions of section 3, then write `.kit/profile.json` (section 4 above).
    - Tell the person the three things to remember:
      - to come back another day: open a terminal, `cd thales-gnimavo-claude-workflow-kit`, `claude`;
      - `/thales:learn` to learn the method;

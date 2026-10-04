@@ -28,12 +28,12 @@ stop. Only `README.md`: same.
 For each `my-projects/<n>/`, from the kit root, bounded to a few lines each:
 
 ```bash
-test -f my-projects/<n>/thales:casp/state.json && jq -r '[.current_phase, .next_phase, (.next_prompt // "none"), (.arbitration.phase // "none"), (.phases_shipped | length), ((.phases_shipped + .phases_queued + .phases_backlog) | length)] | @tsv' my-projects/<n>/thales:casp/state.json
+test -f my-projects/<n>/casp/state.json && jq -r '[.current_phase, .next_phase, (.next_prompt // "none"), (.arbitration.phase // "none"), (.phases_shipped | length), ((.phases_shipped + .phases_queued + .phases_backlog) | length)] | @tsv' my-projects/<n>/casp/state.json
 (cd my-projects/<n> && casp check --quiet > /dev/null 2>&1; echo "check=$?")
 git -C my-projects/<n> log -1 --format='%cs %s' 2>/dev/null
 git -C my-projects/<n> status --short 2>/dev/null | wc -l
 test -f my-projects/<n>/<next_prompt> && sed -n '1,8p' my-projects/<n>/<next_prompt> | grep -E '^(status|kind):'
-sed -n '/^## Blocked/,/^## /p' my-projects/<n>/thales:casp/roadmap.md 2>/dev/null | grep -E '^\| [^-#]' | grep -v '_(none)_' | sed -n '2,2p'
+sed -n '/^## Blocked/,/^## /p' my-projects/<n>/casp/roadmap.md 2>/dev/null | grep -E '^\| [^-#]' | grep -v '_(none)_' | sed -n '2,2p'
 ```
 
 Decide each project's state, first match wins:

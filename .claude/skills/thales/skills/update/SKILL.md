@@ -20,7 +20,7 @@ git status --porcelain | head -20
 git fetch origin --quiet && git log --oneline HEAD..origin/main | head -20
 ```
 
-When the first line prints `no-git`, the kit was unzipped, not cloned (`INSTALL.md`, step 4):
+When the first line prints `no-git`, the kit folder was not cloned with git (an old download):
 say so, point to the releases page for a fresh download, and stop. Nothing below applies.
 
 Report in two lines: current commit, and either "already up to date" or "N commits behind".

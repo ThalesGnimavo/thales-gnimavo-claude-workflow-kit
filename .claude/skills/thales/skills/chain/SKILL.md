@@ -37,7 +37,7 @@ never a guess. The quality of one phase matters more than the number of phases.
 ```bash
 claude --version
 (cd my-projects/<project> && git -C . status --short | wc -l && casp check --quiet; echo "check=$?")
-jq -r '[.next_phase, (.next_prompt // "none"), (.arbitration.phase // "none")] | @tsv' my-projects/<project>/thales:casp/state.json
+jq -r '[.next_phase, (.next_prompt // "none"), (.arbitration.phase // "none")] | @tsv' my-projects/<project>/casp/state.json
 grep -c 'GATE' .claude/skills/thales/skills/next/SKILL.md
 mkdir -p .kit/chain
 ```

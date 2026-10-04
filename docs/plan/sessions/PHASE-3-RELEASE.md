@@ -44,7 +44,7 @@ this repository.
   unborn branch; `"{{first_goal}}".` doubles the period; `{{deploy}}` inside the software
   pre-approved table reads badly. Fix them first: the tester will meet all three.
 - **A fourth finding from session 005**: on a machine where `~/.claude/skills/` holds a
-  skill with the same name as a kit skill (`casp`, `next`, `cto` …), `claude -p "/thales:casp kit"`
+  skill with the same name as a kit skill (`casp`, `next`, `cto` …), `claude -p "/casp kit"`
   ran the user-level skill, not the kit's. A blank machine has no user-level skills, so the
   test is unaffected; a developer who already uses Claude Code is. Decide in this phase
   (level 1, the user decides: rename the kit's skills with a prefix, document the
@@ -86,7 +86,7 @@ this repository.
 3. The user-level skill collision decided (level 1) and the decision written in
    `README.md` under a heading a developer will find.
 4. A `/kit` page on the author's website and a download link on its homepage: the page
-   says what the kit is, who it is for, the five install steps, and links the zip of the
+   says what the kit is, who it is for, the three install steps, and links the clone line and the zip of the
    tagged release. The website is a separate repository; this prompt names the deliverable,
    the website's own `CLAUDE.md` governs the work.
 5. `CHANGELOG.md`: `[Unreleased]` becomes `[0.1.0] - <date>`; a new empty `[Unreleased]`.

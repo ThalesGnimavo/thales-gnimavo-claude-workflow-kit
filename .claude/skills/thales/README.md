@@ -1,6 +1,6 @@
 # The kit's skills — conventions
 
-One folder per command, `SKILL.md` inside. Claude Code loads them when `claude` starts from
+One folder per command under `skills/`, inside the `thales` plugin (`.claude-plugin/plugin.json`), loaded only from a trusted kit root, `SKILL.md` inside. Claude Code loads them when `claude` starts from
 the kit root. Every skill follows the rules below; a skill that breaks one is a bug.
 
 ## Frontmatter, four fields, in this order

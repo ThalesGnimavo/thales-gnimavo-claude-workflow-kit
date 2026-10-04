@@ -79,8 +79,8 @@ Then, from the kit root:
    ```bash
    jq --arg p "phase-1-<SLUG>" --arg f "docs/plan/sessions/PHASE-1-<UPPER>.md" --argjson b '<json array of the other phase ids>' \
       '.next_phase=$p | .next_prompt=$f | .phases_queued=[$p] | .phases_backlog=$b' \
-      my-projects/<name>/thales:casp/state.json > my-projects/<name>/thales:casp/state.tmp \
-   && mv my-projects/<name>/thales:casp/state.tmp my-projects/<name>/thales:casp/state.json
+      my-projects/<name>/casp/state.json > my-projects/<name>/casp/state.tmp \
+   && mv my-projects/<name>/casp/state.tmp my-projects/<name>/casp/state.json
    ```
 5. `casp/roadmap.md`, with `Edit`: the "Now — Next 3" table gets the first three phases
    from `template.json` (`phases[].title`; the first with its prompt path and `queued`,
