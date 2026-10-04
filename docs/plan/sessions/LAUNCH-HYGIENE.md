@@ -9,7 +9,7 @@ next_after: 26-10-04-003-after-v0-1-0
 # Session — launch-hygiene : the known defects fixed before the first outside reader
 
 > **Status : QUEUED.** Drafted at the close of the discussion session `26-10-04-003`
-> (decision record `docs/plan/decisions/2026-10-04-after-v0-1-0.md`, D1, D4, D6, D7).
+> (decision record `docs/plan/decisions/2026-10-04-after-v0-1-0.md`, D1, D4, D6, D7, D8).
 > One session. Opened by `/thales:cto kit` or `/thales:next kit --solo "<reason>"`.
 
 **Project root.** the kit root. Two companion repositories are edited in the same session,
@@ -60,9 +60,22 @@ are recorded in this session's kit log.
    kit's manual exists in English and French. Homepage: button and card use the language
    prefix like `pillarHref()`. The support line (D4) appears on the page.
 4. **Links on justegnimavo.com**: a second button in "Featured writing" to
-   `https://thalesandhisaictoclaude.com/kit?utm_source=justegnimavo.com&utm_medium=hero`,
+   `https://thalesandhisaictoclaude.com/go/kit?utm_source=justegnimavo.com&utm_medium=hero`,
    and a `workflow-kit` row in "Open source" to the GitHub repository, same markup as the
    casp row. Update `llms.txt` and the JSON-LD `sameAs` only if they list repositories.
+
+5. **Short links** (D8). Website: two entries in `src/lib/server/tracked-assets.ts`,
+   `kit` → `https://thalesandhisaictoclaude.com/kit` and `kit-zip` →
+   `https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/releases/latest/download/claude-workflow-kit.zip`
+   (absolute targets; the allowlist stays hardcoded, no request-supplied URL). The justegnimavo
+   button and the `/kit` page's zip button use the two slugs. Kit: build the asset from the tag
+   and upload it under the fixed name, then add the upload line to the release steps in
+   `CHANGELOG.md`'s header or `README.md`:
+
+   ```bash
+   git archive --format=zip --prefix=thales-gnimavo-claude-workflow-kit/ -o claude-workflow-kit.zip v0.1.0
+   gh release upload v0.1.0 claude-workflow-kit.zip
+   ```
 
 ### SHOULD HAVE — same session if time permits
 
@@ -94,6 +107,10 @@ are recorded in this session's kit log.
 - `curl -s https://justegnimavo.com | grep -c 'thalesandhisaictoclaude.com/kit'` ≥ 1 and
   `grep -c 'thales-gnimavo-claude-workflow-kit'` ≥ 1, after the deploy.
 - `gh issue create --web` is not run; `gh api repos/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/contents/.github/ISSUE_TEMPLATE` lists the two files after the push.
+- `curl -s -o /dev/null -w '%{http_code} %{redirect_url}' https://thalesandhisaictoclaude.com/go/kit`
+  prints `302` and the `/kit` URL; same for `/go/kit-zip` with the `releases/latest/download`
+  URL; then `curl -sL -o /tmp/kit.zip https://thalesandhisaictoclaude.com/go/kit-zip && unzip -l /tmp/kit.zip | tail -1`
+  shows the file count.
 - `casp check` exit 0.
 
 ## DO NOT
