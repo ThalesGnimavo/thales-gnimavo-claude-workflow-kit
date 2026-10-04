@@ -34,7 +34,7 @@ Proofs due still open (`roadmap.md`); `plugin.json` already says `0.1.0`.
 
 ### Half a day
 
-`/thales:next kit`, release slice: the `/kit` page in `ThalesAndHisAiCtoClaude.com` (three
+`/thales:cto kit` (arbitration, then it chains on `/thales:next kit`), release slice: the `/kit` page in `ThalesAndHisAiCtoClaude.com` (three
 steps, same order as `INSTALL.md`), the tag `v0.1.0` on the user's go,
 `casp ship phase-3-release --log <id>`, a `casp new discussion` as the next prompt. Then the
 casp repository's own brief (plugin `casp`, separate chantier).

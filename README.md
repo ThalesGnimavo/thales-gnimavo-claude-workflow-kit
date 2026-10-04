@@ -43,6 +43,16 @@ Claude Code with a paid Anthropic plan. Node.js 22 or newer, for the `casp` stat
 Claude: Claude installs it with you. Git: required by Claude Code on Windows only; on macOS
 Claude installs it if missing. See `INSTALL.md`.
 
+## Already using Claude Code with your own skills?
+
+Every kit command is a skill of a project plugin named `thales`, so it is typed
+`/thales:next`, `/thales:casp`, `/thales:setup` … A personal `/next` or `/casp` under
+`~/.claude/skills/` keeps working beside them: the plugin namespace is the one mechanism
+Claude Code guarantees against a name collision, with personal, project or native commands.
+Two conditions, both from the Claude Code documentation: start `claude` at the kit root,
+and accept the trust dialog for this folder. One reserved name: a personal
+`~/.claude/skills/thales/` with a manifest would shadow the kit's plugin.
+
 ## Author
 
 Juste "Thales" Gnimavo, founder of ZeroSuite, Abidjan. Seven products shipped with zero
@@ -94,6 +104,17 @@ livrés. Restent avant la v0.1.0 le test sur machine vierge et la page de télé
 Claude Code avec un abonnement Anthropic payant. Node.js 22 ou plus, pour l'outil d'état `casp`,
 pas pour Claude : Claude l'installe avec vous. Git : exigé par Claude Code sous Windows
 seulement ; sous macOS, Claude l'installe s'il manque. Voir `INSTALL.md`.
+
+## Vous utilisez déjà Claude Code avec vos propres skills ?
+
+Chaque commande du kit est un skill d'un plugin de projet nommé `thales` : on tape
+`/thales:next`, `/thales:casp`, `/thales:setup` … Un `/next` ou un `/casp` personnel sous
+`~/.claude/skills/` continue de fonctionner à côté : l'espace de noms de plugin est le seul
+mécanisme que Claude Code garantit contre une collision de noms, avec les commandes
+personnelles, de projet ou natives. Deux conditions, toutes deux issues de la documentation
+de Claude Code : lancer `claude` à la racine du kit, et accepter le dialogue de confiance
+pour ce dossier. Un nom réservé : un `~/.claude/skills/thales/` personnel avec manifeste
+masquerait le plugin du kit.
 
 ## Auteur
 

@@ -24,7 +24,7 @@ next_after: 26-10-03-005-phase-2-manual-and-examples-b
 **Project root.** `thales-gnimavo-claude-workflow-kit/`
 **Branch.** `main` (single branch, push at end).
 **Session log target.** `session-logs/26-10-XX-NNN-phase-3-release.md`.
-**Expected size.** Two sessions (A: the known defects fixed and the blank-machine test
+**Expected size.** Three sessions; two are done (see Status below). Originally: two sessions (A: the known defects fixed and the blank-machine test
 with its findings fixed; B: the website page, the download link, the tag). No schema
 change. No migration. The website page is the one UI mount, on the author's site, not in
 this repository.
@@ -32,6 +32,19 @@ this repository.
 ---
 
 ## CONTEXT — what changed since the parent prompt was drafted
+
+**Status on 2026-10-04 (sessions 006 and 007, commits `cd5642d` to `852c44b`).** MUST 1 is
+done with its proof (log 006). MUST 2 is done as far as a session can take it: the sandbox
+first-run test passed (`/thales:setup`, two `/thales:new-project`, `/thales:day`), the fully
+blank machine stays Proof due 6 (interactive `/login`). MUST 3 is done: the user decided a
+project plugin named `thales`, every command is `/thales:<name>`, `README.md` carries the
+decision under "Already using Claude Code with your own skills?", and seven proofs passed
+on a fresh clone with Claude Code 2.1.289 (log 007). `INSTALL.md` has three human steps,
+not five. **What remains is one session: the release slice**, MUST 4 to 6 and the SHOULD
+items, opened by `/thales:cto kit` and started by `/thales:next kit`. First thing to paste
+in its log: Proof due 7 of `roadmap.md` (`claude plugin list` and `/thales:next` from an
+interactive session at the kit root).
+
 
 - **Phase 2 shipped** (sessions 004 and 005, commits `5e61803` and `db4536f`). Six
   chapters in `docs/en/` and `docs/fr/`, `examples/job-search/` and `examples/software/`
