@@ -1,6 +1,6 @@
 # Roadmap
 
-> **Updated** : 2026-10-04 (session 010: launch hygiene shipped across three repositories, release asset attached to v0.1.0, Proof due 7 closed; Proof due 8 (justegnimavo.com deploy) open).
+> **Updated** : 2026-10-04 (session 011: distribution article drafted EN/FR/ES, not published; Proof due 8 closed; "Proof due 7 closed" corrected: it was the coexistence item, the blank-machine run stays open).
 > **Source of truth** : this file + `docs/plan/sessions/*.md` (status frontmatter) + `session-logs/`.
 > **Maintenance rule** : update at the end of every session that ships something or surfaces a blocker.
 
@@ -10,8 +10,8 @@
 
 | # | Item | Prompt | Status |
 |---|------|--------|--------|
-| 1 | Distribution article — "how we built the kit", EN/FR/ES on the blog, LinkedIn and newsletter drafts not posted (D2) | `docs/plan/sessions/DISTRIBUTION-ARTICLE.md` | queued |
-| 2 | First outside run — one reader, observed and logged raw; backlog re-ranked by it. Starts only when Proof due 8 is observed (launch hygiene shipped, Proof due 7 closed in session 010) | `docs/plan/sessions/FIRST-OUTSIDE-RUN.md` | queued |
+| 1 | Publish the distribution article (drafts in the blog, `caaaf66`): sync entries, sync, `llms.txt`, push; then post the LinkedIn draft. User's go | log `26-10-04-005` | waiting on the user |
+| 2 | First outside run — one reader, observed and logged raw; backlog re-ranked by it. Starts only when the blank-machine run (Proofs due, item 7) is observed; launch hygiene shipped, Proof due 8 closed in session 011 | `docs/plan/sessions/FIRST-OUTSIDE-RUN.md` | queued, blocked |
 | 3 | _(ranked by the outside run; candidates in "Queued — non-critical")_ | — | — |
 
 If you reach for anything BELOW Next-3, stop and check why.
@@ -30,7 +30,8 @@ If you reach for anything BELOW Next-3, stop and check why.
 
 | Item | Blocker | Unblock action |
 |------|---------|----------------|
-| First outside run (`FIRST-OUTSIDE-RUN.md`) | Proof due 8: the two links on justegnimavo.com not live yet (`35e2b67` pushed, deploy not observed) | `curl -s https://justegnimavo.com \| grep -c 'go/kit'` ≥ 1; if still 0, the user triggers that site's deploy |
+| First outside run (`FIRST-OUTSIDE-RUN.md`) | D1 criterion: the blank-machine run (Proofs due, item 7) not observed; session 010's "Proof due 7 closed" was the coexistence item | The user runs `INSTALL.md` on a clean macOS user account, logged; or restates D1's criterion (level 1) |
+| Distribution article published | The user's go (publish date, sync) | Read the drafts in the blog (`caaaf66`), then sync per log `26-10-04-005` |
 
 ---
 
@@ -66,8 +67,9 @@ If you reach for anything BELOW Next-3, stop and check why.
   7. A first-time reader runs a day from `docs/<lang>/` alone, on a machine that never had
      Claude Code: the blank-machine test, blocked in-session by the interactive `/login`
      (session 006, "Verify").
-  8. justegnimavo.com serves the two kit links (`go/kit`, `thales-gnimavo-claude-workflow-kit`):
-     `35e2b67` pushed 2026-10-04 09:57Z, not live at 10:08Z (log `26-10-04-004`).
+  8. ~~justegnimavo.com serves the two kit links~~ closed in session 011: `grep -c 'go/kit'` = 1 at
+     2026-10-04T10:18:45Z (log `26-10-04-005`).
+  9. post16 answers 200 on the three URLs: blocked by the user's publish go (log `26-10-04-005`).
 - Blog, older than session 010: `/go/[slug]` should look the slug up with `Object.hasOwn`
   (`__proto__` gives a 500); `/kit` pages missing from the sitemap; `app.html` sets
   `lang="en"` on French and Spanish pages; the `v0.1.0` badge on `/kit` is hardcoded.
@@ -84,6 +86,7 @@ If you reach for anything BELOW Next-3, stop and check why.
 | 2026-10-04 | `5c92d1a` | Phase 3 — v0.1.0 tagged, public, `/kit` live | logs 006, 26-10-04-001, 26-10-04-002 |
 | 2026-10-04 | `e2e871d` | Discussion after v0.1.0 — seven decisions, GitHub Release created | log 26-10-04-003 |
 | 2026-10-04 | `1c31a81` | Launch hygiene — issue template, support line, `/kit` EN/FR/ES, short links, release asset | log 26-10-04-004; blog `c9428db`…`01a60b4`, justegnimavo `35e2b67` (Proof due 8) |
+| 2026-10-04 | blog `caaaf66` | Distribution article — post16 EN/FR/ES drafts, LinkedIn and newsletter drafts, nothing published | log 26-10-04-005 |
 
 ---
 
@@ -96,6 +99,6 @@ If you reach for anything BELOW Next-3, stop and check why.
 | Phase 2 — Manual and examples | shipped | `session-logs/26-10-03-004-phase-2-manual-and-examples-a.md`, `session-logs/26-10-03-005-phase-2-manual-and-examples-b.md` | EN then FR, six chapters each, two examples, native commands checked against 2.1.288 |
 | Phase 3 — Blank-machine test, website, v0.1.0 | shipped | `session-logs/26-10-03-006-phase-3-release-a.md`, `26-10-04-001-phase-3-release-plugin.md`, `26-10-04-002-phase-3-release-b.md` | tag `v0.1.0`, public, `/kit` live, GitHub Release 2026-10-04 |
 | After v0.1.0 — discussion, seven decisions | shipped | `session-logs/26-10-04-003-after-v0-1-0.md` | `docs/plan/decisions/2026-10-04-after-v0-1-0.md` |
-| Launch hygiene | shipped | `session-logs/26-10-04-004-launch-hygiene.md` | D4, D6, D7, D8; Proof due 8 open |
-| Distribution article | queued | _(pending)_ | D2 |
+| Launch hygiene | shipped | `session-logs/26-10-04-004-launch-hygiene.md` | D4, D6, D7, D8; Proof due 8 closed in 011 |
+| Distribution article | shipped (drafts) | `session-logs/26-10-04-005-distribution-article.md` | D2; blog `caaaf66` not pushed, not synced |
 | First outside run | queued | _(pending)_ | D1 criterion |

@@ -1,6 +1,6 @@
 # What I'm doing NOW
 
-> **Updated** : 2026-10-04 (session 010: launch hygiene shipped across three repositories; Proof due 7 closed; Proof due 8 open).
+> **Updated** : 2026-10-04 (session 011: distribution article drafted in three languages, not published; Proof due 8 closed; the cockpit's "Proof due 7 closed" corrected: the blank-machine run is still open).
 >
 > **Read this first.** The single most important file in casp/. "Where am I?" has a one-screen answer here.
 
@@ -8,11 +8,10 @@
 
 ## Current focus (1 sentence)
 
-**A stuck reader now knows where to write, `/kit` speaks English, French and Spanish, and the
-short links `/go/kit` and `/go/kit-zip` resolve to the page and to the zip attached to the
-latest release;** what remains before the first outside run is one observation, Proof due 8
-(the two kit links on justegnimavo.com, pushed but not yet deployed). Next session: the
-distribution article (`DISTRIBUTION-ARTICLE.md`), drafts only, nothing posted.
+**The article "how we built the kit" exists as drafts in English, French and Spanish, with
+the LinkedIn and newsletter texts beside it, and nothing is published;** the first outside
+run waits on one observation, the blank-machine run (roadmap Proofs due, item 7), which no
+session has produced: the "Proof due 7" closed in session 010 was the coexistence item.
 
 ---
 
@@ -20,18 +19,20 @@ distribution article (`DISTRIBUTION-ARTICLE.md`), drafts only, nothing posted.
 
 ### 15 minutes
 
-Run `curl -s https://justegnimavo.com | grep -c 'go/kit'`. At 1 or more, record Proof due 8
-closed in the next log; at 0, the user triggers that site's deploy.
+Read `draft/ai-cto-duties/post16/how-we-built-the-claude-workflow-kit.md` in the blog
+repository (commit `caaaf66`, not pushed). Decide the publish date and give the go to
+publish, or the corrections.
 
 ### 1 hour
 
-`/thales:next kit` (arbitration first: `/thales:cto kit` or `--solo`): the English draft of the
-distribution article.
+On the go: add the three sync entries (log `26-10-04-005`, "Decisions"), run the sync,
+regenerate `llms.txt`, push the blog; then the three URLs at 200 close the article's Proof due.
 
 ### 1 day
 
-`DISTRIBUTION-ARTICLE.md` shipped in three languages on the blog as drafts, LinkedIn and
-newsletter texts written and not sent; then `FIRST-OUTSIDE-RUN.md` if Proof due 8 holds.
+The blank-machine run: the author follows `INSTALL.md` alone on a clean macOS user account,
+logged step by step; it closes item 7 and opens `FIRST-OUTSIDE-RUN.md`. Or restate D1's
+criterion (level 1, the user's).
 
 ---
 

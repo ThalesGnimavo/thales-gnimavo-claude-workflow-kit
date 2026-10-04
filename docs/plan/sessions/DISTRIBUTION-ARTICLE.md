@@ -1,7 +1,7 @@
 ---
-status: queued
-session_id: pending
-session_log: pending
+status: shipped
+session_id: 26-10-04-005
+session_log: session-logs/26-10-04-005-distribution-article.md
 drafted_at: 2026-10-04
 next_after: 26-10-04-004-launch-hygiene
 ---

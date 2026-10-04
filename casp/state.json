@@ -1,21 +1,21 @@
 {
   "casp_version": "0.18.2",
   "updated_at": "2026-10-04",
-  "last_session_id": "26-10-04-004-launch-hygiene",
-  "last_commit": "1c31a81",
-  "current_phase": "launch-hygiene",
-  "next_phase": "distribution-article",
-  "next_prompt": "docs/plan/sessions/DISTRIBUTION-ARTICLE.md",
+  "last_session_id": "26-10-04-005-distribution-article",
+  "last_commit": "eccae20",
+  "current_phase": "distribution-article",
+  "next_phase": "first-outside-run",
+  "next_prompt": "docs/plan/sessions/FIRST-OUTSIDE-RUN.md",
   "phases_shipped": [
     "phase-0-skeleton",
     "phase-1-skills-and-templates",
     "phase-2-manual-and-examples",
     "phase-3-release",
     "after-v0-1-0",
-    "launch-hygiene"
+    "launch-hygiene",
+    "distribution-article"
   ],
   "phases_queued": [
-    "distribution-article",
     "first-outside-run"
   ],
   "phases_backlog": [
@@ -25,10 +25,10 @@
   ],
   "notes": "Bump every section at session close. Prompts live in docs/plan/sessions, logs in session-logs. Non-code project: no migrations. Run `casp check` before push.",
   "arbitration": {
-    "phase": "launch-hygiene",
+    "phase": "distribution-article",
     "shape": "solo",
     "decided_at": "2026-10-04",
-    "by": "next --solo",
-    "reason": "one runnable slice; release upload, two site deploys and an in-session user answer need the user present; nothing to parallelise"
+    "by": "cto-kit",
+    "reason": "one article written sequentially (EN then FR/ES from it); publication is level 1 and needs the user present; no lane can be written down"
   }
 }

@@ -3,7 +3,7 @@ status: queued
 session_id: pending
 session_log: pending
 drafted_at: 2026-10-04
-next_after: distribution-article
+next_after: 26-10-04-005-distribution-article
 ---
 
 # Session — first-outside-run : one person who is not the author opens the kit, logged step by step
