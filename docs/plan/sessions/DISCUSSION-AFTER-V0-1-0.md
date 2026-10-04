@@ -1,8 +1,8 @@
 ---
-status: queued
+status: shipped
 kind: discussion
-session_id: pending
-session_log: pending
+session_id: 26-10-04-003-after-v0-1-0
+session_log: session-logs/26-10-04-003-after-v0-1-0.md
 drafted_at: 2026-10-04
 next_after: 26-10-04-002-phase-3-release-b
 ---

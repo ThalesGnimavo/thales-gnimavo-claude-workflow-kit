@@ -1,19 +1,22 @@
 {
   "casp_version": "0.18.2",
   "updated_at": "2026-10-04",
-  "last_session_id": "26-10-04-002-phase-3-release-b",
-  "last_commit": "cee3e44",
-  "current_phase": "phase-3-release",
-  "next_phase": "after-v0-1-0",
-  "next_prompt": "docs/plan/sessions/DISCUSSION-AFTER-V0-1-0.md",
+  "last_session_id": "26-10-04-003-after-v0-1-0",
+  "last_commit": "e2e871d",
+  "current_phase": "after-v0-1-0",
+  "next_phase": "launch-hygiene",
+  "next_prompt": "docs/plan/sessions/LAUNCH-HYGIENE.md",
   "phases_shipped": [
     "phase-0-skeleton",
     "phase-1-skills-and-templates",
     "phase-2-manual-and-examples",
-    "phase-3-release"
+    "phase-3-release",
+    "after-v0-1-0"
   ],
   "phases_queued": [
-    "after-v0-1-0"
+    "launch-hygiene",
+    "distribution-article",
+    "first-outside-run"
   ],
   "phases_backlog": [
     "spanish-docs",

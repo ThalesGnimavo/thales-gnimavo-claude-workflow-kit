@@ -1,6 +1,6 @@
 # Roadmap
 
-> **Updated** : 2026-10-04 (session 008: phase 3 shipped, v0.1.0 tagged and public, `/kit` live; next is the discussion prompt).
+> **Updated** : 2026-10-04 (session 009: discussion after v0.1.0 closed, seven decisions in `docs/plan/decisions/2026-10-04-after-v0-1-0.md`, GitHub Release v0.1.0 created; three prompts chained, launch hygiene first).
 > **Source of truth** : this file + `docs/plan/sessions/*.md` (status frontmatter) + `session-logs/`.
 > **Maintenance rule** : update at the end of every session that ships something or surfaces a blocker.
 
@@ -10,9 +10,9 @@
 
 | # | Item | Prompt | Status |
 |---|------|--------|--------|
-| 1 | Phase 3, slice A — the three known template and skill defects fixed with proofs, the blank-machine test on a machine without `~/.claude/`, the skill-name collision decided (level 1) | `docs/plan/sessions/PHASE-3-RELEASE.md` | done (sessions 006 and 007) |
-| 2 | Phase 3, slice B — `/kit` page on the author's website, homepage download link, `CHANGELOG.md` cut to `[0.1.0]`, tag `v0.1.0` on the user's go, repository flipped to public by the user | `docs/plan/sessions/PHASE-3-RELEASE.md` | done (session 008: tag `v0.1.0`, public, page live) |
-| 3 | After v0.1.0 — a `casp new discussion`: Spanish, Windows walkthrough, `/thales:fleet` without iTerm2, the first outside feedback | `docs/plan/sessions/DISCUSSION-AFTER-V0-1-0.md` | queued |
+| 1 | Launch hygiene — issue template and support line (D4), `/kit` in EN/FR/ES on the blog (D6), two links on justegnimavo.com (D7); no release, no invitation | `docs/plan/sessions/LAUNCH-HYGIENE.md` | queued |
+| 2 | Distribution article — "how we built the kit", EN/FR/ES on the blog, LinkedIn and newsletter drafts not posted (D2) | `docs/plan/sessions/DISTRIBUTION-ARTICLE.md` | queued |
+| 3 | First outside run — one reader, observed and logged raw; backlog re-ranked by it. Starts only when item 1 is shipped **and** Proof due 7 is observed (D1) | `docs/plan/sessions/FIRST-OUTSIDE-RUN.md` | queued |
 
 If you reach for anything BELOW Next-3, stop and check why.
 
@@ -30,14 +30,13 @@ If you reach for anything BELOW Next-3, stop and check why.
 
 | Item | Blocker | Unblock action |
 |------|---------|----------------|
-| Public visibility of the GitHub repository | v0.1.0 not released; half-built kit must not be the first thing a developer sees | flip to public in phase 3 after the blank-machine test |
-| Kit skills shadowed by user-level skills of the same name (`~/.claude/skills/thales/skills/casp` ran instead of `.claude/skills/thales/skills/casp` on `claude -p "/thales:casp kit"`, observed 2026-10-03, session 005) | level 1: rename with a prefix, document in `INSTALL.md`, or accept; binds every later phase | the user decides in phase 3 slice A; the decision goes to `README.md` |
+| First outside run (`FIRST-OUTSIDE-RUN.md`) | the user's criterion (D1): no known defect presented; `LAUNCH-HYGIENE.md` not shipped yet, Proof due 7 not observed | ship item 1; the user runs the blank-machine test or answers the two lines of proof 7 |
 
 ---
 
 ## Queued — launch-critical (do before public launch)
 
-1. Re-check `docs/*/native-commands.md` against the Claude Code version installed on the test machine (`claude --version`, `/help` compared with the table); the sheet was checked against 2.1.288 from the binary's command table and three `claude -p` runs on 2026-10-03.
+1. ~~Re-check `docs/*/native-commands.md`~~ done in session 008 against 2.1.289 (log `26-10-04-002`). Original wording: re-check against the Claude Code version installed on the test machine (`claude --version`, `/help` compared with the table); the sheet was checked against 2.1.288 from the binary's command table and three `claude -p` runs on 2026-10-03.
 2. Blank-machine test: a user who has never opened Claude Code unzips, runs `claude`, and reaches a first project without reading anything but `INSTALL.md`.
 
 ---
@@ -79,6 +78,8 @@ If you reach for anything BELOW Next-3, stop and check why.
 | 2026-10-03 | _(first commit)_ | Phase 0 — the kit boots | `CLAUDE.md`, `INSTALL.md`, `/thales:setup`, `/thales:learn`, cockpit |
 | 2026-10-03 | `7cda8c9` | Phase 1 — skills and templates | fourteen skills, six templates |
 | 2026-10-03 | `5e61803`, `db4536f` | Phase 2 — manual and examples | `docs/en/`, `docs/fr/`, `examples/`, native-commands sheet, wording by profile |
+| 2026-10-04 | `5c92d1a` | Phase 3 — v0.1.0 tagged, public, `/kit` live | logs 006, 26-10-04-001, 26-10-04-002 |
+| 2026-10-04 | `e2e871d` | Discussion after v0.1.0 — seven decisions, GitHub Release created | log 26-10-04-003 |
 
 ---
 
@@ -89,4 +90,8 @@ If you reach for anything BELOW Next-3, stop and check why.
 | Phase 0 — Skeleton, `CLAUDE.md`, `INSTALL.md`, `/thales:setup`, `/thales:learn`, cockpit | shipped | `session-logs/26-10-03-001-phase-0-skeleton.md` | the kit boots a first-time user |
 | Phase 1 — Skills and templates | shipped | `session-logs/26-10-03-002-phase-1-skills-and-templates-a.md`, `session-logs/26-10-03-003-phase-1-skills-and-templates-b.md` | fourteen skills, six templates, de-coupled from the author's private infrastructure |
 | Phase 2 — Manual and examples | shipped | `session-logs/26-10-03-004-phase-2-manual-and-examples-a.md`, `session-logs/26-10-03-005-phase-2-manual-and-examples-b.md` | EN then FR, six chapters each, two examples, native commands checked against 2.1.288 |
-| Phase 3 — Blank-machine test, website, v0.1.0 | queued | _(pending)_ | repo flips to public here |
+| Phase 3 — Blank-machine test, website, v0.1.0 | shipped | `session-logs/26-10-03-006-phase-3-release-a.md`, `26-10-04-001-phase-3-release-plugin.md`, `26-10-04-002-phase-3-release-b.md` | tag `v0.1.0`, public, `/kit` live, GitHub Release 2026-10-04 |
+| After v0.1.0 — discussion, seven decisions | shipped | `session-logs/26-10-04-003-after-v0-1-0.md` | `docs/plan/decisions/2026-10-04-after-v0-1-0.md` |
+| Launch hygiene | queued | _(pending)_ | D4, D6, D7 |
+| Distribution article | queued | _(pending)_ | D2 |
+| First outside run | queued | _(pending)_ | D1 criterion |
