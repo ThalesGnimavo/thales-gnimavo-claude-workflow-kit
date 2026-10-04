@@ -1,8 +1,8 @@
 {
   "casp_version": "0.18.2",
-  "updated_at": "2026-10-03",
-  "last_session_id": "26-10-03-006-phase-3-release-a",
-  "last_commit": "d6004b0",
+  "updated_at": "2026-10-04",
+  "last_session_id": "26-10-04-001-phase-3-release-plugin",
+  "last_commit": "ca1a8ab",
   "current_phase": "phase-2-manual-and-examples",
   "next_phase": "phase-3-release",
   "next_prompt": "docs/plan/sessions/PHASE-3-RELEASE.md",
