@@ -1,6 +1,6 @@
 # Roadmap
 
-> **Updated** : 2026-10-04 (session 009: discussion after v0.1.0 closed, seven decisions in `docs/plan/decisions/2026-10-04-after-v0-1-0.md`, GitHub Release v0.1.0 created; three prompts chained, launch hygiene first).
+> **Updated** : 2026-10-04 (session 010: launch hygiene shipped across three repositories, release asset attached to v0.1.0, Proof due 7 closed; Proof due 8 (justegnimavo.com deploy) open).
 > **Source of truth** : this file + `docs/plan/sessions/*.md` (status frontmatter) + `session-logs/`.
 > **Maintenance rule** : update at the end of every session that ships something or surfaces a blocker.
 
@@ -10,9 +10,9 @@
 
 | # | Item | Prompt | Status |
 |---|------|--------|--------|
-| 1 | Launch hygiene — issue template and support line (D4), `/kit` in EN/FR/ES on the blog (D6), two links on justegnimavo.com (D7); no release, no invitation | `docs/plan/sessions/LAUNCH-HYGIENE.md` | queued |
-| 2 | Distribution article — "how we built the kit", EN/FR/ES on the blog, LinkedIn and newsletter drafts not posted (D2) | `docs/plan/sessions/DISTRIBUTION-ARTICLE.md` | queued |
-| 3 | First outside run — one reader, observed and logged raw; backlog re-ranked by it. Starts only when item 1 is shipped **and** Proof due 7 is observed (D1) | `docs/plan/sessions/FIRST-OUTSIDE-RUN.md` | queued |
+| 1 | Distribution article — "how we built the kit", EN/FR/ES on the blog, LinkedIn and newsletter drafts not posted (D2) | `docs/plan/sessions/DISTRIBUTION-ARTICLE.md` | queued |
+| 2 | First outside run — one reader, observed and logged raw; backlog re-ranked by it. Starts only when Proof due 8 is observed (launch hygiene shipped, Proof due 7 closed in session 010) | `docs/plan/sessions/FIRST-OUTSIDE-RUN.md` | queued |
+| 3 | _(ranked by the outside run; candidates in "Queued — non-critical")_ | — | — |
 
 If you reach for anything BELOW Next-3, stop and check why.
 
@@ -30,7 +30,7 @@ If you reach for anything BELOW Next-3, stop and check why.
 
 | Item | Blocker | Unblock action |
 |------|---------|----------------|
-| First outside run (`FIRST-OUTSIDE-RUN.md`) | the user's criterion (D1): no known defect presented; `LAUNCH-HYGIENE.md` not shipped yet, Proof due 7 not observed | ship item 1; the user runs the blank-machine test or answers the two lines of proof 7 |
+| First outside run (`FIRST-OUTSIDE-RUN.md`) | Proof due 8: the two links on justegnimavo.com not live yet (`35e2b67` pushed, deploy not observed) | `curl -s https://justegnimavo.com \| grep -c 'go/kit'` ≥ 1; if still 0, the user triggers that site's deploy |
 
 ---
 
@@ -60,14 +60,17 @@ If you reach for anything BELOW Next-3, stop and check why.
   5. `/thales:new-project` end to end through the skill text in an interactive session
      (`AskUserQuestion` menu, one question at a time): every run so far was headless, with
      the answers given in the message.
-  6. Interactive coexistence on the author's machine: `claude plugin list` shows
-     `thales@skills-dir`, `/thales:next <example>` loads the kit's text, `/next` still loads
-     the personal skill (brief of 2026-10-04, §8.2); and whether `/thales:` commands are
-     available in the same session right after the first trust dialog, or only after
-     `/reload-plugins` (§8.4).
+  6. ~~Interactive coexistence~~ closed in session 010 (log `26-10-04-004`, "Proof due 7" there): the
+     user reports the personal `/next` still loads and the `/thales:` commands appear without
+     `/reload-plugins`.
   7. A first-time reader runs a day from `docs/<lang>/` alone, on a machine that never had
      Claude Code: the blank-machine test, blocked in-session by the interactive `/login`
      (session 006, "Verify").
+  8. justegnimavo.com serves the two kit links (`go/kit`, `thales-gnimavo-claude-workflow-kit`):
+     `35e2b67` pushed 2026-10-04 09:57Z, not live at 10:08Z (log `26-10-04-004`).
+- Blog, older than session 010: `/go/[slug]` should look the slug up with `Object.hasOwn`
+  (`__proto__` gives a 500); `/kit` pages missing from the sitemap; `app.html` sets
+  `lang="en"` on French and Spanish pages; the `v0.1.0` badge on `/kit` is hardcoded.
 
 ---
 
@@ -80,6 +83,7 @@ If you reach for anything BELOW Next-3, stop and check why.
 | 2026-10-03 | `5e61803`, `db4536f` | Phase 2 — manual and examples | `docs/en/`, `docs/fr/`, `examples/`, native-commands sheet, wording by profile |
 | 2026-10-04 | `5c92d1a` | Phase 3 — v0.1.0 tagged, public, `/kit` live | logs 006, 26-10-04-001, 26-10-04-002 |
 | 2026-10-04 | `e2e871d` | Discussion after v0.1.0 — seven decisions, GitHub Release created | log 26-10-04-003 |
+| 2026-10-04 | `1c31a81` | Launch hygiene — issue template, support line, `/kit` EN/FR/ES, short links, release asset | log 26-10-04-004; blog `c9428db`…`01a60b4`, justegnimavo `35e2b67` (Proof due 8) |
 
 ---
 
@@ -92,6 +96,6 @@ If you reach for anything BELOW Next-3, stop and check why.
 | Phase 2 — Manual and examples | shipped | `session-logs/26-10-03-004-phase-2-manual-and-examples-a.md`, `session-logs/26-10-03-005-phase-2-manual-and-examples-b.md` | EN then FR, six chapters each, two examples, native commands checked against 2.1.288 |
 | Phase 3 — Blank-machine test, website, v0.1.0 | shipped | `session-logs/26-10-03-006-phase-3-release-a.md`, `26-10-04-001-phase-3-release-plugin.md`, `26-10-04-002-phase-3-release-b.md` | tag `v0.1.0`, public, `/kit` live, GitHub Release 2026-10-04 |
 | After v0.1.0 — discussion, seven decisions | shipped | `session-logs/26-10-04-003-after-v0-1-0.md` | `docs/plan/decisions/2026-10-04-after-v0-1-0.md` |
-| Launch hygiene | queued | _(pending)_ | D4, D6, D7 |
+| Launch hygiene | shipped | `session-logs/26-10-04-004-launch-hygiene.md` | D4, D6, D7, D8; Proof due 8 open |
 | Distribution article | queued | _(pending)_ | D2 |
 | First outside run | queued | _(pending)_ | D1 criterion |

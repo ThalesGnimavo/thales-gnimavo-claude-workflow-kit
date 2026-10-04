@@ -1,20 +1,20 @@
 {
   "casp_version": "0.18.2",
   "updated_at": "2026-10-04",
-  "last_session_id": "26-10-04-003-after-v0-1-0",
-  "last_commit": "58105d9",
-  "current_phase": "after-v0-1-0",
-  "next_phase": "launch-hygiene",
-  "next_prompt": "docs/plan/sessions/LAUNCH-HYGIENE.md",
+  "last_session_id": "26-10-04-004-launch-hygiene",
+  "last_commit": "1c31a81",
+  "current_phase": "launch-hygiene",
+  "next_phase": "distribution-article",
+  "next_prompt": "docs/plan/sessions/DISTRIBUTION-ARTICLE.md",
   "phases_shipped": [
     "phase-0-skeleton",
     "phase-1-skills-and-templates",
     "phase-2-manual-and-examples",
     "phase-3-release",
-    "after-v0-1-0"
+    "after-v0-1-0",
+    "launch-hygiene"
   ],
   "phases_queued": [
-    "launch-hygiene",
     "distribution-article",
     "first-outside-run"
   ],
@@ -25,10 +25,10 @@
   ],
   "notes": "Bump every section at session close. Prompts live in docs/plan/sessions, logs in session-logs. Non-code project: no migrations. Run `casp check` before push.",
   "arbitration": {
-    "phase": "after-v0-1-0",
+    "phase": "launch-hygiene",
     "shape": "solo",
     "decided_at": "2026-10-04",
-    "by": "cto-kit-008",
-    "reason": "discussion prompt: needs the user in the session, nothing to parallelise"
+    "by": "next --solo",
+    "reason": "one runnable slice; release upload, two site deploys and an in-session user answer need the user present; nothing to parallelise"
   }
 }

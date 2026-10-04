@@ -3,7 +3,7 @@ status: queued
 session_id: pending
 session_log: pending
 drafted_at: 2026-10-04
-next_after: launch-hygiene
+next_after: 26-10-04-004-launch-hygiene
 ---
 
 # Session — distribution-article : "how we built the kit", the one page the first reader comes from

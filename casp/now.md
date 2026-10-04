@@ -1,6 +1,6 @@
 # What I'm doing NOW
 
-> **Updated** : 2026-10-04 (session 009: the discussion after v0.1.0 is closed, seven decisions recorded, GitHub Release v0.1.0 created; three prompts chained, launch hygiene first).
+> **Updated** : 2026-10-04 (session 010: launch hygiene shipped across three repositories; Proof due 7 closed; Proof due 8 open).
 >
 > **Read this first.** The single most important file in casp/. "Where am I?" has a one-screen answer here.
 
@@ -8,12 +8,11 @@
 
 ## Current focus (1 sentence)
 
-**v0.1.0 exists outside (tag, public repository, GitHub Release with the changelog as notes,
-`/kit` page live) and the roadmap after it is decided, not guessed:** launch hygiene first
-(`LAUNCH-HYGIENE.md`: issue template and support line, `/kit` in EN/FR/ES, two links on
-justegnimavo.com), then the distribution article, then the first outside run. The user's
-criterion for inviting anyone: hygiene shipped **and** Proof due 7 observed. Record of the
-seven decisions and their reasons: `docs/plan/decisions/2026-10-04-after-v0-1-0.md`.
+**A stuck reader now knows where to write, `/kit` speaks English, French and Spanish, and the
+short links `/go/kit` and `/go/kit-zip` resolve to the page and to the zip attached to the
+latest release;** what remains before the first outside run is one observation, Proof due 8
+(the two kit links on justegnimavo.com, pushed but not yet deployed). Next session: the
+distribution article (`DISTRIBUTION-ARTICLE.md`), drafts only, nothing posted.
 
 ---
 
@@ -21,21 +20,18 @@ seven decisions and their reasons: `docs/plan/decisions/2026-10-04-after-v0-1-0.
 
 ### 15 minutes
 
-Answer the two lines left in Proof due 7 (does `/next` still load the personal skill in the
-same interactive session; do `/thales:` commands appear before `/reload-plugins`) and paste
-them in the next log. Or write the issue template alone (`LAUNCH-HYGIENE.md`, MUST 1): two
-fields, plain words.
+Run `curl -s https://justegnimavo.com | grep -c 'go/kit'`. At 1 or more, record Proof due 8
+closed in the next log; at 0, the user triggers that site's deploy.
 
 ### 1 hour
 
-`/thales:next kit`: the kit half of `LAUNCH-HYGIENE.md` (template, support lines, changelog)
-committed, then the website half started with the i18n keys first.
+`/thales:next kit` (arbitration first: `/thales:cto kit` or `--solo`): the English draft of the
+distribution article.
 
 ### 1 day
 
-`LAUNCH-HYGIENE.md` shipped across the three repositories with its proofs (the French and
-Spanish `<title>` of `/fr/kit` and `/es/kit`, the two links on justegnimavo.com found by
-curl), then `DISTRIBUTION-ARTICLE.md` opened.
+`DISTRIBUTION-ARTICLE.md` shipped in three languages on the blog as drafts, LinkedIn and
+newsletter texts written and not sent; then `FIRST-OUTSIDE-RUN.md` if Proof due 8 holds.
 
 ---
 
@@ -47,11 +43,12 @@ curl), then `DISTRIBUTION-ARTICLE.md` opened.
   outside run ranks them (D1).
 - **Inviting a reader early** because the page looks ready: the criterion is written, apply
   it.
-- **Editing the English text of `/kit`** while moving it to i18n keys: translate, do not
-  rewrite.
+- **Fixing the blog's older defects** (`Object.hasOwn` in `/go`, sitemap, `app.html` lang)
+  inside the article session: they are in the roadmap, not in its scope.
 
 ---
 
 ## Open proofs (see `roadmap.md`, "Proofs due still open at v0.1.0")
 
-2 to 7. The first outside run can close several; proof 7 is the gate of that run.
+2 to 6 and 8. Proof 7 closed in session 010. Proof 8 (justegnimavo.com deploy) is the gate
+of the first outside run; that run can close several of the others.

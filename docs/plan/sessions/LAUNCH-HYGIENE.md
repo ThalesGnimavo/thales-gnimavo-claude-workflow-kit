@@ -1,7 +1,7 @@
 ---
-status: queued
+status: shipped
 session_id: pending
-session_log: pending
+session_log: session-logs/26-10-04-004-launch-hygiene.md
 drafted_at: 2026-10-04
 next_after: 26-10-04-003-after-v0-1-0
 ---
