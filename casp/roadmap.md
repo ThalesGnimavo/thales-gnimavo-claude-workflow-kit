@@ -1,6 +1,6 @@
 # Roadmap
 
-> **Updated** : 2026-10-04 (session 008: release slice, v0.1.0 cut; the three defects of session 004 are fixed since session 006).
+> **Updated** : 2026-10-04 (session 008: phase 3 shipped, v0.1.0 tagged and public, `/kit` live; next is the discussion prompt).
 > **Source of truth** : this file + `docs/plan/sessions/*.md` (status frontmatter) + `session-logs/`.
 > **Maintenance rule** : update at the end of every session that ships something or surfaces a blocker.
 
@@ -11,8 +11,8 @@
 | # | Item | Prompt | Status |
 |---|------|--------|--------|
 | 1 | Phase 3, slice A — the three known template and skill defects fixed with proofs, the blank-machine test on a machine without `~/.claude/`, the skill-name collision decided (level 1) | `docs/plan/sessions/PHASE-3-RELEASE.md` | done (sessions 006 and 007) |
-| 2 | Phase 3, slice B — `/kit` page on the author's website, homepage download link, `CHANGELOG.md` cut to `[0.1.0]`, tag `v0.1.0` on the user's go, repository flipped to public by the user | `docs/plan/sessions/PHASE-3-RELEASE.md` | in progress (session 008) |
-| 3 | After v0.1.0 — a `casp new discussion`: Spanish, Windows walkthrough, `/thales:fleet` without iTerm2, the first outside feedback | (drafted at the close of phase 3) | not drafted |
+| 2 | Phase 3, slice B — `/kit` page on the author's website, homepage download link, `CHANGELOG.md` cut to `[0.1.0]`, tag `v0.1.0` on the user's go, repository flipped to public by the user | `docs/plan/sessions/PHASE-3-RELEASE.md` | done (session 008: tag `v0.1.0`, public, page live) |
+| 3 | After v0.1.0 — a `casp new discussion`: Spanish, Windows walkthrough, `/thales:fleet` without iTerm2, the first outside feedback | `docs/plan/sessions/DISCUSSION-AFTER-V0-1-0.md` | queued |
 
 If you reach for anything BELOW Next-3, stop and check why.
 

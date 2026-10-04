@@ -1,7 +1,7 @@
 ---
-status: queued
+status: shipped
 session_id: pending
-session_log: pending
+session_log: session-logs/26-10-04-002-phase-3-release-b.md
 drafted_at: 2026-10-03
 next_after: 26-10-03-005-phase-2-manual-and-examples-b
 ---

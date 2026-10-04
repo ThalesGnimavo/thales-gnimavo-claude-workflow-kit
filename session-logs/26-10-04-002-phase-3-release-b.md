@@ -1,9 +1,8 @@
 ---
-# No `phase:` key on purpose: phase-3-release is not finished. The tag, the public flip and
-# the website push are the user's; the phase ships in the session that observes them.
+phase: phase-3-release
 ---
 
-# 26-10-04-002 — phase-3-release, slice B : v0.1.0 cut, the `/kit` page written, the tag left to the user
+# 26-10-04-002 — phase-3-release, slice B : v0.1.0 tagged and public, the `/kit` page live
 
 **Session prompt :** `docs/plan/sessions/PHASE-3-RELEASE.md`, MUST 4 and 5 and the three SHOULD items.
 **Previous session end :** `db43448` (session 007: README carries the plugin decision, prompt marks MUST 1 to 3 done).
@@ -245,3 +244,40 @@ $ git tag -a v0.1.0 -m "v0.1.0 — first release" && git tag -n1 v0.1.0 && git d
 v0.1.0          v0.1.0 — first release
 v0.1.0
 ```
+
+Then, same go, 2026-10-04:
+
+```
+$ git push && git push origin v0.1.0
+   db43448..cee3e44  main -> main
+ * [new tag]         v0.1.0 -> v0.1.0
+$ gh repo edit ThalesGnimavo/thales-gnimavo-claude-workflow-kit --visibility public --accept-visibility-change-consequences
+$ gh repo view --json visibility,nameWithOwner -q '.nameWithOwner + " " + .visibility'
+ThalesGnimavo/thales-gnimavo-claude-workflow-kit PUBLIC
+$ curl -s -o /dev/null -w '%{http_code} %{content_type}' https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/archive/refs/tags/v0.1.0.zip
+200 text/html; charset=utf-8          # GitHub's HTML shell for non-browser clients, not the archive
+$ curl -s -o /dev/null -w '%{http_code} %{content_type}' https://codeload.github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/zip/refs/tags/v0.1.0
+200 application/zip
+$ unzip -l kit.zip | grep -E 'plugin.json|/INSTALL.md|/CHANGELOG.md'
+      295  10-04-2026 08:59   thales-gnimavo-claude-workflow-kit-0.1.0/.claude/skills/thales/.claude-plugin/plugin.json
+     5552  10-04-2026 08:59   thales-gnimavo-claude-workflow-kit-0.1.0/CHANGELOG.md
+     5572  10-04-2026 08:59   thales-gnimavo-claude-workflow-kit-0.1.0/INSTALL.md
+   595286                     195 files
+```
+
+Consequence: the `/kit` page links the codeload URL, which answers `application/zip` to every
+client; the github.com archive URL is kept out of the page. Website commit `5e449d4` after a
+`pull --rebase` on a remote commit of another session (`60c262c`, a draft); pushed.
+
+```
+$ curl -s -o /dev/null -w '%{http_code}' https://thalesandhisaictoclaude.com/kit      # 09:01:29
+200
+$ curl -s https://thalesandhisaictoclaude.com/kit | grep -o '<title>[^<]*'
+<title>Claude Workflow Kit — run any project with Claude Code | Juste Thales Gnimavo &amp; Claude
+$ curl -s https://thalesandhisaictoclaude.com/ | grep -o 'href="/kit"' | wc -l
+2                                     # the hero button and the product card
+```
+
+MUST 4, 5 and 6 observed. The phase ships in this session: `casp ship phase-3-release --log
+26-10-04-002-phase-3-release-b`; the next prompt is `DISCUSSION-AFTER-V0-1-0.md`. The
+"End-of-session" block above is history: every command in it ran.
