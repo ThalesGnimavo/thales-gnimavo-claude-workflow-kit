@@ -2,7 +2,7 @@
   "casp_version": "0.18.2",
   "updated_at": "2026-10-04",
   "last_session_id": "26-10-04-003-after-v0-1-0",
-  "last_commit": "e2e871d",
+  "last_commit": "f4152e9",
   "current_phase": "after-v0-1-0",
   "next_phase": "launch-hygiene",
   "next_prompt": "docs/plan/sessions/LAUNCH-HYGIENE.md",
