@@ -43,6 +43,8 @@ Claude Code with a paid Anthropic plan. Node.js 22 or newer, for the `casp` stat
 Claude: Claude installs it with you. Git: required by Claude Code on Windows only; on macOS
 Claude installs it if missing. See `INSTALL.md`.
 
+Stuck during the installation? Write here, in plain words: https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/issues/new?template=stuck-during-install.yml
+
 ## Already using Claude Code with your own skills?
 
 Every kit command is a skill of a project plugin named `thales`, so it is typed
@@ -104,6 +106,8 @@ et les deux exemples. Page de téléchargement : https://thalesandhisaictoclaude
 Claude Code avec un abonnement Anthropic payant. Node.js 22 ou plus, pour l'outil d'état `casp`,
 pas pour Claude : Claude l'installe avec vous. Git : exigé par Claude Code sous Windows
 seulement ; sous macOS, Claude l'installe s'il manque. Voir `INSTALL.md`.
+
+L'installation bloque ? Écrivez ici, avec vos mots : https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/issues/new?template=stuck-during-install.yml
 
 ## Vous utilisez déjà Claude Code avec vos propres skills ?
 

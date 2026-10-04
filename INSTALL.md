@@ -65,6 +65,9 @@ That is what switches on the kit's commands.
 > **If something fails before Claude starts** ("command not found", "is not recognized"):
 > close the terminal, open a new one, and try again. If it still fails, redo step 2.
 
+**Stuck at any step?** Write to us here: https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/issues/new?template=stuck-during-install.yml. Say at which step you stopped and paste what
+the screen shows. A free GitHub account is needed to write.
+
 ### Coming back another day
 
 Open a terminal (step 2), then:
@@ -150,6 +153,9 @@ confiance au dossier, répondez **Oui**. C'est ce qui active les commandes du ki
 > **Si quelque chose échoue avant que Claude démarre** (« command not found », « n'est pas
 > reconnu ») : fermez le terminal, ouvrez-en un nouveau et réessayez. Si ça échoue encore,
 > refaites l'étape 2.
+
+**Une étape bloque ?** Écrivez-nous ici : https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/issues/new?template=stuck-during-install.yml. Dites à quelle étape l'installation
+s'est arrêtée et collez ce qu'affiche l'écran. Il faut un compte GitHub gratuit pour écrire.
 
 ### Revenir un autre jour
 

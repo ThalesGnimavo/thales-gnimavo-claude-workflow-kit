@@ -1,0 +1,37 @@
+name: I am stuck during the installation
+description: The installation stopped and you do not know what to do next. No technical words needed.
+title: "Stuck during installation"
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for writing. Answer the two questions below in your own words, in English or in French.
+        Do not paste passwords, keys or anything private.
+  - type: dropdown
+    id: step
+    attributes:
+      label: At which step did you stop?
+      description: The three steps of the installation guide (INSTALL.md).
+      options:
+        - "Step 1: get a paid Claude plan"
+        - "Step 2: install Claude"
+        - "Step 3: start Claude and let it guide you"
+        - "I am not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: screen
+    attributes:
+      label: What was printed on the screen?
+      description: Copy the text you see and paste it here. A screenshot also works.
+      placeholder: Paste the text, or drag a screenshot into this box.
+    validations:
+      required: true
+  - type: input
+    id: computer
+    attributes:
+      label: Which computer do you use?
+      placeholder: "For example: Mac, Windows laptop"
+    validations:
+      required: false

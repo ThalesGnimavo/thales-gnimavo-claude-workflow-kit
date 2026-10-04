@@ -3,9 +3,22 @@
 All notable changes to this kit. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versions follow [Semantic Versioning](https://semver.org/).
 
+Release steps, after the tag `vX.Y.Z` is pushed and its GitHub Release created: build the
+download asset from the tag and attach it under the fixed name that the short link
+`/go/kit-zip` resolves through `releases/latest/download/`.
+
+```bash
+git archive --format=zip --prefix=thales-gnimavo-claude-workflow-kit/ -o claude-workflow-kit.zip vX.Y.Z
+gh release upload vX.Y.Z claude-workflow-kit.zip
+```
+
 ## [Unreleased]
 
-Nothing yet.
+### Added
+- Issue template `stuck-during-install`: two questions in plain words (which step, what the
+  screen shows), for a reader who stopped during `INSTALL.md`.
+- Support line in `INSTALL.md` (after step 3, both languages) and in both halves of
+  `README.md`: where to write when stuck, with the link to the template.
 
 ## [0.1.0] - 2026-10-04
 
