@@ -48,7 +48,7 @@ measure.md              per published piece: what was measured, on which date
 
 `casp status` opens a session; the queued prompt is a claim to replay against the files
 before believing it. One piece, or one editorial pass, per session. Closing follows
-`/next`: log, next prompt, `casp check` exit 0.
+`/thales:next`: log, next prompt, `casp check` exit 0.
 
 ## Pre-approved decisions
 

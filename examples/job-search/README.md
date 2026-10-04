@@ -1,13 +1,15 @@
 # job-search
 
+> Commands renamed to `/thales:` on 2026-10-04; logs updated to match.
+
 Profile: job-search. Owner: Léa Fontaine (fictional).
 A bilingual customer support role in Lyon or remote, every application tracked in one place, nothing sent that the owner has not read.
-Run from the kit root with `/next job-search`.
+Run from the kit root with `/thales:next job-search`.
 Created on 2026-10-03.
 
 ## What this folder is
 
-A project created with `/new-project` from the `job-search` profile, then played for two
+A project created with `/thales:new-project` from the `job-search` profile, then played for two
 sessions on 2026-10-03, and frozen here so that you can compare your own project to a
 finished one. Every name in it is invented: the owner, the agency, the hotel, the
 employer, the addressee, the e-mail address and the phone number. The two PDFs under
@@ -23,7 +25,7 @@ The history as it was played is listed at the end of this file.
 
 1. `CLAUDE.md`: the constitution. Rule number one (prepare everything, send nothing), the
    invariants, the layout, the `## Pre-approved decisions` table. Every answer the owner
-   gave to `/new-project` is in it, word for word.
+   gave to `/thales:new-project` is in it, word for word.
 2. `docs/plan/sessions/PHASE-1-APPLICATION-KIT.md`: the first prompt, now `status: shipped`.
    Read its MUST list, then compare with what session 001 says it shipped.
 3. `session-logs/26-10-03-001-application-kit.md`: the first session. Look for the three
@@ -36,7 +38,7 @@ The history as it was played is listed at the end of this file.
    PDF incident in "Verify": the export returned exit code 0 and the text read back from
    the PDF still had the Markdown heading marks.
 6. `casp/now.md`, then `casp/roadmap.md`: the one-screen state and the real row under
-   `## Blocked`, which is what `/day` shows for this project.
+   `## Blocked`, which is what `/thales:day` shows for this project.
 7. `applications.md`: one row, status `ready`, "sent on" empty. The phase ships in the
    session that writes the date.
 8. From this folder: `casp status`, then `casp check`.
@@ -57,5 +59,5 @@ session logs and in `casp/roadmap.md` are these.
 
 ## What not to do with it
 
-Do not copy this folder into `my-projects/`. Create your own with `/new-project`: the
+Do not copy this folder into `my-projects/`. Create your own with `/thales:new-project`: the
 constitution must hold your answers, not Léa's.

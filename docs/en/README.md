@@ -8,14 +8,14 @@ printed during a real run on 2026-10-03.
 | Chapter | File | Read it when |
 |---|---|---|
 | A day | `a-day.md` | before your first morning with the kit |
-| A session | `a-session.md` | before your first `/next` |
-| A project | `a-project.md` | before your first `/new-project` |
+| A session | `a-session.md` | before your first `/thales:next` |
+| A project | `a-project.md` | before your first `/thales:new-project` |
 | The state | `the-state.md` | the first time `casp check` prints a FAIL, or before |
 | Native commands | `native-commands.md` | the first time you wonder what `/compact` or `/rewind` does; checked against an installed Claude Code |
 | Pitfalls | `pitfalls.md` | at the end of the first week, then whenever something felt wrong |
 
-The manual is longer than `/learn` (seven chapters of five to eight minutes, with an
-exercise each) and shorter than a book. `/learn` teaches; this manual is what you open
+The manual is longer than `/thales:learn` (seven chapters of five to eight minutes, with an
+exercise each) and shorter than a book. `/thales:learn` teaches; this manual is what you open
 when you have a question. Two finished projects to compare yours to are in `examples/`:
 `examples/job-search/` (non-technical) and `examples/software/` (technical). Each has a
 `README.md` that says what to look at and in which order.

@@ -8,7 +8,7 @@ next_after: phase-0-init
 
 # Session — phase-1-application-kit : Application kit
 
-> **Status : QUEUED.** Drafted by `/new-project` on {{created_at}}. The cockpit exists and
+> **Status : QUEUED.** Drafted by `/thales:new-project` on {{created_at}}. The cockpit exists and
 > is empty; nothing has been written for an employer yet.
 >
 > **Goal.** The masters, the tracking file and the content rules exist, so that the first
@@ -27,7 +27,7 @@ next_after: phase-0-init
 
 ## CONTEXT — what changed since the parent prompt was drafted
 
-- **The project was created** by `/new-project` on {{created_at}}. `CLAUDE.md` holds rule
+- **The project was created** by `/thales:new-project` on {{created_at}}. `CLAUDE.md` holds rule
   number one (prepare everything, send nothing), the invariants and the pre-approved
   decisions. Read it before the first file.
 - **Target role:** {{target_role}}. **Situation:** {{current_situation}}. **Scope:**

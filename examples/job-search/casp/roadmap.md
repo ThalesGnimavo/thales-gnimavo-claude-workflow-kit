@@ -30,7 +30,7 @@ If you reach for anything BELOW Next-3, stop and check why.
 
 | Item | Blocker | Unblock action |
 |------|---------|----------------|
-| First application (Meridian Travel Assistance) | at `ready`; the owner has not sent it | the owner sends from their mailbox and gives the date; `/next job-search` writes it |
+| First application (Meridian Travel Assistance) | at `ready`; the owner has not sent it | the owner sends from their mailbox and gives the date; `/thales:next job-search` writes it |
 
 ---
 
@@ -60,7 +60,7 @@ If you reach for anything BELOW Next-3, stop and check why.
 
 | Phase | Status | Session log | Notes |
 |-------|--------|-------------|-------|
-| Phase 0 — Init | shipped | — | created by `/new-project` on 2026-10-03 |
+| Phase 0 — Init | shipped | — | created by `/thales:new-project` on 2026-10-03 |
 | Phase 1 — Application kit | shipped | `26-10-03-001-application-kit` | masters, tracking file, content rules |
 | Phase 2 — First wave | queued | _(pending)_ | one employer folder at a time |
 | Phase 3 — Offer watch | backlog | — | boards and career pages filtered on the trade |

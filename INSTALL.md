@@ -1,84 +1,164 @@
-# Install — five steps before the first `claude`
+# Install
 
-*Français ci-dessous.*
-
-The kit cannot install Claude Code for you: Claude has to be running to read this folder.
-Everything after these five steps is done by Claude, in conversation with you.
-
-**Five words you will meet.** A *terminal* is the window where you type commands: on macOS
-open "Terminal" from Applications, on Windows open "PowerShell" from the Start menu.
-*git* records every change to your files. *Node.js* runs small programs written in
-JavaScript; *npm* installs them. *casp* is the small program this method uses to check that
-a project's recorded state matches reality; it runs on your machine and sends nothing anywhere.
-
-1. **Create an Anthropic account with a paid plan**: Pro, Max, Team or Enterprise at
-   https://claude.ai, or API access at https://console.anthropic.com. The free plan does not
-   include Claude Code.
-2. **Install Node.js 22 or newer** from https://nodejs.org (choose "LTS"). On Windows, also
-   install Git for Windows from https://git-scm.com/downloads/win. Close and reopen the
-   terminal afterwards. Check with `node --version` and `git --version`.
-3. **Install Claude Code** by pasting one line in the terminal:
-   - macOS, Linux, Windows WSL: `curl -fsSL https://claude.ai/install.sh | bash`
-   - Windows PowerShell: `irm https://claude.ai/install.ps1 | iex`
-   - Windows CMD: `curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd`
-   - Any system, with Node.js installed: `npm install -g @anthropic-ai/claude-code`
-   Then open a new terminal and check with `claude --version`. If you prefer no terminal at
-   all, the Claude Desktop app runs Claude Code too: https://claude.com/download.
-4. **Get the kit.** In the terminal, paste these two lines, one after the other:
-   `git clone https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit.git`
-   then `cd thales-gnimavo-claude-workflow-kit`. Keep this folder: it becomes your
-   workspace, and `/update` brings it to each new release. If git is out of reach, a zip
-   of the latest release is at
-   https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/releases/latest:
-   unzip it and open a terminal inside the folder (macOS: drag the folder onto the
-   Terminal icon; Windows: Shift + right-click in the folder, "Open PowerShell window
-   here"). A zip cannot be updated in place: `/update` will ask you to download again.
-5. **Type `claude` and press Enter.** Log in when the browser opens. When asked whether you
-   trust the files in this folder, answer yes. Then type `hello` (or `bonjour`) and press
-   Enter: Claude greets you, reads the folder, and runs `/setup`.
-
-From here, type `/learn` to be taught the method, or `/new-project` to start your first project.
+**[English](#install-1) · [Français](#installation)**
 
 ---
 
-# Installation — cinq étapes avant le premier `claude`
+## Install
 
-Le kit ne peut pas installer Claude Code à votre place : Claude doit déjà tourner pour lire
-ce dossier. Tout ce qui suit ces cinq étapes est fait par Claude, en conversation avec vous.
+Three steps. After that, Claude does everything else with you, in conversation, and helps
+you if something goes wrong.
 
-**Cinq mots que vous allez rencontrer.** Un *terminal* est la fenêtre où l'on tape des
-commandes : sur macOS, ouvrez « Terminal » depuis Applications ; sur Windows, ouvrez
-« PowerShell » depuis le menu Démarrer. *git* enregistre chaque modification de vos
-fichiers. *Node.js* exécute de petits programmes écrits en JavaScript ; *npm* les installe.
-*casp* est le petit programme que la méthode utilise pour vérifier que l'état enregistré
-d'un projet correspond à la réalité ; il tourne sur votre machine et n'envoie rien nulle part.
+### 1. Get a paid Claude plan
 
-1. **Créez un compte Anthropic avec un abonnement payant** : Pro, Max, Team ou Enterprise sur
-   https://claude.ai, ou un accès API sur https://console.anthropic.com. Le plan gratuit ne
-   comprend pas Claude Code.
-2. **Installez Node.js 22 ou plus** depuis https://nodejs.org (choisissez « LTS »). Sous
-   Windows, installez aussi Git for Windows depuis https://git-scm.com/downloads/win. Fermez
-   puis rouvrez le terminal. Vérifiez avec `node --version` et `git --version`.
-3. **Installez Claude Code** en collant une ligne dans le terminal :
-   - macOS, Linux, Windows WSL : `curl -fsSL https://claude.ai/install.sh | bash`
-   - Windows PowerShell : `irm https://claude.ai/install.ps1 | iex`
-   - Windows CMD : `curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd`
-   - Tout système, avec Node.js installé : `npm install -g @anthropic-ai/claude-code`
-   Ouvrez ensuite un nouveau terminal et vérifiez avec `claude --version`. Si vous ne voulez
-   pas de terminal du tout, l'application Claude Desktop fait aussi tourner Claude Code :
-   https://claude.com/download.
-4. **Récupérez le kit.** Dans le terminal, collez ces deux lignes, l'une après l'autre :
-   `git clone https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit.git`
-   puis `cd thales-gnimavo-claude-workflow-kit`. Gardez ce dossier : il devient votre
-   espace de travail, et `/update` l'amène à chaque nouvelle version. Si git est hors de
-   portée, un zip de la dernière version est à
-   https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit/releases/latest :
-   décompressez-le, puis ouvrez un terminal dans le dossier (macOS : glissez le dossier
-   sur l'icône Terminal ; Windows : Maj + clic droit dans le dossier, « Ouvrir une fenêtre
-   PowerShell ici »). Un zip ne se met pas à jour sur place : `/update` vous demandera de
-   le télécharger à nouveau.
-5. **Tapez `claude` et validez.** Connectez-vous quand le navigateur s'ouvre. Quand on vous
-   demande si vous faites confiance aux fichiers de ce dossier, répondez oui. Tapez ensuite
-   `bonjour` et validez : Claude vous accueille, lit le dossier et lance `/setup`.
+Subscribe to **Pro** (or higher) at https://claude.ai. The free plan does not include
+Claude Code.
 
-Ensuite, tapez `/learn` pour apprendre la méthode, ou `/new-project` pour démarrer votre premier projet.
+**Windows only:** also install Git from https://git-scm.com/downloads/win. Open the
+downloaded file and click **Next** on every screen.
+
+### 2. Install Claude
+
+Open a **terminal**, the window where you type instructions:
+
+- **Mac:** press `Cmd + Space`, type `Terminal`, press Enter.
+- **Windows:** click Start, type `PowerShell`, press Enter.
+
+Copy the line for your computer (copy button on the right of the grey box), paste it into
+the terminal, press **Enter**:
+
+**Mac**
+```
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+**Windows**
+```
+irm https://claude.ai/install.ps1 | iex
+```
+
+When it is done, **close the terminal and open a new one**.
+
+### 3. Start Claude and let it guide you
+
+Type this and press Enter:
+
+```
+claude
+```
+
+- If asked to pick a look (theme), press **Enter**.
+- If asked how to log in, choose your **Claude account**. A browser page opens: log in.
+- If asked whether you trust this folder, choose **Yes**.
+
+Then copy this message, paste it to Claude and press Enter:
+
+```
+Hello. I am not technical. Please install the workflow kit for me: clone https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit into my home folder, then open the file INSTALL.md inside it, read its section "For Claude" and follow it. Explain each step simply, and tell me exactly what to do when you need me.
+```
+
+Claude takes it from there. When it asks permission to do something on your computer, read
+what it says and answer **Yes**. At one point it will ask you to close Claude and reopen it
+inside the kit folder: when Claude asks again whether you trust the folder, answer **Yes**.
+That is what switches on the kit's commands.
+
+> **If something fails before Claude starts** ("command not found", "is not recognized"):
+> close the terminal, open a new one, and try again. If it still fails, redo step 2.
+
+### Coming back another day
+
+Open a terminal (step 2), then:
+
+```
+cd thales-gnimavo-claude-workflow-kit
+claude
+```
+
+Always start Claude **from inside this folder**: the kit's commands (they all start with
+`/thales:`) only exist there.
+
+### For Claude
+
+You are reading this because a person pasted the message of step 3 and you have just
+cloned the kit. The kit's own commands are not loaded yet: they load only when Claude
+starts inside this folder and the person trusts it. Open
+`.claude/skills/thales/skills/setup/SKILL.md`, section "Installing the kit for someone who
+is not technical", and run its **bootstrap** steps, in order, one action at a time. They
+end with the person restarting Claude inside this folder; the kit continues from there.
+
+---
+
+## Installation
+
+Trois étapes. Ensuite, Claude fait tout le reste avec vous, en conversation, et vous aide si
+quelque chose bloque.
+
+### 1. Prenez un abonnement Claude payant
+
+Abonnez-vous à **Pro** (ou plus) sur https://claude.ai. Le plan gratuit ne comprend pas
+Claude Code.
+
+**Windows uniquement :** installez aussi Git depuis https://git-scm.com/downloads/win.
+Ouvrez le fichier téléchargé et cliquez sur **Next** à chaque écran.
+
+### 2. Installez Claude
+
+Ouvrez un **terminal**, la fenêtre où l'on tape des instructions :
+
+- **Mac :** appuyez sur `Cmd + Espace`, tapez `Terminal`, validez.
+- **Windows :** cliquez sur Démarrer, tapez `PowerShell`, validez.
+
+Copiez la ligne qui correspond à votre ordinateur (bouton copier à droite du cadre gris),
+collez-la dans le terminal, appuyez sur **Entrée** :
+
+**Mac**
+```
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+**Windows**
+```
+irm https://claude.ai/install.ps1 | iex
+```
+
+Quand c'est terminé, **fermez le terminal et ouvrez-en un nouveau**.
+
+### 3. Lancez Claude et laissez-vous guider
+
+Tapez ceci et validez :
+
+```
+claude
+```
+
+- Si on vous demande de choisir une apparence (thème), appuyez sur **Entrée**.
+- Si on vous demande comment vous connecter, choisissez votre **compte Claude**. Une page
+  s'ouvre dans le navigateur : connectez-vous.
+- Si on vous demande si vous faites confiance à ce dossier, choisissez **Oui**.
+
+Copiez ensuite ce message, collez-le à Claude et validez :
+
+```
+Bonjour. Je ne suis pas technicien. Installe-moi le kit de travail : clone https://github.com/ThalesGnimavo/thales-gnimavo-claude-workflow-kit dans mon dossier personnel, puis ouvre le fichier INSTALL.md qu'il contient, lis sa section « For Claude » et suis-la. Explique chaque étape simplement, et dis-moi exactement quoi faire quand tu as besoin de moi.
+```
+
+Claude prend le relais. Quand il demande la permission de faire quelque chose sur votre
+ordinateur, lisez ce qu'il dit et répondez **Oui**. À un moment, il vous demandera de fermer
+Claude et de le rouvrir dans le dossier du kit : quand Claude vous redemande si vous faites
+confiance au dossier, répondez **Oui**. C'est ce qui active les commandes du kit.
+
+> **Si quelque chose échoue avant que Claude démarre** (« command not found », « n'est pas
+> reconnu ») : fermez le terminal, ouvrez-en un nouveau et réessayez. Si ça échoue encore,
+> refaites l'étape 2.
+
+### Revenir un autre jour
+
+Ouvrez un terminal (étape 2), puis :
+
+```
+cd thales-gnimavo-claude-workflow-kit
+claude
+```
+
+Lancez toujours Claude **depuis ce dossier** : les commandes du kit (elles commencent toutes
+par `/thales:`) n'existent que là.

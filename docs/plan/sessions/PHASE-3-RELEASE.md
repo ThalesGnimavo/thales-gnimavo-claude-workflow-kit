@@ -40,16 +40,16 @@ this repository.
   reads `INSTALL.md` and the manual as they are; a sentence the tester cannot follow is a
   defect of the kit, never of the tester.
 - **Three defects known since session 004**, in `casp/roadmap.md` under "Queued —
-  non-critical", each with file and line: `/new-project` step 3's branch check fails on an
+  non-critical", each with file and line: `/thales:new-project` step 3's branch check fails on an
   unborn branch; `"{{first_goal}}".` doubles the period; `{{deploy}}` inside the software
   pre-approved table reads badly. Fix them first: the tester will meet all three.
 - **A fourth finding from session 005**: on a machine where `~/.claude/skills/` holds a
-  skill with the same name as a kit skill (`casp`, `next`, `cto` …), `claude -p "/casp kit"`
+  skill with the same name as a kit skill (`casp`, `next`, `cto` …), `claude -p "/thales:casp kit"`
   ran the user-level skill, not the kit's. A blank machine has no user-level skills, so the
   test is unaffected; a developer who already uses Claude Code is. Decide in this phase
   (level 1, the user decides: rename the kit's skills with a prefix, document the
   collision in `INSTALL.md`, or accept it) and write the decision in `README.md`.
-- **Two Proofs due still open**: `/fleet`'s iTerm2 launch has never been run; the
+- **Two Proofs due still open**: `/thales:fleet`'s iTerm2 launch has never been run; the
   `(cd my-projects/<x> && casp status)` form has never been observed from a fresh
   `claude -p` with a project under `my-projects/` (the kit root form was, twice). Both are
   produced on the test machine or stay listed in the release notes as untested.
@@ -60,9 +60,9 @@ this repository.
 
 ## REFERENCE FILES (read these before writing)
 
-1. **`INSTALL.md`** — the five steps the tester follows; every finding maps to one of them.
+1. **`INSTALL.md`** — the three steps the tester follows; every finding maps to one of them.
 2. **`casp/roadmap.md`**, "Queued — non-critical" — the three defects with file and line.
-3. **`.claude/skills/new-project/SKILL.md`**, step 3 — the branch check to replace.
+3. **`.claude/skills/thales/skills/new-project/SKILL.md`**, step 3 — the branch check to replace.
 4. **`templates/*/CLAUDE.md`** — the `first_goal` line in six files; `templates/software/CLAUDE.md:58`.
 5. **`session-logs/26-10-03-005-phase-2-manual-and-examples-b.md`**, "Verify" — how the
    headless probe was run and what it showed.
@@ -73,15 +73,15 @@ this repository.
 
 ## MUST
 
-1. The three known defects fixed, each with its proof: a throwaway `/new-project` run on
+1. The three known defects fixed, each with its proof: a throwaway `/thales:new-project` run on
    the `job-search` and `software` profiles, `casp check` exit 0, zero `{{` left, the
    rendered `first_goal` line and the software pre-approved row pasted in the log.
 2. A blank-machine test on a machine (or a fresh user account, or a clean VM) with no
    `~/.claude/`, no `casp`, no prior Claude Code: the tester follows `INSTALL.md` only.
    The log records, step by step, what was typed, what was printed, and every point where
    the tester stopped. Each stop becomes a fix in this phase or a row in `roadmap.md`
-   with the file and line. Pass criterion: `/setup` writes the profile, `/new-project`
-   ends with `casp check` at exit 0, `/next <project> --solo "…"` starts, all without the
+   with the file and line. Pass criterion: `/thales:setup` writes the profile, `/thales:new-project`
+   ends with `casp check` at exit 0, `/thales:next <project> --solo "…"` starts, all without the
    author.
 3. The user-level skill collision decided (level 1) and the decision written in
    `README.md` under a heading a developer will find.
@@ -96,7 +96,7 @@ this repository.
 
 ## SHOULD
 
-- `/fleet` run once on iTerm2 with two workers on a throwaway project; the raw tab list
+- `/thales:fleet` run once on iTerm2 with two workers on a throwaway project; the raw tab list
   and the workers' first lines pasted in the log; or the Proof due restated.
 - The `(cd my-projects/<x> && casp status)` form observed from a fresh `claude -p` with a
   real project under `my-projects/`, exact outcome pasted.
@@ -106,7 +106,7 @@ this repository.
 
 ## MUST NOT
 
-- No Spanish, no Windows screenshots, no tmux fallback for `/fleet` (backlog).
+- No Spanish, no Windows screenshots, no tmux fallback for `/thales:fleet` (backlog).
 - No new skill, no new template: the phase ships what exists, fixed.
 - No tag and no public flip without the user's go in the session: both are level 1.
 - No edit to the examples beyond what a fixed template forces (a changed `first_goal`

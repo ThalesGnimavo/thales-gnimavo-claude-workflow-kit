@@ -5,7 +5,7 @@ phase: phase-1-application-kit
 # 26-10-03-001 — phase-1-application-kit : Application kit
 
 **Session prompt :** `docs/plan/sessions/PHASE-1-APPLICATION-KIT.md` (shipped by this log).
-**Previous session end :** `132bd58` (project created by `/new-project`, job-search profile).
+**Previous session end :** `132bd58` (project created by `/thales:new-project`, job-search profile).
 **Delegation :** executed inline. One sitting; nothing to run in the background.
 **State at session start :** phase 0 shipped (the cockpit), phase 1 queued with its prompt,
 `casp check` 0. The owner had no CV file and one old letter she did not want to reuse;
@@ -96,5 +96,5 @@ Skipped: no automation, no sending, no data of a third party. The content check 
 - `casp close --yes`, `casp check` 0; two commits, work first.
 
 ## End-of-session
-Next: `/next job-search`, phase 2, first wave. The first employer folder; the owner
+Next: `/thales:next job-search`, phase 2, first wave. The first employer folder; the owner
 sends before the second one is prepared.

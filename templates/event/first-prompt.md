@@ -8,7 +8,7 @@ next_after: phase-0-init
 
 # Session — phase-1-scope-and-budget : Scope, date, budget, decisions
 
-> **Status : QUEUED.** Drafted by `/new-project` on {{created_at}}. The cockpit exists;
+> **Status : QUEUED.** Drafted by `/thales:new-project` on {{created_at}}. The cockpit exists;
 > no schedule, budget or decision is written yet.
 >
 > **Goal.** The event in one page, the schedule with its known dates, the budget envelope
@@ -27,7 +27,7 @@ next_after: phase-0-init
 
 ## CONTEXT — what changed since the parent prompt was drafted
 
-- **The project was created** by `/new-project` on {{created_at}}. `CLAUDE.md` holds rule
+- **The project was created** by `/thales:new-project` on {{created_at}}. `CLAUDE.md` holds rule
   number one (dates, venues, vendors and budget lines are the organiser's decisions), the
   invariants and the pre-approved decisions. Read it before the first file.
 - **Event:** {{event_kind}}. **Date and place:** {{event_date}}. **Envelope:**

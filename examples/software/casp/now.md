@@ -24,7 +24,7 @@ say in one word whether it shows three columns without a wizard (the Proof due).
 
 ### 1 hour
 
-`/next ledger-cli`: the atomic write (MUST 1) with its test, gate green.
+`/thales:next ledger-cli`: the atomic write (MUST 1) with its test, gate green.
 
 ### Half a day
 

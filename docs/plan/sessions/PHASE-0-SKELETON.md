@@ -11,7 +11,7 @@ next_after: none
 > **Status : SHIPPED** in session `26-10-03-001`. Drafted at the opening of the kit, before any file existed.
 >
 > **Goal.** A person who has never used Claude Code unzips the kit, types `claude`, and is
-> greeted, checked, taught and pointed at `/new-project`, without reading anything but `INSTALL.md`.
+> greeted, checked, taught and pointed at `/thales:new-project`, without reading anything but `INSTALL.md`.
 >
 > **Why now.** Nothing else in the kit can be tested until it boots.
 
@@ -24,7 +24,7 @@ next_after: none
 
 - Root `CLAUDE.md` in English, XML-sectioned, rules only, under 150 lines.
 - `INSTALL.md` bilingual, the five human steps, commands verified against the official docs.
-- `/setup` and `/learn` with its seven chapters.
+- `/thales:setup` and `/thales:learn` with its seven chapters.
 - Project-level `.claude/settings.json` with safe defaults.
 - `README.md`, `LICENSE` (MIT), `CHANGELOG.md`, `.gitignore`.
 - The kit's own `casp/` cockpit with the four-phase plan.

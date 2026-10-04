@@ -8,7 +8,7 @@ next_after: phase-0-init
 
 # Session — phase-1-outline-and-sources : Outline, sources on disk, writing rules
 
-> **Status : QUEUED.** Drafted by `/new-project` on {{created_at}}. The cockpit exists;
+> **Status : QUEUED.** Drafted by `/thales:new-project` on {{created_at}}. The cockpit exists;
 > no outline, no source and no chapter exists yet.
 >
 > **Goal.** The outline with one promise per chapter, every source the author already has
@@ -27,7 +27,7 @@ next_after: phase-0-init
 
 ## CONTEXT — what changed since the parent prompt was drafted
 
-- **The project was created** by `/new-project` on {{created_at}}. `CLAUDE.md` holds rule
+- **The project was created** by `/thales:new-project` on {{created_at}}. `CLAUDE.md` holds rule
   number one (no claim without a source the author has read), the invariants and the
   pre-approved decisions. Read it before the first file.
 - **Working title:** "{{working_title}}". **Kind:** {{text_kind}}. **Deadline:**

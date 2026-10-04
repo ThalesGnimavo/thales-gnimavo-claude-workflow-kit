@@ -52,7 +52,7 @@ rejected / no answer`.
 ## Session cycle
 
 `casp status` opens a session; the queued prompt is a claim to replay against the files
-before believing it. One slice per session. Closing follows `/next`: log, next prompt,
+before believing it. One slice per session. Closing follows `/thales:next`: log, next prompt,
 `casp check` exit 0. The roadmap ends at a signed contract, with follow-ups, negotiation and
 notice period on it from day one; the cockpit closes on signature.
 

@@ -1,7 +1,7 @@
 # A project
 
 A project is a folder under `my-projects/` with a constitution (`CLAUDE.md`), a cockpit
-(`casp/`), and its own git history. `/new-project` creates one from a profile, with your
+(`casp/`), and its own git history. `/thales:new-project` creates one from a profile, with your
 answers, and proves it is startable before it ends. You never write a constitution from
 a blank page.
 
@@ -20,7 +20,7 @@ All six share one rule: Claude prepares, you send, sign, pay, publish or push. E
 profile is a folder under `templates/` with three files; `templates/README.md` says how to
 add a seventh.
 
-## What `/new-project` asks
+## What `/thales:new-project` asks
 
 One question at a time, in plain conversation, never as a form:
 
@@ -84,11 +84,11 @@ grep -rn '{{' my-projects/<name>/ --include='*.md' | wc -l      # must print 0
 A `{{` left is a placeholder you never saw; a red `casp check` is a cockpit that lies on
 day one. Neither is allowed to survive the command.
 
-## After `/new-project`
+## After `/thales:new-project`
 
 The project has no remote: nothing leaves your machine until you create one, and that is
 a level-1 decision you take. The closing message gives the next command:
-`/next <name> --solo "first slice of a new project"` to start now, or `/cto <name>` to
+`/thales:next <name> --solo "first slice of a new project"` to start now, or `/thales:cto <name>` to
 have the plan re-read first.
 
 Read the constitution once, one minute. Then start.
@@ -96,7 +96,7 @@ Read the constitution once, one minute. Then start.
 ## What to type
 
 ```
-/new-project job-search --profile job-search
+/thales:new-project job-search --profile job-search
 ```
 
 Without `--profile`, the menu lists the six profiles with one line each, the ones for
@@ -125,4 +125,4 @@ STATE
 ```
 
 `pending` on the two last lines is normal on day one: no session has run yet. The first
-`/next` fills them.
+`/thales:next` fills them.

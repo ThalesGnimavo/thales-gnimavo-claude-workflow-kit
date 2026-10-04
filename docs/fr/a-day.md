@@ -7,16 +7,16 @@ vit dans des fichiers et non dans la mémoire de quiconque, celle de Claude comp
 ## Le matin, dix minutes
 
 Ouvrez un terminal dans le dossier du kit (celui qui contient ce `docs/`), tapez `claude`,
-puis `/day`. Un tableau apparaît, une ligne par projet sous `my-projects/`, avec sa phase,
+puis `/thales:day`. Un tableau apparaît, une ligne par projet sous `my-projects/`, avec sa phase,
 ce qui vient ensuite, le dernier point de sauvegarde et un état. Sous le tableau, les
 projets qui ne sont pas prêts, chacun avec la commande qui le débloque.
 
-`/day` pose ensuite une question en deux parties : quel projet, et une session ou
+`/thales:day` pose ensuite une question en deux parties : quel projet, et une session ou
 plusieurs. Une session est la réponse normale. « Plusieurs » signifie des sessions
 parallèles sur un même projet ; cela coûte plusieurs fois plus cher et exige macOS avec
 iTerm2 ; laissez cela pour plus tard.
 
-`/day` ouvre `/next <project>` pour vous. La session lit la constitution du projet, son
+`/thales:day` ouvre `/thales:next <project>` pour vous. La session lit la constitution du projet, son
 cockpit et le prompt en file, vérifie que ce prompt est toujours le bon, dit en une phrase
 ce qu'elle commence, et commence. Elle n'attend pas de « go » ; interrompez-la et corrigez
 le prompt s'il est faux. Puis partez.
@@ -69,8 +69,8 @@ ce que Claude peut décider seul ; tout ce qui a une conséquence externe vous r
 ```
 cd <the kit's folder>
 claude
-/day --dry-run
-/day
+/thales:day --dry-run
+/thales:day
 ```
 
 `--dry-run` imprime le tableau et s'arrête, sans question ; utilisez-le la première fois,
@@ -78,7 +78,7 @@ pour lire l'écran sans rien ouvrir.
 
 ## Ce que vous devez voir
 
-Le tableau pour les deux projets d'`examples/`, tel que `/day` le présente, avec les
+Le tableau pour les deux projets d'`examples/`, tel que `/thales:day` le présente, avec les
 valeurs que leurs cockpits contenaient le 2026-10-03 :
 
 ```
@@ -89,18 +89,18 @@ job-search       1/5     phase-2-first-wave     2026-10-03    blocked: First app
 software         2/4     phase-3-hardening      2026-10-03    ready, to confirm
 
 Blocked
-- job-search: the owner sends from their mailbox and gives the date; `/next job-search` writes it
-- software: `/cto software`, or `/next software --solo "<reason>"` for a slice you know is small
+- job-search: the owner sends from their mailbox and gives the date; `/thales:next job-search` writes it
+- software: `/thales:cto software`, or `/thales:next software --solo "<reason>"` for a slice you know is small
 ```
 
 « 1/5 » est une phase livrée sur cinq. La ligne `software` est le nom du dossier : ce
 projet a été joué sous le nom `ledger-cli`, et son propre `README.md` dit
-`/next ledger-cli` ; sous `my-projects/`, le nom du dossier et le nom du projet sont
+`/thales:next ledger-cli` ; sous `my-projects/`, le nom du dossier et le nom du projet sont
 identiques. « blocked » vient d'une vraie ligne sous `## Blocked` dans le
 `casp/roadmap.md` du projet : la première candidature est à `ready` et seul son
 propriétaire peut l'envoyer. « ready, to confirm » signifie que l'étape en file n'a pas
-été confirmée comme une session ou plusieurs ; `/next software --solo "<reason>"` la
+été confirmée comme une session ou plusieurs ; `/thales:next software --solo "<reason>"` la
 confirme en un geste.
 
 Puis la question unique, en deux parties : quel projet, une session ou plusieurs.
-Répondez-y, et `/next` prend le relais.
+Répondez-y, et `/thales:next` prend le relais.

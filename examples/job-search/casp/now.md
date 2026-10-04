@@ -24,7 +24,7 @@ send from your own mailbox, note the date.
 
 ### 1 hour
 
-`/next job-search` with the date: the row goes to `sent`, the follow-up date is
+`/thales:next job-search` with the date: the row goes to `sent`, the follow-up date is
 computed, the phase ships, the second folder is picked.
 
 ### Half a day

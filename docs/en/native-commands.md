@@ -1,7 +1,7 @@
 # Native commands
 
 The commands below belong to Claude Code itself, not to the kit. The kit's own commands
-(`/next`, `/casp`, `/day` …) live in `.claude/skills/` and are listed in the root
+(`/thales:next`, `/thales:casp`, `/thales:day` …) live in `.claude/skills/thales/`, the kit's plugin, and are listed in the root
 `CLAUDE.md`. This sheet exists because the root `CLAUDE.md` and `pitfalls.md` name five native
 commands (`/compact`, `/context`, `/rewind`, `/model`, `/schedule`) and a first week meets
 a few more.
@@ -31,9 +31,10 @@ listed here that `/help` does not show has been renamed or removed in your build
 |---|---|---|
 | `/compact` | Free up context by summarizing the conversation so far | when Claude says the context is getting long and the slice is not finished; it buys time, it does not replace a close (`pitfalls.md`, pitfall 3) |
 | `/context` | Visualize current context usage as a colored grid | before deciding between "finish the slice" and "close now" |
+| `/reload-plugins` | not in the command table of 2.1.288's `/help`; documented at code.claude.com/docs/en/plugins/loading. This manual's wording: reloads plugins without restarting | after `/thales:update`, so the updated kit commands load |
 | `/rewind` | aliases `/checkpoint`, `/undo` in the table; no description there. This manual's wording: restores code, conversation, or both, to an earlier user message | after a bad edit, before the next prompt; interactive only (`supportsNonInteractive: false` in the table) |
 | `/model` | Set model for this session (not persisted) | named in the root `CLAUDE.md`; choose once per session, "not persisted" is the program's word |
-| `/schedule` | aliases `/routines`; create and manage scheduled remote Claude Code agents | not used by the kit's commands; `/chain` runs locally and needs no schedule |
+| `/schedule` | aliases `/routines`; create and manage scheduled remote Claude Code agents | not used by the kit's commands; `/thales:chain` runs locally and needs no schedule |
 
 ## The ones a first week meets
 
@@ -51,7 +52,7 @@ listed here that `/help` does not show has been renamed or removed in your build
 | `/memory` | Edit CLAUDE.md files and memory settings |
 | `/skills` | List available skills (the kit's commands should appear here; confirm below) |
 | `/doctor` (alias `/checkup`) | checks the installation; the description is computed at run time |
-| `/init` | writes a first `CLAUDE.md` for a folder; the kit's `/new-project` does this for you, from a template |
+| `/init` | writes a first `CLAUDE.md` for a folder; the kit's `/thales:new-project` does this for you, from a template |
 | `/plan` | Enable plan mode or view the current session plan |
 | `/btw` | Ask a quick side question without interrupting the main conversation |
 | `/version` | Print the version this session is running (not what autoupdate downloaded) |
@@ -105,7 +106,7 @@ as a question and answered from the folder; the other two print the program's ow
 ```
 
 Lesson: the native commands are for the interactive screen. The kit's commands
-(`/next`, `/casp` …) are skills and work in both modes; that is how `/chain` runs them.
+(`/thales:next`, `/thales:casp` …) are skills and work in both modes; that is how `/thales:chain` runs them.
 
 ## To confirm on your machine
 
@@ -115,10 +116,10 @@ Not observed from this session; run the command and compare with the table.
   or `/context` are missing, note the version and read the release notes.
 - `/rewind`: open it once on a throwaway change to see the three choices (restore code,
   restore conversation, restore both) before you need it in anger.
-- `/skills`: the kit's commands (`/next`, `/casp`, `/day` …) must be in the list; if not,
+- `/skills`: the kit's commands (`/thales:next`, `/thales:casp`, `/thales:day` …) must be in the list; if not,
   `claude` was started from a folder other than the kit's.
 - `/model`: open it once to see which models your plan offers and what "not persisted"
   means on your side (a new session starts on the default).
 - `/permissions`: check that the kit's `.claude/settings.json` rules appear under the
   allow list.
-- `/doctor`: run it once after `/setup`; it is the program's own check of the install.
+- `/doctor`: run it once after `/thales:setup`; it is the program's own check of the install.

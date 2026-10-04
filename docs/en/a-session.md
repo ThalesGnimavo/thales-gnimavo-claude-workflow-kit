@@ -6,23 +6,23 @@ has four beats; none is skipped, none is merged with another.
 
 ## 1. Start
 
-`/next <project>` from the kit's folder. The session reads, in this order:
+`/thales:next <project>` from the kit's folder. The session reads, in this order:
 
 1. The project's `CLAUDE.md`: the constitution.
 2. `casp status`: the cockpit. Which phase is current, which comes next, which file opens
    this session.
 3. The queued prompt, the file on the `next_prompt` line. It was written by the previous
-   session. A prompt is a claim, not a specification: `/next` checks that it is still
+   session. A prompt is a claim, not a specification: `/thales:next` checks that it is still
    `queued`, that its `next_after` names the last log, that its `## CONTEXT` names the
    last commit, and stops when a file or state it assumes does not exist. The thorough
-   replay of its claims against the files is what `/cto <project>` does before it
+   replay of its claims against the files is what `/thales:cto <project>` does before it
    confirms a step.
 
-`/next` refuses to start a step nobody has confirmed as one session or several. The
-confirmation is written in `casp/state.json` by `/cto <project>` (which re-reads the
-queue first) or by `/next <project> --solo "<reason>"`, the one-gesture form for a slice
-you know is small. A project fresh from `/new-project` has no confirmation yet; the
-closing message of `/new-project` gives you the exact command.
+`/thales:next` refuses to start a step nobody has confirmed as one session or several. The
+confirmation is written in `casp/state.json` by `/thales:cto <project>` (which re-reads the
+queue first) or by `/thales:next <project> --solo "<reason>"`, the one-gesture form for a slice
+you know is small. A project fresh from `/thales:new-project` has no confirmation yet; the
+closing message of `/thales:new-project` gives you the exact command.
 
 Then the session says in one sentence what it is about to do, and begins. It does not
 ask whether to proceed: the prompt is the scope.
@@ -78,7 +78,7 @@ wrote it to be understood, it is not finished.
 ## What to type
 
 ```
-/next job-search
+/thales:next job-search
 ```
 
 At the end, the session runs the close itself. If you close by hand, the sequence is:

@@ -2,7 +2,7 @@
 
 **Run any project, technical or not, with Claude Code as a working partner.**
 
-Clone it, type `claude`. Claude reads this folder, checks your machine, teaches you
+Three human steps (`INSTALL.md`), then type `claude`. Claude reads this folder, checks your machine, teaches you
 the method one chapter at a time, and creates your first project with its own cockpit.
 No prior experience with Claude Code is assumed.
 
@@ -19,8 +19,8 @@ the authority on what exists.
 | Folder | What it is |
 |---|---|
 | `CLAUDE.md` | The rules every session follows: roles, session cycle, decision levels, verification. |
-| `INSTALL.md` | The five human steps before the first `claude`. |
-| `.claude/skills/` | The kit's commands, loaded automatically: `/setup`, `/learn`, `/new-project`, `/day`, `/casp`, `/next`, `/cto`, `/verify`, `/notify`, `/humanizer`, `/update`, and the advanced `/chain`, `/fleet`, `/audit-batch`. |
+| `INSTALL.md` | The three human steps before the first `claude`; Claude installs the rest with you. |
+| `.claude/skills/` | The kit's commands, loaded automatically: `/thales:setup`, `/thales:learn`, `/thales:new-project`, `/thales:day`, `/thales:casp`, `/thales:next`, `/thales:cto`, `/thales:verify`, `/thales:notify`, `/thales:humanizer`, `/thales:update`, and the advanced `/thales:chain`, `/thales:fleet`, `/thales:audit-batch`. |
 | `docs/en/`, `docs/fr/` | The manual: a day, a session, a project, the state protocol, native commands, pitfalls. |
 | `templates/` | A constitution and a cockpit for each profile: job search, book or thesis, small business, event, content creation, software project. |
 | `examples/` | Two complete projects, one non-technical (a job search), one technical. |
@@ -30,7 +30,7 @@ the authority on what exists.
 
 1. **One project, one constitution.** A `CLAUDE.md` holds the goal, the invariants, the
    decisions and their reasons. The context window is finite; the project is not.
-2. **One session, one slice.** Start with `/next`, ship one thing, write the next prompt,
+2. **One session, one slice.** Start with `/thales:next`, ship one thing, write the next prompt,
    close. The next session must be startable by someone who has read nothing but the cockpit.
 3. **State is validated, not narrated.** [`casp`](https://casp.sh) checks the recorded
    state against git and blocks the push on drift.
@@ -39,7 +39,9 @@ the authority on what exists.
 
 ## Requirements
 
-Claude Code with a paid Anthropic plan, Node.js 22 or newer, git. See `INSTALL.md`.
+Claude Code with a paid Anthropic plan. Node.js 22 or newer, for the `casp` state tool, not for
+Claude: Claude installs it with you. Git: required by Claude Code on Windows only; on macOS
+Claude installs it if missing. See `INSTALL.md`.
 
 ## Author
 
@@ -54,7 +56,7 @@ human engineers; the method is documented at
 
 **Pilotez n'importe quel projet, technique ou non, avec Claude Code comme partenaire de travail.**
 
-Téléchargez, décompressez, tapez `claude`. Claude lit ce dossier, vérifie votre machine,
+Trois étapes humaines (`INSTALL.md`), puis tapez `claude`. Claude lit ce dossier, vérifie votre machine,
 vous enseigne la méthode chapitre par chapitre, et crée votre premier projet avec son
 cockpit. Aucune expérience préalable de Claude Code n'est supposée.
 
@@ -69,8 +71,8 @@ livrés. Restent avant la v0.1.0 le test sur machine vierge et la page de télé
 | Dossier | Ce que c'est |
 |---|---|
 | `CLAUDE.md` | Les règles que chaque session suit : rôles, cycle de session, niveaux de décision, vérification. |
-| `INSTALL.md` | Les cinq étapes humaines avant le premier `claude`. |
-| `.claude/skills/` | Les commandes du kit, chargées automatiquement : `/setup`, `/learn`, `/new-project`, `/day`, `/casp`, `/next`, `/cto`, `/verify`, `/notify`, `/humanizer`, `/update`, et les avancées `/chain`, `/fleet`, `/audit-batch`. |
+| `INSTALL.md` | Les trois étapes humaines avant le premier `claude` ; Claude installe le reste avec vous. |
+| `.claude/skills/` | Les commandes du kit, chargées automatiquement : `/thales:setup`, `/thales:learn`, `/thales:new-project`, `/thales:day`, `/thales:casp`, `/thales:next`, `/thales:cto`, `/thales:verify`, `/thales:notify`, `/thales:humanizer`, `/thales:update`, et les avancées `/thales:chain`, `/thales:fleet`, `/thales:audit-batch`. |
 | `docs/fr/`, `docs/en/` | Le manuel : une journée, une session, un projet, le protocole d'état, les commandes natives, les pièges. |
 | `templates/` | Une constitution et un cockpit par profil : recherche d'emploi, livre ou mémoire, petite entreprise, événement, création de contenu, projet logiciel. |
 | `examples/` | Deux projets complets, un non technique (une recherche d'emploi), un technique. |
@@ -80,7 +82,7 @@ livrés. Restent avant la v0.1.0 le test sur machine vierge et la page de télé
 
 1. **Un projet, une constitution.** Un `CLAUDE.md` porte l'objectif, les invariants, les
    décisions et leurs raisons. La fenêtre de contexte est finie ; le projet ne l'est pas.
-2. **Une session, une tranche.** Démarrer par `/next`, livrer une chose, écrire le prompt
+2. **Une session, une tranche.** Démarrer par `/thales:next`, livrer une chose, écrire le prompt
    suivant, clore. La session suivante doit pouvoir démarrer avec le seul cockpit.
 3. **L'état se valide, il ne se raconte pas.** [`casp`](https://casp.sh) confronte l'état
    enregistré à git et bloque le push en cas de dérive.
@@ -89,7 +91,9 @@ livrés. Restent avant la v0.1.0 le test sur machine vierge et la page de télé
 
 ## Prérequis
 
-Claude Code avec un abonnement Anthropic payant, Node.js 22 ou plus, git. Voir `INSTALL.md`.
+Claude Code avec un abonnement Anthropic payant. Node.js 22 ou plus, pour l'outil d'état `casp`,
+pas pour Claude : Claude l'installe avec vous. Git : exigé par Claude Code sous Windows
+seulement ; sous macOS, Claude l'installe s'il manque. Voir `INSTALL.md`.
 
 ## Auteur
 

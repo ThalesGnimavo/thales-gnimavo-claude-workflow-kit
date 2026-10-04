@@ -12,7 +12,7 @@ prompt names.
 
 What catches it: the prompt's `## MUST` list. A session that cannot fit it in one sitting
 says so before the first file and proposes the cut. If a prompt of yours has eight MUSTs,
-cut it yourself before `/next`.
+cut it yourself before `/thales:next`.
 
 ## 2. Trusting "done"
 
@@ -40,22 +40,22 @@ does not replace a close.
 ## 4. Starting `claude` inside a project
 
 The kit's commands and permissions load from the kit's folder. Started inside
-`my-projects/<name>/`, Claude has none of them: no `/next`, no `/day`, and the project's
+`my-projects/<name>/`, Claude has none of them: no `/thales:next`, no `/thales:day`, and the project's
 constitution alone.
 
-What catches it: type `/`. If `/next` is not in the list, you are in the wrong folder.
+What catches it: type `/`. If `/thales:next` is not in the list, you are in the wrong folder.
 Every command takes the project name as its argument from the kit's folder.
 
 ## 5. Believing the prompt
 
 The prompt was written by the previous session, from what it believed at the time. "The
 masters exist" may be true, or may be what that session meant to do. The root rules say
-to replay a prompt's assertions against the files before believing them; `/cto <project>`
-is the command that does it thoroughly, and `/next` stops when a file or state the prompt
+to replay a prompt's assertions against the files before believing them; `/thales:cto <project>`
+is the command that does it thoroughly, and `/thales:next` stops when a file or state the prompt
 assumes does not exist.
 
 What catches it: the `## CONTEXT` section of the prompt names the last commit. If the
-history has moved past it, the prompt may be stale; `/next` says so before starting.
+history has moved past it, the prompt may be stale; `/thales:next` says so before starting.
 
 ## 6. Moving the pointers in the wrong order
 

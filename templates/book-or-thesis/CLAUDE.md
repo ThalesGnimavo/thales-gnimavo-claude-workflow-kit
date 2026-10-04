@@ -50,7 +50,7 @@ exports/                generated docx or pdf, never edited by hand
 
 `casp status` opens a session; the queued prompt is a claim to replay against the files
 before believing it. One chapter, or one revision pass over one chapter, per session.
-Closing follows `/next`: log with the measured word count, next prompt, `casp check` exit 0.
+Closing follows `/thales:next`: log with the measured word count, next prompt, `casp check` exit 0.
 
 ## Pre-approved decisions
 

@@ -32,8 +32,8 @@ npm test
 npm run check
 ```
 
-One command per line. `/verify <project>` runs them in the background and writes the
-report under `session-logs/verification/`; `/cto` reads this section to decide whether
+One command per line. `/thales:verify <project>` runs them in the background and writes the
+report under `session-logs/verification/`; `/thales:cto` reads this section to decide whether
 two sessions can run the gate at once.
 
 ## Sources of truth
@@ -47,7 +47,7 @@ two sessions can run the gate at once.
 ## Session cycle
 
 `casp status` opens a session; the queued prompt is a claim to replay against the code
-before believing it. One slice per session. Closing follows `/next`: work committed, gate
+before believing it. One slice per session. Closing follows `/thales:next`: work committed, gate
 green with its output in the log, next prompt, `casp check` exit 0.
 
 ## Pre-approved decisions

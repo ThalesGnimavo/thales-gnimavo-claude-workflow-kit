@@ -8,7 +8,7 @@ next_after: phase-0-init
 
 # Session — phase-1-operating-baseline : Operating baseline
 
-> **Status : QUEUED.** Drafted by `/new-project` on {{created_at}}. The cockpit exists;
+> **Status : QUEUED.** Drafted by `/thales:new-project` on {{created_at}}. The cockpit exists;
 > nothing about the business is written in this folder yet.
 >
 > **Goal.** What is sold, to whom, at what price, how the business speaks, and which tasks
@@ -27,7 +27,7 @@ next_after: phase-0-init
 
 ## CONTEXT — what changed since the parent prompt was drafted
 
-- **The project was created** by `/new-project` on {{created_at}}. `CLAUDE.md` holds rule
+- **The project was created** by `/thales:new-project` on {{created_at}}. `CLAUDE.md` holds rule
   number one (nothing leaves this folder without the owner), the invariants and the
   pre-approved decisions. Read it before the first file.
 - **Business:** {{business_kind}}. **Customers:** {{customers}}. **Tools:**

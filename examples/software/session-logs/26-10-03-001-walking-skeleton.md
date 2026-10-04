@@ -5,7 +5,7 @@ phase: phase-1-walking-skeleton
 # 26-10-03-001 — phase-1-walking-skeleton : The gate runs, one path works end to end
 
 **Session prompt :** `docs/plan/sessions/PHASE-1-WALKING-SKELETON.md` (shipped by this log).
-**Previous session end :** `ccc505d` (project created by `/new-project`, software profile).
+**Previous session end :** `ccc505d` (project created by `/thales:new-project`, software profile).
 **Delegation :** executed inline; the gate takes under two seconds, nothing to background.
 **State at session start :** phase 0 shipped (the cockpit), phase 1 queued, `casp check` 0.
 The repository held `CLAUDE.md`, `casp/`, `README.md` and nothing that runs.

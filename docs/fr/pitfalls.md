@@ -12,7 +12,7 @@ session, celle que le prompt nomme.
 
 Ce qui le rattrape : la liste `## MUST` du prompt. Une session qui ne peut pas la tenir en
 une seule traite le dit avant le premier fichier et propose la découpe. Si l'un de vos prompts
-a huit MUST, découpez-le vous-même avant `/next`.
+a huit MUST, découpez-le vous-même avant `/thales:next`.
 
 ## 2. Croire « c'est fait »
 
@@ -41,10 +41,10 @@ temps ; il ne remplace pas une clôture.
 ## 4. Lancer `claude` à l'intérieur d'un projet
 
 Les commandes et les permissions du kit se chargent depuis le dossier du kit. Lancé dans
-`my-projects/<name>/`, Claude n'en a aucune : pas de `/next`, pas de `/day`, et la
+`my-projects/<name>/`, Claude n'en a aucune : pas de `/thales:next`, pas de `/thales:day`, et la
 constitution du projet seule.
 
-Ce qui le rattrape : tapez `/`. Si `/next` n'est pas dans la liste, vous êtes dans le mauvais
+Ce qui le rattrape : tapez `/`. Si `/thales:next` n'est pas dans la liste, vous êtes dans le mauvais
 dossier. Chaque commande prend le nom du projet en argument depuis le dossier du kit.
 
 ## 5. Croire le prompt
@@ -52,11 +52,11 @@ dossier. Chaque commande prend le nom du projet en argument depuis le dossier du
 Le prompt a été écrit par la session précédente, d'après ce qu'elle croyait à ce moment-là.
 « Les masters existent » peut être vrai, ou peut être ce que cette session avait l'intention
 de faire. Les règles racines disent de rejouer les assertions d'un prompt face aux fichiers
-avant de les croire ; `/cto <project>` est la commande qui le fait à fond, et `/next`
+avant de les croire ; `/thales:cto <project>` est la commande qui le fait à fond, et `/thales:next`
 s'arrête quand un fichier ou un état que le prompt suppose n'existe pas.
 
 Ce qui le rattrape : la section `## CONTEXT` du prompt nomme le dernier commit. Si
-l'historique l'a dépassé, le prompt est peut-être périmé ; `/next` le dit avant de démarrer.
+l'historique l'a dépassé, le prompt est peut-être périmé ; `/thales:next` le dit avant de démarrer.
 
 ## 6. Déplacer les pointeurs dans le mauvais ordre
 

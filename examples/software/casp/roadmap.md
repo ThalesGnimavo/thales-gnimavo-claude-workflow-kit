@@ -59,7 +59,7 @@ If you reach for anything BELOW Next-3, stop and check why.
 
 | Phase | Status | Session log | Notes |
 |-------|--------|-------------|-------|
-| Phase 0 — Init | shipped | — | created by `/new-project` on 2026-10-03 |
+| Phase 0 — Init | shipped | — | created by `/thales:new-project` on 2026-10-03 |
 | Phase 1 — Walking skeleton | shipped | `26-10-03-001-walking-skeleton` | the gate runs, one path works |
 | Phase 2 — First feature | shipped | `26-10-03-002-first-feature` | export one month as CSV |
 | Phase 3 — Hardening | queued | _(pending)_ | errors, edge cases |

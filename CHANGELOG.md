@@ -58,6 +58,13 @@ Versions follow [Semantic Versioning](https://semver.org/).
   `.git`; each `README.md` says what to look at and in which order.
 
 ### Changed
+- Every kit command lives in a Claude Code plugin named `thales`, under
+  `.claude/skills/thales/`: `/setup` is `/thales:setup`, `/next` is `/thales:next`, and so on.
+  The plugin namespace is the one mechanism Claude Code guarantees against a name collision
+  with a personal, project or native command. Consequence: the kit's commands exist only
+  when Claude starts at the kit root in a trusted folder.
+- `INSTALL.md`: three human steps instead of five; Claude clones the kit and installs Node.js
+  and `casp` with the person, guided by `/thales:setup`'s bootstrap flow.
 - `INSTALL.md` step 4: `git clone` is the primary path (git is required by step 2 already);
   the release zip stays as the fallback and says that `/update` cannot update a zip.
 - `/update`: refuses with a clear message when the kit folder is not a git repository.

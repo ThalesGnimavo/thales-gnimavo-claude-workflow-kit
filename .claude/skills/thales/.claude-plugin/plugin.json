@@ -1,0 +1,8 @@
+{
+  "name": "thales",
+  "displayName": "Thales Gnimavo workflow kit",
+  "description": "The kit's commands: setup, learn, projects, sessions, verification.",
+  "version": "0.1.0",
+  "author": { "name": "Juste Thales Gnimavo", "url": "https://thalesandhisaictoclaude.com" },
+  "license": "MIT"
+}

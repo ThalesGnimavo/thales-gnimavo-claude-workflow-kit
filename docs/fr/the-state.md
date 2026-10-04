@@ -2,7 +2,7 @@
 
 Chaque projet possède un dossier `casp/`, le cockpit. Il répond à « où en sommes-nous ? »
 sans relire la conversation, et un outil, `casp`, vérifie que la réponse est vraie face à git.
-Le cockpit est écrit par les sessions et lu par vous, par `/day`, par `/next`. Il tourne sur
+Le cockpit est écrit par les sessions et lu par vous, par `/thales:day`, par `/thales:next`. Il tourne sur
 votre machine et n'envoie rien nulle part.
 
 ## Les trois fichiers
@@ -125,7 +125,7 @@ ne l'a pas envoyée, la phase attend.
 
 ## Ce qu'il faut taper
 
-Depuis le dossier du projet, ou via `/casp <project>` depuis le dossier du kit :
+Depuis le dossier du projet, ou via `/thales:casp <project>` depuis le dossier du kit :
 
 ```
 casp status
@@ -134,7 +134,7 @@ casp check
 
 ## Ce que vous devez voir
 
-Juste après `/new-project`, avant toute session, le compte est `14 PASS · 2 WARN · 0 FAIL`.
+Juste après `/thales:new-project`, avant toute session, le compte est `14 PASS · 2 WARN · 0 FAIL`.
 Les deux WARN disent que `last_session_id` et `last_commit` valent encore `pending` : rien
 n'a encore été travaillé. Ils disparaissent à la clôture de la première session. Observé
 sur deux projets neufs le 2026-10-03 (session 006). Un projet qui a vécu quelques sessions

@@ -8,7 +8,7 @@ next_after: phase-0-init
 
 # Session — phase-1-editorial-baseline : Audience, voice, pillars, calendar
 
-> **Status : QUEUED.** Drafted by `/new-project` on {{created_at}}. The cockpit exists;
+> **Status : QUEUED.** Drafted by `/thales:new-project` on {{created_at}}. The cockpit exists;
 > no voice, pillar or calendar is written yet.
 >
 > **Goal.** The voice, the pillars, the calendar four weeks ahead with its first four
@@ -27,7 +27,7 @@ next_after: phase-0-init
 
 ## CONTEXT — what changed since the parent prompt was drafted
 
-- **The project was created** by `/new-project` on {{created_at}}. `CLAUDE.md` holds rule
+- **The project was created** by `/thales:new-project` on {{created_at}}. `CLAUDE.md` holds rule
   number one (the assistant drafts, the owner publishes), the invariants and the
   pre-approved decisions. Read it before the first file.
 - **Channels:** {{channels}}. **Audience:** {{audience}}. **Cadence:** {{cadence}}.

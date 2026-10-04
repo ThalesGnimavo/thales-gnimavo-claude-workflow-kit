@@ -7,15 +7,15 @@ lives in files and not in anyone's memory, Claude's included.
 ## Morning, ten minutes
 
 Open a terminal in the kit's folder (the one that holds this `docs/`), type `claude`,
-then `/day`. One table appears, one row per project under `my-projects/`, with its phase,
+then `/thales:day`. One table appears, one row per project under `my-projects/`, with its phase,
 what comes next, the last save point, and a state. Under the table, the projects that are
 not ready, each with the command that unblocks it.
 
-`/day` then asks one question with two parts: which project, and one session or several.
+`/thales:day` then asks one question with two parts: which project, and one session or several.
 One session is the normal answer. "Several" means parallel sessions on one project; it
 costs several times as much and needs macOS with iTerm2; leave it for later.
 
-`/day` opens `/next <project>` for you. The session reads the project's constitution, its
+`/thales:day` opens `/thales:next <project>` for you. The session reads the project's constitution, its
 cockpit and the queued prompt, checks that the prompt is still the right one, says in one
 sentence what it starts, and starts. It does not wait for a "go"; interrupt it and correct
 the prompt if it is wrong. Then leave.
@@ -66,8 +66,8 @@ alone; everything with an external consequence is yours.
 ```
 cd <the kit's folder>
 claude
-/day --dry-run
-/day
+/thales:day --dry-run
+/thales:day
 ```
 
 `--dry-run` prints the table and stops, with no question; use it the first time, to read
@@ -75,7 +75,7 @@ the screen without opening anything.
 
 ## What you should see
 
-The table for the two projects of `examples/`, as `/day` lays it out, with the values
+The table for the two projects of `examples/`, as `/thales:day` lays it out, with the values
 their cockpits held on 2026-10-03:
 
 ```
@@ -86,17 +86,17 @@ job-search       1/5     phase-2-first-wave     2026-10-03    blocked: First app
 software         2/4     phase-3-hardening      2026-10-03    ready, to confirm
 
 Blocked
-- job-search: the owner sends from their mailbox and gives the date; `/next job-search` writes it
-- software: `/cto software`, or `/next software --solo "<reason>"` for a slice you know is small
+- job-search: the owner sends from their mailbox and gives the date; `/thales:next job-search` writes it
+- software: `/thales:cto software`, or `/thales:next software --solo "<reason>"` for a slice you know is small
 ```
 
 "1/5" is one phase shipped out of five. The `software` row is the folder name: that
 project was played under the name `ledger-cli`, and its own `README.md` says
-`/next ledger-cli`; under `my-projects/` the folder name and the project name are the same. "blocked" comes from a real row under
+`/thales:next ledger-cli`; under `my-projects/` the folder name and the project name are the same. "blocked" comes from a real row under
 `## Blocked` in the project's `casp/roadmap.md`: the first application is at `ready` and
 only the owner can send it. "ready, to confirm" means the queued step has not been
-confirmed as one session or several; `/next software --solo "<reason>"` confirms it in
+confirmed as one session or several; `/thales:next software --solo "<reason>"` confirms it in
 one gesture.
 
 Then the one question, in two parts: which project, one session or several. Answer it,
-and `/next` takes over.
+and `/thales:next` takes over.

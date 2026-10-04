@@ -1,11 +1,11 @@
 # Templates — one folder per profile
 
-`/new-project` offers these profiles and builds a project from the chosen one. A profile
+`/thales:new-project` offers these profiles and builds a project from the chosen one. A profile
 is a folder with exactly three files:
 
 | File | Role |
 |---|---|
-| `template.json` | What `/new-project` asks and what it writes: label, summary, questions, first phase, roadmap phases |
+| `template.json` | What `/thales:new-project` asks and what it writes: label, summary, questions, first phase, roadmap phases |
 | `CLAUDE.md` | The project's constitution: identity, rule number one, invariants, layout, sources of truth, session cycle, pre-approved decisions, what signals the owner, debt |
 | `first-prompt.md` | The first queued session prompt, in the `casp` layout, written from the owner's answers |
 
@@ -17,11 +17,11 @@ Both markdown files use `{{key}}` placeholders. Five are always available:
 |---|---|
 | `{{project_name}}` | the folder name under `my-projects/` |
 | `{{owner_name}}` | `name` from `.kit/profile.json` |
-| `{{description}}` | the project in two or three sentences, asked by `/new-project` |
-| `{{first_goal}}` | the first thing the owner wants done, asked by `/new-project` (seeded from the profile) |
+| `{{description}}` | the project in two or three sentences, asked by `/thales:new-project` |
+| `{{first_goal}}` | the first thing the owner wants done, asked by `/thales:new-project` (seeded from the profile) |
 | `{{created_at}}` | today, `YYYY-MM-DD` |
 
-Every other key comes from `template.json` → `questions[].key`. `/new-project` refuses to
+Every other key comes from `template.json` → `questions[].key`. `/thales:new-project` refuses to
 finish while a `{{` survives in the written files: a placeholder the user never saw is a
 rule nobody agreed to.
 
@@ -29,9 +29,9 @@ rule nobody agreed to.
 
 Keep these headings exactly; other commands look them up by name:
 
-- `## Pre-approved decisions`: the level-0 table (`/next`, `/cto`, `/chain` cite its lines).
-- `## Gate`: one command per line in a code block, software profile only (`/verify` runs
-  them, `/cto` measures whether they can run twice at once). A profile without a gate has
+- `## Pre-approved decisions`: the level-0 table (`/thales:next`, `/thales:cto`, `/thales:chain` cite its lines).
+- `## Gate`: one command per line in a code block, software profile only (`/thales:verify` runs
+  them, `/thales:cto` measures whether they can run twice at once). A profile without a gate has
   no such section; do not write an empty one.
 - `## Not done yet and should be`: the debt list sessions append to.
 
@@ -51,7 +51,7 @@ Keep these headings exactly; other commands look them up by name:
 4. `first-prompt.md`: keep the frontmatter as is (`next_after: phase-0-init`), name the
    phase `phase-1-<slug>` in the title and in `## Close`, and write a MUST list a fresh
    session can finish in one sitting.
-5. Run `/new-project` with the new profile in a throwaway name; `casp check` must exit 0
+5. Run `/thales:new-project` with the new profile in a throwaway name; `casp check` must exit 0
    in the created project, and `grep -rn '{{' my-projects/<name>/` must print nothing.
 6. Add a line under `[Unreleased]` in `CHANGELOG.md`.
 

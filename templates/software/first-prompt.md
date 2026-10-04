@@ -8,7 +8,7 @@ next_after: phase-0-init
 
 # Session — phase-1-walking-skeleton : The gate runs, one path works end to end
 
-> **Status : QUEUED.** Drafted by `/new-project` on {{created_at}}. The cockpit exists;
+> **Status : QUEUED.** Drafted by `/thales:new-project` on {{created_at}}. The cockpit exists;
 > the repository holds `CLAUDE.md`, `casp/` and nothing that runs.
 >
 > **Goal.** A fresh clone runs the gate green and one path works end to end, however
@@ -26,7 +26,7 @@ next_after: phase-0-init
 
 ## CONTEXT — what changed since the parent prompt was drafted
 
-- **The project was created** by `/new-project` on {{created_at}}. `CLAUDE.md` holds rule
+- **The project was created** by `/thales:new-project` on {{created_at}}. `CLAUDE.md` holds rule
   number one (the gate passes before any push), the invariants, the `## Gate` section and
   the pre-approved decisions. Read it before the first file.
 - **Stack:** {{stack}}. **Deployment:** {{deploy}}. **Gate:** the commands under

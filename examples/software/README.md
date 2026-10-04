@@ -1,13 +1,15 @@
 # ledger-cli
 
+> Commands renamed to `/thales:` on 2026-10-04; logs updated to match.
+
 Profile: software. Owner: Sam Idris (fictional).
 A command-line tool that records small expenses in a plain JSON file and prints monthly totals; one folder, no server, no account.
-Run from the kit root with `/next ledger-cli`.
+Run from the kit root with `/thales:next ledger-cli`.
 Created on 2026-10-03.
 
 ## What this folder is
 
-A project created with `/new-project` from the `software` profile under the name
+A project created with `/thales:new-project` from the `software` profile under the name
 `ledger-cli`, then played for two sessions on 2026-10-03, and frozen here as
 `examples/software/`. The owner is invented. The code is real and runs: Node.js 22 or
 newer, no dependency.
@@ -63,5 +65,5 @@ session logs and in `casp/roadmap.md` are these.
 
 ## What not to do with it
 
-Do not copy this folder into `my-projects/`. Create your own with `/new-project`: the
+Do not copy this folder into `my-projects/`. Create your own with `/thales:new-project`: the
 gate commands and the deployment answer must be yours.

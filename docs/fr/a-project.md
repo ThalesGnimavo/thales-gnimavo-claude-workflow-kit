@@ -1,7 +1,7 @@
 # Un projet
 
 Un projet est un dossier sous `my-projects/` avec une constitution (`CLAUDE.md`), un
-cockpit (`casp/`) et son propre historique git. `/new-project` en crée un à partir d'un
+cockpit (`casp/`) et son propre historique git. `/thales:new-project` en crée un à partir d'un
 profil, avec vos réponses, et prouve qu'il est démarrable avant de se terminer. Vous
 n'écrivez jamais une constitution depuis une page blanche.
 
@@ -20,7 +20,7 @@ Les six partagent une règle : Claude prépare, vous envoyez, signez, payez, pub
 poussez. Chaque profil est un dossier sous `templates/` avec trois fichiers ;
 `templates/README.md` dit comment en ajouter un septième.
 
-## Ce que `/new-project` demande
+## Ce que `/thales:new-project` demande
 
 Une question à la fois, en conversation ordinaire, jamais sous forme de formulaire :
 
@@ -90,19 +90,19 @@ Un `{{` qui reste est un espace réservé que vous n'avez jamais vu ; un `casp c
 rouge est un cockpit qui ment dès le premier jour. Ni l'un ni l'autre n'a le droit de
 survivre à la commande.
 
-## Après `/new-project`
+## Après `/thales:new-project`
 
 Le projet n'a pas de dépôt distant : rien ne quitte votre machine tant que vous n'en créez
 pas un, et c'est une décision de niveau 1 que vous prenez. Le message de clôture donne la
-commande suivante : `/next <name> --solo "first slice of a new project"` pour démarrer
-maintenant, ou `/cto <name>` pour faire relire le plan d'abord.
+commande suivante : `/thales:next <name> --solo "first slice of a new project"` pour démarrer
+maintenant, ou `/thales:cto <name>` pour faire relire le plan d'abord.
 
 Lisez la constitution une fois, une minute. Puis démarrez.
 
 ## Ce qu'il faut taper
 
 ```
-/new-project job-search --profile job-search
+/thales:new-project job-search --profile job-search
 ```
 
 Sans `--profile`, le menu liste les six profils avec une ligne chacun, ceux qui
@@ -131,4 +131,4 @@ STATE
 ```
 
 `pending` sur les deux dernières lignes est normal le premier jour : aucune session n'a
-encore tourné. Le premier `/next` les remplit.
+encore tourné. Le premier `/thales:next` les remplit.

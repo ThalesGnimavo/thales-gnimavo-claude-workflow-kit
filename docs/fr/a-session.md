@@ -6,23 +6,23 @@ suivante. Elle compte quatre temps ; aucun n'est sauté, aucun n'est fusionné a
 
 ## 1. Démarrer
 
-`/next <project>` depuis le dossier du kit. La session lit, dans cet ordre :
+`/thales:next <project>` depuis le dossier du kit. La session lit, dans cet ordre :
 
 1. Le `CLAUDE.md` du projet : la constitution.
 2. `casp status` : le cockpit. Quelle phase est en cours, laquelle vient ensuite, quel
    fichier ouvre cette session.
 3. Le prompt en file, le fichier indiqué sur la ligne `next_prompt`. Il a été écrit par la
-   session précédente. Un prompt est une affirmation, pas une spécification : `/next`
+   session précédente. Un prompt est une affirmation, pas une spécification : `/thales:next`
    vérifie qu'il est encore `queued`, que son `next_after` nomme le dernier journal, que son
    `## CONTEXT` nomme le dernier commit, et s'arrête quand un fichier ou un état qu'il
    suppose n'existe pas. La relecture approfondie de ses affirmations contre les fichiers
-   est ce que fait `/cto <project>` avant de confirmer une étape.
+   est ce que fait `/thales:cto <project>` avant de confirmer une étape.
 
-`/next` refuse de démarrer une étape que personne n'a confirmée comme une session ou
-plusieurs. La confirmation est écrite dans `casp/state.json` par `/cto <project>` (qui relit
-d'abord la file) ou par `/next <project> --solo "<reason>"`, la forme en un geste pour une
-tranche que vous savez petite. Un projet qui sort de `/new-project` n'a pas encore de
-confirmation ; le message de clôture de `/new-project` vous donne la commande exacte.
+`/thales:next` refuse de démarrer une étape que personne n'a confirmée comme une session ou
+plusieurs. La confirmation est écrite dans `casp/state.json` par `/thales:cto <project>` (qui relit
+d'abord la file) ou par `/thales:next <project> --solo "<reason>"`, la forme en un geste pour une
+tranche que vous savez petite. Un projet qui sort de `/thales:new-project` n'a pas encore de
+confirmation ; le message de clôture de `/thales:new-project` vous donne la commande exacte.
 
 Puis la session dit en une phrase ce qu'elle s'apprête à faire, et commence. Elle ne
 demande pas si elle doit continuer : le prompt est le périmètre.
@@ -82,7 +82,7 @@ conversation qui l'a écrit pour être compris, il n'est pas terminé.
 ## Ce qu'il faut taper
 
 ```
-/next job-search
+/thales:next job-search
 ```
 
 À la fin, la session exécute la clôture elle-même. Si vous clôturez à la main, la séquence

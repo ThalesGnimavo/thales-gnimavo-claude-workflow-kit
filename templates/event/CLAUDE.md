@@ -50,7 +50,7 @@ messages/               invitations, requests, thanks, prepared and sent by the 
 ## Session cycle
 
 `casp status` opens a session; the queued prompt is a claim to replay against the files
-before believing it. One slice per session. Closing follows `/next`: log, next prompt,
+before believing it. One slice per session. Closing follows `/thales:next`: log, next prompt,
 `casp check` exit 0. The roadmap ends after the event, with payments closed and thanks
 sent.
 

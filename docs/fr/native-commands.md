@@ -1,7 +1,7 @@
 # Les commandes natives
 
 Les commandes ci-dessous appartiennent à Claude Code lui-même, pas au kit. Les commandes
-du kit (`/next`, `/casp`, `/day` …) vivent dans `.claude/skills/` et sont listées dans le
+du kit (`/thales:next`, `/thales:casp`, `/thales:day` …) vivent dans `.claude/skills/thales/`, le plugin du kit, et sont listées dans le
 `CLAUDE.md` racine. Cette fiche existe parce que le `CLAUDE.md` racine et `pitfalls.md`
 nomment cinq commandes natives (`/compact`, `/context`, `/rewind`, `/model`, `/schedule`)
 et qu'une première semaine en rencontre quelques autres.
@@ -32,9 +32,10 @@ version ; faites confiance à `/help`.
 |---|---|---|
 | `/compact` | Free up context by summarizing the conversation so far | quand Claude dit que le contexte s'allonge et que la tranche n'est pas finie ; elle gagne du temps, elle ne remplace pas une clôture (`pitfalls.md`, piège 3) |
 | `/context` | Visualize current context usage as a colored grid | avant de choisir entre « finir la tranche » et « clôturer maintenant » |
+| `/reload-plugins` | absent de la table de commandes du `/help` de 2.1.288 ; documenté sur code.claude.com/docs/en/plugins/loading. Formulation de ce manuel : recharge les plugins sans redémarrer | après `/thales:update`, pour que les commandes mises à jour du kit se chargent |
 | `/rewind` | alias `/checkpoint`, `/undo` dans la table ; pas de description. Formulation de ce manuel : restaure le code, la conversation, ou les deux, à un message antérieur | après une mauvaise modification, avant le prompt suivant ; interactive seulement (`supportsNonInteractive: false` dans la table) |
 | `/model` | Set model for this session (not persisted) | nommée dans le `CLAUDE.md` racine ; se choisit une fois par session, « not persisted » est le mot du programme |
-| `/schedule` | alias `/routines` ; create and manage scheduled remote Claude Code agents | non utilisée par les commandes du kit ; `/chain` tourne en local et n'a besoin d'aucune planification |
+| `/schedule` | alias `/routines` ; create and manage scheduled remote Claude Code agents | non utilisée par les commandes du kit ; `/thales:chain` tourne en local et n'a besoin d'aucune planification |
 
 ## Celles qu'une première semaine rencontre
 
@@ -52,7 +53,7 @@ version ; faites confiance à `/help`.
 | `/memory` | Edit CLAUDE.md files and memory settings |
 | `/skills` | List available skills (les commandes du kit devraient y apparaître ; à confirmer ci-dessous) |
 | `/doctor` (alias `/checkup`) | vérifie l'installation ; la description est calculée à l'exécution |
-| `/init` | écrit un premier `CLAUDE.md` pour un dossier ; `/new-project`, du kit, le fait pour vous depuis un gabarit |
+| `/init` | écrit un premier `CLAUDE.md` pour un dossier ; `/thales:new-project`, du kit, le fait pour vous depuis un gabarit |
 | `/plan` | Enable plan mode or view the current session plan |
 | `/btw` | Ask a quick side question without interrupting the main conversation |
 | `/version` | Print the version this session is running (not what autoupdate downloaded) |
@@ -108,8 +109,8 @@ refus du programme lui-même.
 ```
 
 Leçon : les commandes natives sont faites pour l'écran interactif. Les commandes du kit
-(`/next`, `/casp` …) sont des skills et fonctionnent dans les deux modes ; c'est ainsi que
-`/chain` les lance.
+(`/thales:next`, `/thales:casp` …) sont des skills et fonctionnent dans les deux modes ; c'est ainsi que
+`/thales:chain` les lance.
 
 ## À confirmer sur votre machine
 
@@ -120,11 +121,11 @@ Non observé depuis cette session ; lancez la commande et comparez avec la table
 - `/rewind` : ouvrez-la une fois sur une modification sans importance pour voir les trois
   choix (restaurer le code, restaurer la conversation, restaurer les deux) avant d'en avoir
   besoin dans l'urgence.
-- `/skills` : les commandes du kit (`/next`, `/casp`, `/day` …) doivent figurer dans la
+- `/skills` : les commandes du kit (`/thales:next`, `/thales:casp`, `/thales:day` …) doivent figurer dans la
   liste ; sinon, `claude` a été lancé depuis un autre dossier que celui du kit.
 - `/model` : ouvrez-la une fois pour voir quels modèles votre offre propose et ce que
   « not persisted » signifie chez vous (une nouvelle session repart sur le modèle par défaut).
 - `/permissions` : vérifiez que les règles du `.claude/settings.json` du kit apparaissent
   dans la liste des autorisations.
-- `/doctor` : lancez-la une fois après `/setup` ; c'est la vérification de l'installation
+- `/doctor` : lancez-la une fois après `/thales:setup` ; c'est la vérification de l'installation
   par le programme lui-même.

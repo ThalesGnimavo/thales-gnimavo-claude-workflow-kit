@@ -13,8 +13,8 @@ When a listed command or folder is missing, say it ships in a later release. Nev
 <first_run>
 If `.kit/profile.json` does not exist, the person in front of you has never used this kit,
 and possibly never used Claude Code. Greet them in the language they wrote in, say in two
-sentences what this folder is, then run `/setup`. Do nothing else until `/setup` has written
-the profile. After setup, offer `/learn`.
+sentences what this folder is, then run `/thales:setup`. Do nothing else until `/thales:setup` has written
+the profile. After setup, offer `/thales:learn`.
 </first_run>
 
 <language>
@@ -41,29 +41,32 @@ Every project lives in its own folder under `my-projects/`, with its own `CLAUDE
 (constitution) and its own `casp/` cockpit (state). This root file applies to all of them.
 That folder is the one place for the user's work: when they mention a project that lives
 elsewhere on the machine, propose moving it here before working on it.
-Create a project with `/new-project`; never scatter files at the root. Always start `claude`
-from this folder, never from inside a project: the kit's commands and permissions load from
-here, and every command takes the project name as its argument. On a conflict between this
+Create a project with `/thales:new-project`; never scatter files at the root. Always start `claude`
+from this folder, never from inside a project: the kit's commands are a project plugin (`thales`),
+loaded only when the session's primary working directory is this folder and the person
+has accepted the trust dialog for it. From inside a project, no `/thales:` command exists.
+A headless `claude -p` loads them once the folder has been trusted interactively. Every
+command takes the project name as its argument. On a conflict between this
 file and a project's `CLAUDE.md`, this file wins.
 
 ```
 CLAUDE.md          this file: rules for every session
-INSTALL.md         the five human steps before the first `claude`
-.claude/skills/    the kit's commands, loaded automatically from this folder
+INSTALL.md         the three human steps before the first `claude`
+.claude/skills/thales/  the kit's commands, a project plugin loaded from this folder
 .claude/settings.json  safe default permissions
 docs/{fr,en}/      the manual
 templates/         project constitutions and cockpits, one per profile
 examples/          two complete worked projects
 my-projects/          the user's projects (each one is its own git repository)
 casp/              the kit's own cockpit (the kit is run with its own method)
-.kit/profile.json  who the user is, what they have learned; written by /setup
+.kit/profile.json  who the user is, what they have learned; written by /thales:setup
 ```
 </workspace>
 
 <session_cycle>
 Every working session has four beats. Do not skip one, do not merge two.
 
-1. **Start.** `/next <project>`. Read the project's `CLAUDE.md`, then `casp status`. The queued prompt is a claim, not a specification: replay its
+1. **Start.** `/thales:next <project>`. Read the project's `CLAUDE.md`, then `casp status`. The queued prompt is a claim, not a specification: replay its
    assertions against the files before believing them.
 2. **Work.** One slice, the one the prompt names. Anything else is noted in
    `casp/roadmap.md` and left alone.
@@ -109,22 +112,23 @@ Quote these three rules in the brief of every sub-agent; never assume it knows t
 </context_discipline>
 
 <skills>
-Loaded from `.claude/skills/`. Type `/` to list them. Core first, advanced later.
+Loaded from `.claude/skills/thales/`, the kit's plugin: every command is `/thales:<name>`.
+Type `/thales:` to list them. Core first, advanced later.
 
 | Command | Role | Audience | Phase |
 |---|---|---|---|
-| `/setup` | Check the machine, install `casp`, write the profile | everyone, first run | 0 |
-| `/learn [chapter]` | Guided tour of the method, one exercise per chapter | everyone | 0 |
-| `/new-project` | Create a project from a profile template, with its cockpit | everyone | 1 |
-| `/day` | Open the day: one decision, one or several sessions | everyone | 1 |
-| `/casp [project]` | Where are we? Reads the cockpit, proposes nothing | everyone | 1 |
-| `/next <project>` | Start the queued session of a project | everyone | 1 |
-| `/cto <project>` | Open a steering session: re-verify the queue, arbitrate solo or fleet | intermediate | 1 |
-| `/verify <project>` | Run the project's declared gate in the background, report only | developers | 1 |
-| `/humanizer` | Strip machine-sounding patterns from a text | everyone | 1 |
-| `/notify` | End-of-session summary on the channel set in `.env` | everyone | 1 |
-| `/update` | Bring the kit to its latest release | everyone | 1 |
-| `/chain`, `/fleet`, `/audit-batch` | Unattended chains, parallel sessions, deep audit | advanced, off by default | 1 |
+| `/thales:setup` | Check the machine, install `casp`, write the profile | everyone, first run | 0 |
+| `/thales:learn [chapter]` | Guided tour of the method, one exercise per chapter | everyone | 0 |
+| `/thales:new-project` | Create a project from a profile template, with its cockpit | everyone | 1 |
+| `/thales:day` | Open the day: one decision, one or several sessions | everyone | 1 |
+| `/thales:casp [project]` | Where are we? Reads the cockpit, proposes nothing | everyone | 1 |
+| `/thales:next <project>` | Start the queued session of a project | everyone | 1 |
+| `/thales:cto <project>` | Open a steering session: re-verify the queue, arbitrate solo or fleet | intermediate | 1 |
+| `/thales:verify <project>` | Run the project's declared gate in the background, report only | developers | 1 |
+| `/thales:humanizer` | Strip machine-sounding patterns from a text | everyone | 1 |
+| `/thales:notify` | End-of-session summary on the channel set in `.env` | everyone | 1 |
+| `/thales:update` | Bring the kit to its latest release | everyone | 1 |
+| `/thales:chain`, `/thales:fleet`, `/thales:audit-batch` | Unattended chains, parallel sessions, deep audit | advanced, off by default | 1 |
 
 Native Claude Code commands (`/compact`, `/model`, `/context`, `/rewind`, `/schedule` …)
 are documented in `docs/<lang>/native-commands.md`, verified against the installed version.
@@ -135,7 +139,7 @@ are documented in `docs/<lang>/native-commands.md`, verified against the install
   the current session. A go given earlier does not carry over.
 - Never `git push --force`, never `--no-verify`, never commit `.env` or any credential.
 - Never read a `.env` file, with any tool. If a value is needed, ask the user to paste it.
-  One exception: `/notify` runs `.claude/skills/notify/notify.sh`, which reads `.env` and
+  One exception: `/thales:notify` runs `.claude/skills/thales/skills/notify/notify.sh`, which reads `.env` and
   prints no value from it.
 - Never mark an item done without its proof.
 - Never rewrite a user's wording when asked to fix layout, tone or structure; ask first.
