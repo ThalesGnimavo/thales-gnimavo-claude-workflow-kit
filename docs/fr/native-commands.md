@@ -8,8 +8,9 @@ et qu'une première semaine en rencontre quelques autres.
 
 ## Vérifiée sur quelle version, et comment
 
-- **Version.** `claude --version` a affiché `2.1.288 (Claude Code)` le 2026-10-03 (macOS,
-  cask Homebrew `claude-code@latest`).
+- **Version.** `claude --version` a affiché `2.1.289 (Claude Code)` le 2026-10-04 (macOS,
+  cask Homebrew `claude-code@latest`) ; première vérification sur 2.1.288 le 2026-10-03. Entre
+  les deux, deux lignes ont changé : `/reload-plugins` est entrée dans la table, `/model` a été reformulée.
 - **Méthode.** Claude Code embarque sa table de commandes dans le binaire installé. Chaque
   ligne ci-dessous a été lue dans cette table (`strings` sur le binaire, puis recherche de
   `name:"<commande>",description:"…"`) : la description en une ligne est celle du
@@ -28,13 +29,13 @@ version ; faites confiance à `/help`.
 
 ## Celles dont le manuel dépend
 
-| Commande | Ce qu'elle fait (les mots de Claude Code, 2.1.288) | Quand le kit s'en sert |
+| Commande | Ce qu'elle fait (les mots de Claude Code, 2.1.289) | Quand le kit s'en sert |
 |---|---|---|
 | `/compact` | Free up context by summarizing the conversation so far | quand Claude dit que le contexte s'allonge et que la tranche n'est pas finie ; elle gagne du temps, elle ne remplace pas une clôture (`pitfalls.md`, piège 3) |
 | `/context` | Visualize current context usage as a colored grid | avant de choisir entre « finir la tranche » et « clôturer maintenant » |
-| `/reload-plugins` | absent de la table de commandes du `/help` de 2.1.288 ; documenté sur code.claude.com/docs/en/plugins/loading. Formulation de ce manuel : recharge les plugins sans redémarrer | après `/thales:update`, pour que les commandes mises à jour du kit se chargent |
+| `/reload-plugins` | Activate pending plugin changes in the current session (`[--force]`) ; dans la table depuis 2.1.289, absente de celle de 2.1.288 | après `/thales:update`, pour que les commandes mises à jour du kit se chargent |
 | `/rewind` | alias `/checkpoint`, `/undo` dans la table ; pas de description. Formulation de ce manuel : restaure le code, la conversation, ou les deux, à un message antérieur | après une mauvaise modification, avant le prompt suivant ; interactive seulement (`supportsNonInteractive: false` dans la table) |
-| `/model` | Set model for this session (not persisted) | nommée dans le `CLAUDE.md` racine ; se choisit une fois par session, « not persisted » est le mot du programme |
+| `/model` | Set the AI model for Claude Code | nommée dans le `CLAUDE.md` racine ; se choisit une fois par session. 2.1.288 disait « Set model for this session (not persisted) » ; en 2.1.289 cette formulation appartient à une autre entrée de la table |
 | `/schedule` | alias `/routines` ; create and manage scheduled remote Claude Code agents | non utilisée par les commandes du kit ; `/thales:chain` tourne en local et n'a besoin d'aucune planification |
 
 ## Celles qu'une première semaine rencontre

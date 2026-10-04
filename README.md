@@ -6,11 +6,11 @@ Three human steps (`INSTALL.md`), then type `claude`. Claude reads this folder, 
 the method one chapter at a time, and creates your first project with its own cockpit.
 No prior experience with Claude Code is assumed.
 
-**Release status.** This is a pre-release: every command of the table below, the six
-templates, the manual in English and in French (`docs/en/`, `docs/fr/`, six chapters each,
-native commands checked against Claude Code 2.1.288) and the two examples ship today. What
-remains before v0.1.0 is the blank-machine test and the download page. `CHANGELOG.md` is
-the authority on what exists.
+**Release status.** v0.1.0 is the first release: every command of the table below, the
+six templates, the manual in English and in French (`docs/en/`, `docs/fr/`, six chapters
+each, native commands checked against Claude Code 2.1.289) and the two examples. Download
+page: https://thalesandhisaictoclaude.com/kit. `CHANGELOG.md` is the authority on what
+exists, including what this release leaves untested.
 
 *Version française plus bas.*
 
@@ -70,11 +70,11 @@ Trois étapes humaines (`INSTALL.md`), puis tapez `claude`. Claude lit ce dossie
 vous enseigne la méthode chapitre par chapitre, et crée votre premier projet avec son
 cockpit. Aucune expérience préalable de Claude Code n'est supposée.
 
-**État de la version.** Pré-version : toutes les commandes du tableau ci-dessous, les six
-gabarits, le manuel en anglais et en français (`docs/en/`, `docs/fr/`, six chapitres
-chacun, commandes natives vérifiées contre Claude Code 2.1.288) et les deux exemples sont
-livrés. Restent avant la v0.1.0 le test sur machine vierge et la page de téléchargement.
-`CHANGELOG.md` fait foi sur ce qui existe.
+**État de la version.** La v0.1.0 est la première version publiée : toutes les commandes
+du tableau ci-dessous, les six gabarits, le manuel en anglais et en français (`docs/en/`,
+`docs/fr/`, six chapitres chacun, commandes natives vérifiées contre Claude Code 2.1.289)
+et les deux exemples. Page de téléchargement : https://thalesandhisaictoclaude.com/kit.
+`CHANGELOG.md` fait foi sur ce qui existe, y compris ce que cette version laisse non testé.
 
 ## Ce qu'il contient
 

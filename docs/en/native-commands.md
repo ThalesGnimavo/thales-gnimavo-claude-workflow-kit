@@ -8,8 +8,9 @@ a few more.
 
 ## Checked against which version, and how
 
-- **Version.** `claude --version` printed `2.1.288 (Claude Code)` on 2026-10-03 (macOS,
-  Homebrew cask `claude-code@latest`).
+- **Version.** `claude --version` printed `2.1.289 (Claude Code)` on 2026-10-04 (macOS,
+  Homebrew cask `claude-code@latest`); first checked on 2.1.288 on 2026-10-03. Between the
+  two, two rows changed: `/reload-plugins` entered the table, `/model` reworded.
 - **Method.** Claude Code embeds its command table in the installed binary. Each line
   below was read from that table (`strings` on the binary, then a search for
   `name:"<command>",description:"…"`), so the one-line description is the program's own,
@@ -27,13 +28,13 @@ listed here that `/help` does not show has been renamed or removed in your build
 
 ## The ones the manual relies on
 
-| Command | What it does (Claude Code's own words, 2.1.288) | When the kit uses it |
+| Command | What it does (Claude Code's own words, 2.1.289) | When the kit uses it |
 |---|---|---|
 | `/compact` | Free up context by summarizing the conversation so far | when Claude says the context is getting long and the slice is not finished; it buys time, it does not replace a close (`pitfalls.md`, pitfall 3) |
 | `/context` | Visualize current context usage as a colored grid | before deciding between "finish the slice" and "close now" |
-| `/reload-plugins` | not in the command table of 2.1.288's `/help`; documented at code.claude.com/docs/en/plugins/loading. This manual's wording: reloads plugins without restarting | after `/thales:update`, so the updated kit commands load |
+| `/reload-plugins` | Activate pending plugin changes in the current session (`[--force]`); in the table since 2.1.289, absent from 2.1.288's | after `/thales:update`, so the updated kit commands load |
 | `/rewind` | aliases `/checkpoint`, `/undo` in the table; no description there. This manual's wording: restores code, conversation, or both, to an earlier user message | after a bad edit, before the next prompt; interactive only (`supportsNonInteractive: false` in the table) |
-| `/model` | Set model for this session (not persisted) | named in the root `CLAUDE.md`; choose once per session, "not persisted" is the program's word |
+| `/model` | Set the AI model for Claude Code | named in the root `CLAUDE.md`; choose once per session. 2.1.288 said "Set model for this session (not persisted)"; in 2.1.289 that wording belongs to another entry of the table |
 | `/schedule` | aliases `/routines`; create and manage scheduled remote Claude Code agents | not used by the kit's commands; `/thales:chain` runs locally and needs no schedule |
 
 ## The ones a first week meets

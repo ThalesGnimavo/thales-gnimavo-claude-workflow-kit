@@ -5,6 +5,12 @@ Versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+Nothing yet.
+
+## [0.1.0] - 2026-10-04
+
+First release. Download page: https://thalesandhisaictoclaude.com/kit
+
 ### Fixed
 - `/new-project` step 3: the branch check uses `git symbolic-ref --short HEAD`, which prints
   `main` on an unborn branch; `rev-parse --abbrev-ref HEAD` printed `HEAD` and a fatal error.
@@ -69,3 +75,14 @@ Versions follow [Semantic Versioning](https://semver.org/).
   the release zip stays as the fallback and says that `/update` cannot update a zip.
 - `/update`: refuses with a clear message when the kit folder is not a git repository.
 - `/setup`: the `casp` install log goes to `.kit/`, not `/tmp`; `.kit/` is ignored as a whole.
+
+### Untested at this release
+Listed in `casp/roadmap.md` as Proofs due; each stays open until its observation exists.
+- `/thales:fleet` opening an iTerm2 tab with the worker loaded: never run.
+- `/thales:notify` on Linux (`notify-send`) and Windows (PowerShell balloon); the e-mail
+  channel end to end on a real SMTP account.
+- `/thales:new-project` through its interactive menu (every run so far was headless).
+- The blank-machine test by a first-time reader, from `INSTALL.md` alone, on a machine that
+  never had Claude Code: the sandbox run passed, the interactive `/login` was not reachable.
+- Whether `/thales:` commands appear right after the first trust dialog or only after
+  `/reload-plugins`.
