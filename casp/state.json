@@ -1,8 +1,8 @@
 {
   "casp_version": "0.18.2",
   "updated_at": "2026-10-04",
-  "last_session_id": "26-10-04-001-phase-3-release-plugin",
-  "last_commit": "9ff0b81",
+  "last_session_id": "26-10-04-002-phase-3-release-b",
+  "last_commit": "db43448",
   "current_phase": "phase-2-manual-and-examples",
   "next_phase": "phase-3-release",
   "next_prompt": "docs/plan/sessions/PHASE-3-RELEASE.md",
@@ -23,8 +23,8 @@
   "arbitration": {
     "phase": "phase-3-release",
     "shape": "solo",
-    "decided_at": "2026-10-03",
-    "by": "cto-kit-006",
-    "reason": "serial chain (defects fixed before the blank-machine test, test findings before the tag, tag before the website zip) with two level-1 stops (skill-collision decision, v0.1.0 go); the website page is another repository; single gate casp check, nothing a second writer could contribute without blocking on the same stops"
+    "decided_at": "2026-10-04",
+    "by": "cto-kit-008",
+    "reason": "release slice is a chain of two level-1 stops (v0.1.0 go, public flip) that a second writer would only wait on; the website page is the one independent task but its repository forbids inline builds and its download link is dead until the flip, so it is sequenced after the flip in the same session"
   }
 }

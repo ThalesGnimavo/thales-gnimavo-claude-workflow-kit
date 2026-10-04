@@ -1,6 +1,6 @@
 # Roadmap
 
-> **Updated** : 2026-10-03 (phase 2 slice A shipped: English manual, two examples; slice B queued).
+> **Updated** : 2026-10-04 (session 008: release slice, v0.1.0 cut; the three defects of session 004 are fixed since session 006).
 > **Source of truth** : this file + `docs/plan/sessions/*.md` (status frontmatter) + `session-logs/`.
 > **Maintenance rule** : update at the end of every session that ships something or surfaces a blocker.
 
@@ -10,8 +10,8 @@
 
 | # | Item | Prompt | Status |
 |---|------|--------|--------|
-| 1 | Phase 3, slice A — the three known template and skill defects fixed with proofs, the blank-machine test on a machine without `~/.claude/`, the skill-name collision decided (level 1) | `docs/plan/sessions/PHASE-3-RELEASE.md` | queued |
-| 2 | Phase 3, slice B — `/kit` page on the author's website, homepage download link, `CHANGELOG.md` cut to `[0.1.0]`, tag `v0.1.0` on the user's go, repository flipped to public by the user | `docs/plan/sessions/PHASE-3-RELEASE.md` | queued |
+| 1 | Phase 3, slice A — the three known template and skill defects fixed with proofs, the blank-machine test on a machine without `~/.claude/`, the skill-name collision decided (level 1) | `docs/plan/sessions/PHASE-3-RELEASE.md` | done (sessions 006 and 007) |
+| 2 | Phase 3, slice B — `/kit` page on the author's website, homepage download link, `CHANGELOG.md` cut to `[0.1.0]`, tag `v0.1.0` on the user's go, repository flipped to public by the user | `docs/plan/sessions/PHASE-3-RELEASE.md` | in progress (session 008) |
 | 3 | After v0.1.0 — a `casp new discussion`: Spanish, Windows walkthrough, `/thales:fleet` without iTerm2, the first outside feedback | (drafted at the close of phase 3) | not drafted |
 
 If you reach for anything BELOW Next-3, stop and check why.
@@ -47,10 +47,8 @@ If you reach for anything BELOW Next-3, stop and check why.
 - Spanish docs (the blog already publishes ES; the kit can follow).
 - Windows-native walkthrough for `/thales:setup` with screenshots.
 - `fleet` without iTerm2 (tmux or plain multi-terminal fallback).
-- Defects met while playing the examples (session 004, level 2, one line each):
-  `.claude/skills/thales/skills/new-project/SKILL.md:59` — `git -C . rev-parse --abbrev-ref HEAD` prints `HEAD` and a fatal error on an unborn branch; the check that prints `main` is `git symbolic-ref --short HEAD`.
-  `templates/*/CLAUDE.md` (six files, the `"{{first_goal}}".` line) — an answer that ends with a period renders as `week.".`; drop the period after the closing quote.
-  `templates/software/CLAUDE.md:58` — `{{deploy}}` inside the pre-approved table renders as "unless `not deployed` names it as the normal path"; rephrase the row so that any answer reads.
+- Defects met while playing the examples (session 004): the three were fixed in session 006,
+  proofs in its log; entry kept one release for the trail.
 - Proofs due still open at v0.1.0 (consolidated by session 006 from logs 002 to 005; the
   release notes list them as untested until each one has its observation):
   1. `(cd my-projects/<x> && casp status)` without a permission prompt, from a fresh `claude`
@@ -63,12 +61,12 @@ If you reach for anything BELOW Next-3, stop and check why.
   5. `/thales:new-project` end to end through the skill text in an interactive session
      (`AskUserQuestion` menu, one question at a time): every run so far was headless, with
      the answers given in the message.
-  7. Interactive coexistence on the author's machine: `claude plugin list` shows
+  6. Interactive coexistence on the author's machine: `claude plugin list` shows
      `thales@skills-dir`, `/thales:next <example>` loads the kit's text, `/next` still loads
      the personal skill (brief of 2026-10-04, §8.2); and whether `/thales:` commands are
      available in the same session right after the first trust dialog, or only after
      `/reload-plugins` (§8.4).
-  6. A first-time reader runs a day from `docs/<lang>/` alone, on a machine that never had
+  7. A first-time reader runs a day from `docs/<lang>/` alone, on a machine that never had
      Claude Code: the blank-machine test, blocked in-session by the interactive `/login`
      (session 006, "Verify").
 
